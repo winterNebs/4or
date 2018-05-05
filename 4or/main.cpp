@@ -6,18 +6,33 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "Shader.h"
+#include "shader.h"
+#include "camera.h"
+#include "svgReader.h"
 
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+void mouse_callback(GLFWwindow* window, int width, int height);
+void scroll_Callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
 
-//Settings
+///Settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
+///Camera Pos
+glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
+glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
+glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
+
+///Frame tracker
+float deltaTime = 0.0f;
+float lastFrame = 0.0f;
+
 int main() {
+
+	svgReader::read();
 
 	///GLFW: initialize & configure
 	glfwInit();
@@ -33,6 +48,7 @@ int main() {
 		glfwTerminate();
 		return -1;
 	}
+	//glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 	glfwMakeContextCurrent(window);
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
@@ -41,6 +57,8 @@ int main() {
 		std::cout << "Failed to initialize GLAD" << std::endl;
 		return -1;
 	}
+	
+	glEnable(GL_DEPTH_TEST);
 
 	//Shader ourShader("/Shaders/shader.vs","/Shaders/shader.fs");
 	Shader ourShader("shader.vs", "shader.fs");
@@ -104,30 +122,48 @@ int main() {
 	}
 	stbi_image_free(data);
 
+
+
 	///Render loop
 	ourShader.use();
 
 	while (!glfwWindowShouldClose(window)) {
+
+		///Calculate frame time
+		float currentFrame = glfwGetTime();
+		deltaTime = currentFrame - lastFrame;
+		lastFrame = currentFrame;
 
 		///Input
 		processInput(window);
 
 		///Render stuff
 		glClearColor(0.1f, 0.0f, 0.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		///Bind Texture
 		glBindTexture(GL_TEXTURE_2D, texture);
 
-		glm::mat4 trans(1);
-		trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
-		trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
+		glm::mat4 model(1);
+		glm::mat4 view(1);
+		glm::mat4 projection(1);
 
+		//model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
 
+		float radius = 10.0f;
+		float camX = sin(glfwGetTime()) * radius;
+		float camZ = cos(glfwGetTime()) * radius;
+		view = glm::lookAt(cameraPos, cameraPos+cameraFront, cameraUp);
+		projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+		// retrieve the matrix uniform locations
+		unsigned int modelLoc = glGetUniformLocation(ourShader.ID, "model");
+		unsigned int viewLoc = glGetUniformLocation(ourShader.ID, "view");
+		// pass them to the shaders (3 different ways)
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
+		// note: currently we set the projection matrix each frame, but since the projection matrix rarely changes it's often best practice to set it outside the main loop only once.
+		ourShader.setMat4("projection", projection);
 
-		ourShader.use();
-		unsigned int transformLoc = glGetUniformLocation(ourShader.ID, "transform");
-		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
 
 		///Render
 		glBindVertexArray(VAO);
@@ -151,9 +187,41 @@ int main() {
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 	glViewport(0, 0, width, height);
 }
+void mouse_callback(GLFWwindow* window, int width, int height) {
 
+}
+void scroll_Callback(GLFWwindow* window, int width, int height) {
+
+}
 void processInput(GLFWwindow* window) {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, true);
+	}
+	float cameraSpeed = 2.5f * deltaTime;
+	/*
+	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
+		cameraPos += cameraSpeed * cameraFront;
+	}
+	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
+		cameraPos -= cameraSpeed * cameraFront;
+	}
+	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
+		cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+	}
+	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+		cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+	}
+	*/
+	if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
+		cameraPos += cameraSpeed * glm::vec3(0.0f, 1.0f, 0.0f);
+	}
+	if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) {
+		cameraPos += cameraSpeed * glm::vec3(1.0f, 0.0f, 0.0f);
+	}
+	if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
+		cameraPos -= cameraSpeed * glm::vec3(0.0f, 1.0f, 0.0f);
+	}
+	if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) {
+		cameraPos -= cameraSpeed * glm::vec3(1.0f, 0.0f, 0.0f);
 	}
 }
