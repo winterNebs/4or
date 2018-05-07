@@ -24,10 +24,7 @@
     <ClCompile Include="stb_image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="svgReader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="svg.cpp">
+    <ClCompile Include="svg\svgReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,30 +35,24 @@
     <ClInclude Include="camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="shader.h">
+    <ClInclude Include="shaders\shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="svgReader.h">
+    <ClInclude Include="svg\svgReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="xmlTag.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="svg.h">
+    <ClInclude Include="svg\xmlTag.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shader.fs" />
-    <None Include="shader.vs" />
-    <None Include="2rect.svg" />
+    <None Include="shaders\shader.fs" />
+    <None Include="shaders\shader.vs" />
+    <None Include="svg\2rect.svg" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="container.jpg">
+    <Image Include="resources\textures\container.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="test.txt" />
   </ItemGroup>
 </Project>

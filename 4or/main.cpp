@@ -6,9 +6,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "shader.h"
+#include "shaders/shader.h"
 #include "camera.h"
-#include "svgReader.h"
+#include "svg/svgReader.h"
 
 #include <iostream>
 
@@ -32,8 +32,15 @@ float lastFrame = 0.0f;
 
 int main() {
 
-	svgReader::read();
-
+	svgReader test = svgReader();
+	std::vector<shape*> shapes = test.read(".\\svg\\2rect.svg");
+	for (auto i : shapes) {
+		std::vector<glm::vec3> convert = i->convert();
+		for (auto j : convert) {
+			std::cout << "(" << j.x << ", " << j.y << ")";
+		}
+		std::cout << std::endl;
+	}
 	///GLFW: initialize & configure
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -60,8 +67,7 @@ int main() {
 	
 	glEnable(GL_DEPTH_TEST);
 
-	//Shader ourShader("/Shaders/shader.vs","/Shaders/shader.fs");
-	Shader ourShader("shader.vs", "shader.fs");
+	Shader ourShader(".\\shaders\\shader.vs", ".\\shaders\\shader.fs");
 
 	float vertices[] = {
 		// positions			// colors			// texture coords
@@ -112,7 +118,7 @@ int main() {
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	///Load image, create tedxture, gen mipmaps
 	int width, height, nrChannels;
-	unsigned char* data = stbi_load("container.jpg", &width, &height, &nrChannels, 0);
+	unsigned char* data = stbi_load(".\\resources\\textures\\container.jpg", &width, &height, &nrChannels, 0);
 	if (data) {
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
 		glGenerateMipmap(GL_TEXTURE_2D);
@@ -179,7 +185,10 @@ int main() {
 	glDeleteVertexArrays(1, &VAO);
 	glDeleteBuffers(1, &VBO);
 	glDeleteBuffers(1, &EBO);
-
+	
+	for (auto&i : shapes) {
+		delete i;
+	}
 	glfwTerminate();
 	return 0;
 }
