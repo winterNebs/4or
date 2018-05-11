@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -122,26 +122,42 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Documents\ExternC++\src\glad.c" />
+    <ClCompile Include="game\game.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="stb_image.cpp" />
-    <ClCompile Include="svg\svgReader.cpp" />
+    <ClCompile Include="resources\resource_manager.cpp" />
+    <ClCompile Include="resources\shader.cpp" />
+    <ClCompile Include="resources\sprite_renderer.cpp" />
+    <ClCompile Include="resources\sprite_renderer.h" />
+    <ClCompile Include="resources\texture.cpp" />
+    <ClCompile Include="resources\stb_image.cpp" />
+    <ClCompile Include="svg\svg_reader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h" />
-    <ClInclude Include="shaders\shader.h" />
-    <ClInclude Include="stb_image.h" />
-    <ClInclude Include="svg\svgReader.h" />
+    <ClInclude Include="game\game.h" />
+    <ClInclude Include="game\level.h" />
+    <ClInclude Include="game\object.h" />
+    <ClInclude Include="resources\resource_manager.h" />
+    <ClInclude Include="resources\shader.h" />
+    <ClInclude Include="resources\texture.h" />
+    <ClInclude Include="resources\stb_image.h" />
+    <ClInclude Include="svg\svg_reader.h" />
     <ClInclude Include="svg\xmlTag.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\shaders\sprite.fs" />
+    <None Include="resources\shaders\sprite.vs" />
     <None Include="svg\2rect.svg">
       <SubType>Designer</SubType>
     </None>
-    <None Include="shaders\shader.fs" />
-    <None Include="shaders\shader.vs" />
+    <None Include="resources\shader.fs" />
+    <None Include="resources\shader.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\container.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="_thanks.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,21 +1,19 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "stb_image.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "shaders/shader.h"
+#include "resources/shader.h"
 #include "camera.h"
-#include "svg/svgReader.h"
+#include "svg/svg_reader.h"
+#include "game.h"
+#include "resources/resource_manager.h"
 
 #include <iostream>
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void mouse_callback(GLFWwindow* window, int width, int height);
-void scroll_Callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow* window);
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
 ///Settings
 const unsigned int SCR_WIDTH = 800;
@@ -26,11 +24,9 @@ glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
 glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
 glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
 
-///Frame tracker
-float deltaTime = 0.0f;
-float lastFrame = 0.0f;
+Game game(SCR_WIDTH, SCR_HEIGHT);
 
-int main() {
+int main(int argc, char *argv[]) {
 
 	svgReader test = svgReader();
 	std::vector<shape*> shapes = test.read(".\\svg\\2rect.svg");
@@ -46,145 +42,59 @@ int main() {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 	//glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);	//MacOSX
 
 	///GLFW: window creation
-	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "4or", NULL, NULL);
-	if (window == NULL) {
+	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "4or", nullptr, nullptr);
+	if (window == nullptr) {
 		std::cout << "Failed to create GLFW window" << std::endl;
 		glfwTerminate();
 		return -1;
 	}
-	//glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-	glfwMakeContextCurrent(window);
-	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
+	glfwMakeContextCurrent(window);
+	glfwSetKeyCallback(window, key_callback);
 	///GLAD: load all OpenGL function pointers
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
 		std::cout << "Failed to initialize GLAD" << std::endl;
 		return -1;
 	}
-	
-	glEnable(GL_DEPTH_TEST);
+	//glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
-	Shader ourShader(".\\shaders\\shader.vs", ".\\shaders\\shader.fs");
+	glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
+	glEnable(GL_CULL_FACE);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	game.init();
 
-	float vertices[] = {
-		// positions			// colors			// texture coords
-		0.5f,  0.5f, 0.0f,		1.0f, 0.0f, 0.0f,	1.0f, 1.0f, // top right
-		0.5f, -0.5f, 0.0f,		0.0f, 1.0f, 0.0f,	1.0f, 0.0f, // bottom right
-		-0.5f, -0.5f, 0.0f,		0.0f, 0.0f, 1.0f,	0.0f, 0.0f, // bottom left
-		-0.5f,  0.5f, 0.0f,		1.0f, 1.0f, 0.0f,	0.0f, 1.0f  // top left 
-	};
+	///Frame tracker
+	float deltaTime = 0.0f;
+	float lastFrame = 0.0f;
 
-	unsigned int indices[] = {  // note that we start from 0!
-		0, 1, 3,	// first triangle
-		1, 2, 3,	// second triangle
-	};
-
-	///Vertex Buffer Object (copy our vertices array in a buffer for OpenGL to use)
-	unsigned int VBO, VAO, EBO;
-	glGenVertexArrays(1, &VAO);
-	glGenBuffers(1, &VBO);
-	glGenBuffers(1, &EBO);
-
-	glBindVertexArray(VAO);
-
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-
-	///Vertex data format (set up attribute pointer)
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
-	///Color attribute
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
-	glEnableVertexAttribArray(1);
-	///Texture attrivbute
-	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
-	glEnableVertexAttribArray(2);
-
-	///Load texture
-	unsigned int texture;
-	glGenTextures(1, &texture);
-	glBindTexture(GL_TEXTURE_2D, texture);
-	///Wrapping
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
-	///Filtering
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	///Load image, create tedxture, gen mipmaps
-	int width, height, nrChannels;
-	unsigned char* data = stbi_load(".\\resources\\textures\\container.jpg", &width, &height, &nrChannels, 0);
-	if (data) {
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-		glGenerateMipmap(GL_TEXTURE_2D);
-	}
-	else {
-		std::cout << "Failed to load texture" << std::endl;
-	}
-	stbi_image_free(data);
-
-
-
-	///Render loop
-	ourShader.use();
+	game.state = GameState::GAME_ACTIVE;
 
 	while (!glfwWindowShouldClose(window)) {
 
 		///Calculate frame time
-		float currentFrame = glfwGetTime();
+		GLfloat currentFrame = glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
+		glfwPollEvents();
 
-		///Input
-		processInput(window);
+		game.processInput(deltaTime);
+
+		game.update(deltaTime);
 
 		///Render stuff
 		glClearColor(0.1f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-		///Bind Texture
-		glBindTexture(GL_TEXTURE_2D, texture);
-
-		glm::mat4 model(1);
-		glm::mat4 view(1);
-		glm::mat4 projection(1);
-
-		//model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-
-		float radius = 10.0f;
-		float camX = sin(glfwGetTime()) * radius;
-		float camZ = cos(glfwGetTime()) * radius;
-		view = glm::lookAt(cameraPos, cameraPos+cameraFront, cameraUp);
-		projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-		// retrieve the matrix uniform locations
-		unsigned int modelLoc = glGetUniformLocation(ourShader.ID, "model");
-		unsigned int viewLoc = glGetUniformLocation(ourShader.ID, "view");
-		// pass them to the shaders (3 different ways)
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
-		// note: currently we set the projection matrix each frame, but since the projection matrix rarely changes it's often best practice to set it outside the main loop only once.
-		ourShader.setMat4("projection", projection);
-
-
-		///Render
-		glBindVertexArray(VAO);
-		//glDrawArrays(GL_TRIANGLES, 0, 3);
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-		//glBindVertexArray(0);
-
-		//Check calls & swap buffer
+		game.render();
+	
 		glfwSwapBuffers(window);
-		glfwPollEvents();
 	}
 	///Deallocate 
-	glDeleteVertexArrays(1, &VAO);
-	glDeleteBuffers(1, &VBO);
-	glDeleteBuffers(1, &EBO);
+	ResourceManager::clear();
 	
 	for (auto&i : shapes) {
 		delete i;
@@ -193,44 +103,16 @@ int main() {
 	return 0;
 }
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-	glViewport(0, 0, width, height);
-}
-void mouse_callback(GLFWwindow* window, int width, int height) {
-
-}
-void scroll_Callback(GLFWwindow* window, int width, int height) {
-
-}
-void processInput(GLFWwindow* window) {
-	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
-		glfwSetWindowShouldClose(window, true);
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
+		glfwSetWindowShouldClose(window, GL_TRUE);
 	}
-	float cameraSpeed = 2.5f * deltaTime;
-	/*
-	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
-		cameraPos += cameraSpeed * cameraFront;
-	}
-	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
-		cameraPos -= cameraSpeed * cameraFront;
-	}
-	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
-		cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-	}
-	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
-		cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-	}
-	*/
-	if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
-		cameraPos += cameraSpeed * glm::vec3(0.0f, 1.0f, 0.0f);
-	}
-	if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) {
-		cameraPos += cameraSpeed * glm::vec3(1.0f, 0.0f, 0.0f);
-	}
-	if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
-		cameraPos -= cameraSpeed * glm::vec3(0.0f, 1.0f, 0.0f);
-	}
-	if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) {
-		cameraPos -= cameraSpeed * glm::vec3(1.0f, 0.0f, 0.0f);
+	if (key >= 0 && key < 1024) {
+		if (action == GLFW_PRESS) {
+			game.keys[key] = GL_TRUE;
+		}
+		else if (action == GLFW_RELEASE) {
+			game.keys[key] = GL_FALSE;
+		}
 	}
 }

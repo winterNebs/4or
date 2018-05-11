@@ -1,4 +1,4 @@
-#include "svgReader.h"
+#include "svg_reader.h"
 
 std::vector<glm::vec3> shape::convert() {
 	std::vector<glm::vec3> shapes;
