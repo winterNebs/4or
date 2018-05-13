@@ -158,9 +158,6 @@
     <Image Include="resources\textures\container.jpg" />
     <Image Include="resources\textures\frik.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="_thanks.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

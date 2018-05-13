@@ -16,8 +16,8 @@
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
 ///Settings
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
+const unsigned int SCR_WIDTH = 1920;
+const unsigned int SCR_HEIGHT = 1080;
 
 ///Camera Pos
 glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);

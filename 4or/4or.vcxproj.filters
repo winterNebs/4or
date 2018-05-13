@@ -96,7 +96,4 @@
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="_thanks.txt" />
-  </ItemGroup>
 </Project>
