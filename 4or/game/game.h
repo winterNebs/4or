@@ -5,6 +5,9 @@
 
 #include "game_level.h"
 
+const glm::vec2 PLAYER_SIZE(50.0f, 50.0f);
+const GLfloat PLAYER_VELOCITY(200.0f);
+
 enum class GameState {
 GAME_ACTIVE,
 GAME_MENU
@@ -22,5 +25,6 @@ public:
 	void processInput(GLfloat dt);
 	void update(GLfloat dt);
 	void render();
+
 };
 #endif
