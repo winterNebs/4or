@@ -8,7 +8,7 @@
 #include "resources/shader.h"
 #include "camera.h"
 #include "svg/svg_reader.h"
-#include "game.h"
+#include "game/game.h"
 #include "resources/resource_manager.h"
 
 #include <iostream>
@@ -28,15 +28,7 @@ Game game(SCR_WIDTH, SCR_HEIGHT);
 
 int main(int argc, char *argv[]) {
 
-	svgReader test = svgReader();
-	std::vector<shape*> shapes = test.read(".\\svg\\2rect.svg");
-	for (auto i : shapes) {
-		std::vector<glm::vec3> convert = i->convert();
-		for (auto j : convert) {
-			std::cout << "(" << j.x << ", " << j.y << ")";
-		}
-		std::cout << std::endl;
-	}
+	
 	///GLFW: initialize & configure
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -96,9 +88,6 @@ int main(int argc, char *argv[]) {
 	///Deallocate 
 	ResourceManager::clear();
 	
-	for (auto&i : shapes) {
-		delete i;
-	}
 	glfwTerminate();
 	return 0;
 }

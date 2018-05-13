@@ -123,6 +123,8 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Documents\ExternC++\src\glad.c" />
     <ClCompile Include="game\game.cpp" />
+    <ClCompile Include="game\game_level.cpp" />
+    <ClCompile Include="game\game_object.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="resources\resource_manager.cpp" />
     <ClCompile Include="resources\shader.cpp" />
@@ -135,14 +137,13 @@
   <ItemGroup>
     <ClInclude Include="camera.h" />
     <ClInclude Include="game\game.h" />
-    <ClInclude Include="game\level.h" />
-    <ClInclude Include="game\object.h" />
+    <ClInclude Include="game\game_level.h" />
+    <ClInclude Include="game\game_object.h" />
     <ClInclude Include="resources\resource_manager.h" />
     <ClInclude Include="resources\shader.h" />
     <ClInclude Include="resources\texture.h" />
     <ClInclude Include="resources\stb_image.h" />
     <ClInclude Include="svg\svg_reader.h" />
-    <ClInclude Include="svg\xmlTag.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\shaders\sprite.fs" />
@@ -155,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\container.jpg" />
+    <Image Include="resources\textures\frik.png" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="_thanks.txt" />

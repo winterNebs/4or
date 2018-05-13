@@ -45,12 +45,15 @@
     <ClCompile Include="game\game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="game\game_object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game\game_level.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="svg\xmlTag.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resources\texture.h">
@@ -71,6 +74,12 @@
     <ClInclude Include="game\game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="game\game_object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game\game_level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="svg\2rect.svg" />
@@ -81,6 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\container.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\textures\frik.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

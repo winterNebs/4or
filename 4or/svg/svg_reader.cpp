@@ -1,11 +1,23 @@
 #include "svg_reader.h"
+svgReader::svgReader(std::string file) {
+	svgReader::shapes = svgReader::read(file);
+	/*for (auto i : svgReader::read(file)) {
+		svgReader::verticies.push_back(i->convert());
+	}*/
+}
+std::vector<shape*> svgReader::getShapes() const{
+	return svgReader::shapes;
+}
+svgReader::~svgReader() {
 
+}
 std::vector<glm::vec3> shape::convert() {
 	std::vector<glm::vec3> shapes;
 	return shapes;
 }
 void shape::readAttrib(xmlTag t) {}
-std::vector<glm::vec3> rect::convert(){
+
+std::vector<glm::vec3> rect::convert() {
 	std::vector<glm::vec3> points;
 	points.push_back(glm::vec3(x, y, 0.0f));
 	points.push_back(glm::vec3(x + width, y, 0.0f));
@@ -29,6 +41,7 @@ void rect::readAttrib(xmlTag t) {
 		}
 	}
 }
+
 std::vector<shape*> svgReader::read(std::string file) {	//File reader
 	std::string line;
 	std::ifstream svg(file, std::ios::binary);
@@ -51,9 +64,18 @@ std::vector<shape*> svgReader::read(std::string file) {	//File reader
 			newRect->readAttrib(i);
 			shapes.push_back(newRect);
 		}
+		else if (i.type == "svg") {
+			rect newRect;
+			newRect.readAttrib(i);
+			width = newRect.width;
+			height = newRect.height;
+			x = newRect.x;
+			y = newRect.y;
+		}
 	}
 	return shapes;
 }
+
 void svgReader::parse(std::string input) {
 	bool openBrack = false;
 	tagStarter tagStart = tagStarter::NONE;
@@ -123,4 +145,19 @@ void svgReader::parse(std::string input) {
 			std::cout << "\t" << it->first << " " << it->second << "\n";
 		}
 	}*/
+}
+std::vector<std::vector<glm::vec3>> svgReader::getVerticies() const {
+	return svgReader::verticies;
+}
+int svgReader::getX() const {
+	return svgReader::x;
+}
+int svgReader::getY() const {
+	return svgReader::y;
+}
+int svgReader::getWidth() const {
+	return svgReader::width;
+}
+int svgReader::getHeight() const {
+	return svgReader::height;
 }

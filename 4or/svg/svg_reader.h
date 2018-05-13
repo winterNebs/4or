@@ -24,20 +24,31 @@ public:
 	std::map<std::string, std::string> attrib;
 };
 struct shape {
-	float x, y;
+	float x, y, width, height;
 	virtual std::vector<glm::vec3> convert();
 	virtual void readAttrib(xmlTag t);
 };
 struct rect : public shape {
-	float width, height;
 	virtual std::vector<glm::vec3> convert() override;
 	void readAttrib(xmlTag t) override;
 };
 class svgReader {
 public:
+	svgReader(){}
+	svgReader(std::string file);
+	~svgReader();
 	std::vector<xmlTag> tags;
-	std::vector<shape*> read(std::string file);
+	std::vector<std::vector<glm::vec3>> getVerticies() const;
+	std::vector<shape*> getShapes() const;
+	int getX() const;
+	int getY() const;
+	int getWidth() const;
+	int getHeight() const;
 private:
+	std::vector<shape*> shapes;
+	std::vector<shape*> read(std::string file);
 	void parse(std::string input);
+	std::vector<std::vector<glm::vec3>> verticies;
+	int x, y, width, height;
 };
 #endif

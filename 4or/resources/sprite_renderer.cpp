@@ -24,7 +24,6 @@ void SpriteRenderer::drawSprite(Texture2D &texture, glm::vec2 position, glm::vec
 	model = glm::scale(model, glm::vec3(size, 1.0f)); // Last scale
 
 	this->shader.setMatrix4("model", model);
-
 	// Render textured quad
 	this->shader.setVector3f("spriteColor", color);
 
