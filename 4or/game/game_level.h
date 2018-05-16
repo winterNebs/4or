@@ -1,10 +1,12 @@
-#ifndef LEVEL_H
-#define LEVEL_H
-#include <vector>
+#pragma once
 
 #include "game_object.h"
+#include "game_entity.h"
+
 #include "../svg/svg_reader.h"
 #include "../resources/resource_manager.h"
+
+#include <vector>
 
 class GameLevel {
 public:
@@ -19,5 +21,3 @@ public:
 private:
 	void init(std::vector<shape*> blockData);
 };
-
-#endif

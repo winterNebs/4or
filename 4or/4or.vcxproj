@@ -79,6 +79,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -137,8 +138,10 @@
   <ItemGroup>
     <ClInclude Include="camera.h" />
     <ClInclude Include="game\game.h" />
+    <ClInclude Include="game\game_entity.h" />
     <ClInclude Include="game\game_level.h" />
     <ClInclude Include="game\game_object.h" />
+    <ClInclude Include="game\game_entity.cpp" />
     <ClInclude Include="resources\resource_manager.h" />
     <ClInclude Include="resources\shader.h" />
     <ClInclude Include="resources\texture.h" />
@@ -153,6 +156,7 @@
     </None>
     <None Include="resources\shader.fs" />
     <None Include="resources\shader.vs" />
+    <None Include="svg\3rect.svg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\container.jpg" />

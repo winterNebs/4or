@@ -149,15 +149,15 @@ void svgReader::parse(std::string input) {
 std::vector<std::vector<glm::vec3>> svgReader::getVerticies() const {
 	return svgReader::verticies;
 }
-int svgReader::getX() const {
+float svgReader::getX() const {
 	return svgReader::x;
 }
-int svgReader::getY() const {
+float svgReader::getY() const {
 	return svgReader::y;
 }
-int svgReader::getWidth() const {
+float svgReader::getWidth() const {
 	return svgReader::width;
 }
-int svgReader::getHeight() const {
+float svgReader::getHeight() const {
 	return svgReader::height;
 }

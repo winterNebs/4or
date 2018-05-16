@@ -1,13 +1,11 @@
-#ifndef RESOURCE_MANAGER_H
-#define RESOURCE_MANAGER_H
-
-#include <map>
-#include <string>
-
-#include <glad/glad.h>
+#pragma once
 
 #include "shader.h"
 #include "texture.h"
+
+#include <map>
+#include <string>
+#include <glad/glad.h>
 
 // A static singleton ResourceManager class that hosts several
 // functions to load Textures and Shaders. Each loaded texture
@@ -38,5 +36,3 @@ private:
 	// Loads a single texture from file
 	static Texture2D loadTextureFromFile(const GLchar *file, GLboolean alpha);
 };
-
-#endif

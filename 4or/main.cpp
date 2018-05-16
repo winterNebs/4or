@@ -1,15 +1,15 @@
+#include "resources/shader.h"
+#include "camera.h"
+#include "svg/svg_reader.h"
+#include "game/game.h"
+#include "resources/resource_manager.h"
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-
-#include "resources/shader.h"
-#include "camera.h"
-#include "svg/svg_reader.h"
-#include "game/game.h"
-#include "resources/resource_manager.h"
 
 #include <iostream>
 

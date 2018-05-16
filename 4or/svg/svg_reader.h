@@ -40,15 +40,15 @@ public:
 	std::vector<xmlTag> tags;
 	std::vector<std::vector<glm::vec3>> getVerticies() const;
 	std::vector<shape*> getShapes() const;
-	int getX() const;
-	int getY() const;
-	int getWidth() const;
-	int getHeight() const;
+	float getX() const;
+	float getY() const;
+	float getWidth() const;
+	float getHeight() const;
 private:
 	std::vector<shape*> shapes;
 	std::vector<shape*> read(std::string file);
 	void parse(std::string input);
 	std::vector<std::vector<glm::vec3>> verticies;
-	int x, y, width, height;
+	float x, y, width, height;
 };
 #endif

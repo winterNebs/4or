@@ -1,11 +1,10 @@
-#ifndef SHADER_H
-#define SHADER_H
-
-#include <string>
+#pragma once
 
 #include <GLAD/glad.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
+
+#include <string>
 
 
 // General purpsoe shader object. Compiles from file, generates
@@ -36,5 +35,3 @@ private:
 	// Checks if compilation or linking failed and if so, print the error logs
 	void checkCompileErrors(GLuint object, std::string type);
 };
-
-#endif
