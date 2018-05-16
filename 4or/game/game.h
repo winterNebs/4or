@@ -1,9 +1,9 @@
-#ifndef _GAME_
-#define _GAME_
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+#pragma once
 
 #include "game_level.h"
+
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 
 const glm::vec2 PLAYER_SIZE(50.0f, 50.0f);
 const GLfloat PLAYER_VELOCITY(200.0f);
@@ -27,4 +27,3 @@ public:
 	void render();
 
 };
-#endif

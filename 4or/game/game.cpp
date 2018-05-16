@@ -1,7 +1,7 @@
-#include <glm/gtc/matrix_transform.hpp>
 #include "game.h"
 #include "../resources/resource_manager.h"
 #include "../resources/sprite_renderer.h"
+#include <glm/gtc/matrix_transform.hpp>
 
 SpriteRenderer* renderer;
 GameObject* player;
@@ -31,8 +31,8 @@ void Game::init() {
 	levels.push_back(one);
 	levels.push_back(two);
 	level = 1;
-	glm::vec2 playerPos = glm::vec2(100.0f, 100.0f);
-	player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::getTexture("player"));
+	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
+	player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::getTexture("player"), false);
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
