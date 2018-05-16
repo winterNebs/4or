@@ -1,11 +1,10 @@
-#ifndef SPRITE_RENDER_H
-#define SPRITE_RENDER_H
-#include <glad/glad.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-
+#pragma once
 #include "texture.h"
 #include "shader.h"
+
+#include <glm/gtc/matrix_transform.hpp>
+#include <glad/glad.h>
+#include <glm/glm.hpp>
 
 class SpriteRenderer {
 public:
@@ -19,5 +18,5 @@ private:
 	Shader shader;
 	GLuint quadVAO;
 
-	void initRenderData();};
-#endif
+	void initRenderData();
+};
