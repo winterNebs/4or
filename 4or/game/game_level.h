@@ -10,11 +10,13 @@
 
 class GameLevel {
 public:
-	std::vector<GameObject> blocks;
+	std::vector<GameObject*> objects;
+	GameEntity* player;
 
-	GameLevel() {
-
-	}
+	GameLevel() {}
+	~GameLevel();
+	void setPlayer(GameEntity* p);
+	GameEntity* getPlayer();
 	void load(std::string file);
 	void draw(SpriteRenderer &renderer);
 	GLboolean isCompleted();

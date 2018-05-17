@@ -24,18 +24,6 @@ glm::vec2 GameObject::getFriction() const {
 	return friction;
 }
 void GameObject::setFriction(glm::vec2 fric) {
-	/*if (fric.x > 1.0f) {
-		fric.x = 1.0f;
-	}
-	if (fric.x < 0.0f) {
-		fric.x = 0.0f;
-	}
-	if (fric.y > 1.0f) {
-		fric.y = 1.0f;
-	}
-	if (fric.y < 0.0f) {
-		fric.y = 0.0f;
-	}*/
 	friction = fric;
 }
 GLboolean GameObject::relocate(glm::vec2 loc) {
@@ -47,9 +35,10 @@ void GameObject::move(GLfloat dt){
 }
 void GameObject::draw(SpriteRenderer &renderer) {
 	renderer.drawSprite(sprite, position, size, rotation, color);
+	//std::cout << position.x << ", " << position.y << std::endl;
 }
-GLboolean GameObject::collide(GameObject &obj) { ///Two axis collision
-	bool colX = position.x + size.x >= obj.position.x && obj.position.x + obj.size.x >= position.x;
-	bool colY = position.y + size.y >= obj.position.y && obj.position.y + obj.size.y >= position.y;
+GLboolean GameObject::collide(GameObject* obj) { ///Two axis collision
+	bool colX = position.x + size.x >= obj->position.x && obj->position.x + obj->size.x >= position.x;
+	bool colY = position.y + size.y >= obj->position.y && obj->position.y + obj->size.y >= position.y;
 	return colX && colY;
 }

@@ -73,6 +73,9 @@
     <IncludePath>C:\Users\winter Nebs\Documents\ExternC++\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\winter Nebs\Documents\ExternC++\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\winter Nebs\Documents\ExternC++\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -126,6 +129,7 @@
     <ClCompile Include="game\game.cpp" />
     <ClCompile Include="game\game_level.cpp" />
     <ClCompile Include="game\game_object.cpp" />
+    <ClCompile Include="game\game_entity.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="resources\resource_manager.cpp" />
     <ClCompile Include="resources\shader.cpp" />
@@ -141,7 +145,6 @@
     <ClInclude Include="game\game_entity.h" />
     <ClInclude Include="game\game_level.h" />
     <ClInclude Include="game\game_object.h" />
-    <ClInclude Include="game\game_entity.cpp" />
     <ClInclude Include="resources\resource_manager.h" />
     <ClInclude Include="resources\shader.h" />
     <ClInclude Include="resources\texture.h" />

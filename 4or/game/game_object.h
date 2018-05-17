@@ -18,7 +18,7 @@ public:
 	GameObject();
 	GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, bool s, glm::vec3 color = glm::vec3(1.0f), glm::vec2 vel = glm::vec2(0.0f, 0.0f));
 	virtual void draw(SpriteRenderer &renderer);
-	virtual GLboolean collide(GameObject &obj);
+	virtual GLboolean collide(GameObject* obj);
 	virtual void move(GLfloat dt);
 
 	glm::vec2 getPos() const;

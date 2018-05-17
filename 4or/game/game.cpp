@@ -1,18 +1,19 @@
 #include "game.h"
-
 #include "game_entity.h"
 #include "../resources/resource_manager.h"
 #include "../resources/sprite_renderer.h"
 #include <glm/gtc/matrix_transform.hpp>
 
 SpriteRenderer* renderer;
-GameEntity* player;
 
 Game::Game(GLuint w, GLuint h) :
 	state(GameState::GAME_ACTIVE), keys(), width(w), height(h) {
 }
 Game::~Game() {
 	delete renderer;
+	for (auto i : levels) {
+		delete i;
+	}
 }
 
 void Game::init() {
@@ -28,39 +29,50 @@ void Game::init() {
 	Shader myShader = ResourceManager::getShader("sprite");
 	renderer = new SpriteRenderer(myShader);
 	// Load levels
-	GameLevel one; one.load(".\\svg\\2rect.svg");
-	GameLevel two; two.load(".\\svg\\3rect.svg");
+	GameLevel* one = new GameLevel(); one->load(".\\svg\\2rect.svg");
+	GameLevel* two = new GameLevel(); two->load(".\\svg\\3rect.svg");
 	levels.push_back(one);
 	levels.push_back(two);
 	level = 1;
 	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
-	player = new GameEntity(playerPos, PLAYER_SIZE, ResourceManager::getTexture("player"));
+	GameEntity* player = new GameEntity(playerPos, PLAYER_SIZE, ResourceManager::getTexture("player"));
+	levels[level]->setPlayer(player);
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
-		player->acceleration.x = 0.0f;
-		player->acceleration.y = 0.0f;
+		levels[level]->getPlayer()->acceleration.x = 0.0f;
+		levels[level]->getPlayer()->acceleration.y = 0.0f;
 		GLfloat velocity = PLAYER_VELOCITY * dt;
 		if (keys[GLFW_KEY_LEFT]) {
-			player->acceleration.x = -600.0f;
+			levels[level]->getPlayer()->acceleration.x = -600.0f;
 		}
 		if (keys[GLFW_KEY_RIGHT]) {
-			player->acceleration.x = 600.0f;
+			levels[level]->getPlayer()->acceleration.x = 600.0f;
 		}
 		if (keys[GLFW_KEY_UP]) {
-			player->acceleration.y = -600.0f;
+			levels[level]->getPlayer()->acceleration.y = -600.0f;
 		}
 		if (keys[GLFW_KEY_DOWN]) {
-			player->acceleration.y = 600.0f;
+			levels[level]->getPlayer()->acceleration.y = 600.0f;
 		}
 	}
 }
 void Game::update(GLfloat dt) {
-	player->move(dt);
+	for (GameObject* i : levels[level]->objects) {
+		i->move(dt);
+		if (!i->isSolid) {
+			for (GameObject* j : levels[level]->objects) {
+				if (j != i) {
+					if (i->collide(j)) {
+						std::cout << "collide lol"; 
+					}
+				}
+			}
+		}
+	}
 }
 void Game::render() {
 	if (state == GameState::GAME_ACTIVE) {
-		levels[level].draw(*renderer);
-		player->draw(*renderer);
+		levels[level]->draw(*renderer);
 	}
 }

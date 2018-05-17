@@ -5,8 +5,8 @@
 GameEntity::GameEntity() {
 
 }
-GameEntity::GameEntity(glm::vec2 pos, glm::vec2 size, Texture2D sprt, glm::vec3 color = glm::vec3(1.0f), glm::vec2 vel = glm::vec2(0.0f, 0.0f)) :
-	GameObject::GameObject(pos, size, sprt, false, color, vel) {	
+GameEntity::GameEntity(glm::vec2 pos, glm::vec2 size, Texture2D sprt, glm::vec3 color , glm::vec2 vel) :
+	GameObject::GameObject(pos, size, sprt, false, color, vel) {
 }
 
 void GameEntity::move(GLfloat dt) {
@@ -34,23 +34,23 @@ void GameEntity::move(GLfloat dt) {
 	else {
 		velocity.y = 0;
 	}
-
 	velocity += (acceleration * dt);
 	GLfloat speed = abs(sqrt(pow(velocity.x, 2) + pow(velocity.y, 2)));
 	if (speed > 200) {
-
 		velocity = glm::vec2(200 * velocity.x / speed, 200 * velocity.y / speed);
 	}
 	position += (velocity * dt);
-	std::cout << "Delta Time: " << dt <<
-		"\tPostiton: (" << position.x << ", " << position.y <<
-		")\tVelocity: (" << velocity.x << "," << velocity.y <<
-		")\tAcceleration: (" << acceleration.x << "," << acceleration.y <<
-		")" << std::endl;
+	/*std::cout << "Delta Time: " << dt <<
+	"\tPostiton: (" << position.x << ", " << position.y <<
+	")\tVelocity: (" << velocity.x << "," << velocity.y <<
+	")\tAcceleration: (" << acceleration.x << "," << acceleration.y <<
+	")" << std::endl;*/
 }
 
-GLboolean GameEntity::collide(GameObject &obj) { ///Two axis collision
-	bool colX = position.x + size.x >= obj.getPos().x && obj.getPos().x + obj.getSize().x >= getPos().x;
-	bool colY = position.y + size.y >= obj.getPos().y && obj.getPos().y + obj.getSize().y >= getPos().y;
-	return colX && colY;
+GLboolean GameEntity::collide(GameObject* obj) { ///Two axis collision
+	return GameObject::collide(obj);
+}
+
+void GameEntity::draw(SpriteRenderer &renderer) {
+	GameObject::draw(renderer);
 }
