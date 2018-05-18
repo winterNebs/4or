@@ -69,7 +69,7 @@ int main(int argc, char *argv[]) {
 	while (!glfwWindowShouldClose(window)) {
 
 		///Calculate frame time
-		GLfloat currentFrame = glfwGetTime();
+		GLfloat currentFrame = (GLfloat)glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
 		glfwPollEvents();

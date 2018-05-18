@@ -63,8 +63,9 @@ void Game::update(GLfloat dt) {
 		if (!i->isSolid) {
 			for (GameObject* j : levels[level]->objects) {
 				if (j != i) {
-					if (i->collide(j)) {
-						std::cout << "collide lol"; 
+					if (i->collide(j, dt)) {
+
+						std::cout << "collide lol";
 					}
 				}
 			}

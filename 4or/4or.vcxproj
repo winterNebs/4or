@@ -127,9 +127,9 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Documents\ExternC++\src\glad.c" />
     <ClCompile Include="game\game.cpp" />
+    <ClCompile Include="game\game_entity.cpp" />
     <ClCompile Include="game\game_level.cpp" />
     <ClCompile Include="game\game_object.cpp" />
-    <ClCompile Include="game\game_entity.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="resources\resource_manager.cpp" />
     <ClCompile Include="resources\shader.cpp" />

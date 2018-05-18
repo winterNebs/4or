@@ -33,6 +33,6 @@ GameEntity* GameLevel::getPlayer() {
 }
 GameLevel::~GameLevel() {
 	for (auto i : objects) {
-		delete i;
+			delete i;
 	}
 }

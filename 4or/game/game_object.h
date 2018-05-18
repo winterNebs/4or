@@ -6,6 +6,8 @@
 #include <glad/glad.h>
 #include <glm/glm.hpp>
 
+#include <vector>
+
 class GameObject {
 public:
 	glm::vec3 color;
@@ -18,8 +20,10 @@ public:
 	GameObject();
 	GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, bool s, glm::vec3 color = glm::vec3(1.0f), glm::vec2 vel = glm::vec2(0.0f, 0.0f));
 	virtual void draw(SpriteRenderer &renderer);
-	virtual GLboolean collide(GameObject* obj);
+	virtual GLboolean collide(GameObject* obj, GLfloat dt);
 	virtual void move(GLfloat dt);
+	virtual glm::vec2 interpolate(GLfloat dt);
+	virtual glm::vec2 normal(GameObject* obj, GLfloat dt);
 
 	glm::vec2 getPos() const;
 	glm::vec2 getSize() const;
@@ -30,4 +34,6 @@ public:
 	void setFriction(glm::vec2 fric);
 protected:
 	glm::vec2 position, size, velocity, friction;
+	GLfloat calcTime(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, glm::vec2 line2);
+	virtual std::vector<glm::vec2> getVerticies();
 };
