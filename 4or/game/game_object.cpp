@@ -23,6 +23,12 @@ glm::vec2 GameObject::getVel() const {
 glm::vec2 GameObject::getFriction() const {
 	return friction;
 }
+glm::vec2 GameObject::getAccel() const {
+	return acceleration;
+}
+glm::vec2 GameObject::getSize() const {
+	return size;
+}
 void GameObject::setFriction(glm::vec2 fric) {
 	friction = fric;
 }
@@ -31,13 +37,13 @@ GLboolean GameObject::relocate(glm::vec2 loc) {
 	return true;
 }
 void GameObject::move(GLfloat dt){
-
+	
 }
 void GameObject::draw(SpriteRenderer &renderer) {
 	renderer.drawSprite(sprite, position, size, rotation, color);
 	//std::cout << position.x << ", " << position.y << std::endl;
 }
-GLboolean GameObject::collide(GameObject* obj, GLfloat dt) { ///Two axis collision
+GLboolean GameObject::collide(GameObject* obj, const GLfloat dt) { ///Two axis collision
 	glm::vec2 intperPos = interpolate(dt);
 	glm::vec2 objPos = obj->interpolate(dt);
 
@@ -46,10 +52,24 @@ GLboolean GameObject::collide(GameObject* obj, GLfloat dt) { ///Two axis collisi
 	return colX && colY;
 }
 
-glm::vec2 GameObject::interpolate(GLfloat dt) {
+glm::vec2 GameObject::interpolate(const GLfloat dt) {
 	return position;
 }
-glm::vec2 GameObject::normal(GameObject* obj, GLfloat dt) {
+GLfloat GameObject::calcFastest(GameObject* obj) {
+	GLfloat fastest = calcTime(velocity, getVerticies()[0],
+		obj->getVerticies()[0], obj->getVerticies()[(0 + 1) % obj->getVerticies().size()]);;
+	for (int i = 0; i < getVerticies().size(); i++) {
+		for (int j = 0; j < obj->getVerticies().size(); j++) {
+			GLfloat temp = calcTime(velocity, getVerticies()[i],
+				obj->getVerticies()[j], obj->getVerticies()[(j + 1) % (obj->getVerticies().size())]);
+			if (fastest > temp) {
+				fastest = temp;
+			}
+		}
+	}
+	return fastest;
+}
+glm::vec2 GameObject::normal(GameObject* obj, const  GLfloat dt) {
 	///Axis rectangle assumption
 	///Check collision first
 	GLfloat fastest = calcTime(velocity, getVerticies()[0],
@@ -60,16 +80,23 @@ glm::vec2 GameObject::normal(GameObject* obj, GLfloat dt) {
 		for (int j = 0; j < obj->getVerticies().size(); j++) {
 			GLfloat temp = calcTime(velocity, getVerticies()[i],
 				obj->getVerticies()[j], obj->getVerticies()[(j+1)%(obj->getVerticies().size())]);
+			
+			//std::cout << "i:" << i << "\tj:" << j << "\tTime:" << temp << "\tFastest:" << fastest << std::endl;
+			
 			if (fastest > temp) {
 				fastest = temp;
 				indexj = j;
+			}
+			else if (fastest == temp) {
+
+				std::cout << "SAME" << std::endl;
 			}
 		}
 	}
 	glm::vec2 normal = glm::vec2(obj->getVerticies()[indexj].y - obj->getVerticies()[(indexj + 1) % obj->getVerticies().size()].y,
 		-(obj->getVerticies()[indexj].x - obj->getVerticies()[(indexj + 1) % obj->getVerticies().size()].x));
 	normal = glm::normalize(normal);
-	if (glm::distance(interpolate(dt), normal + interpolate(dt)) > glm::distance(interpolate(dt), interpolate(dt) - normal)) {
+	if (glm::distance(interpolate(fastest), normal + interpolate(fastest)) > glm::distance(interpolate(fastest), interpolate(fastest) - normal)) {
 		normal = -normal;
 		std::cout << "flip" << std::endl;
 	}
@@ -81,11 +108,39 @@ GLfloat GameObject::calcTime(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, gl
 	//function y = (dir.y/dir.x)(x-point.x)+point.y
 	//function y = ((line1.y-line2.y)/(line1.x-line1.y))(x-line1.x) + line1.y
 	//Trust me the algebra works out
-	GLfloat slope1 = dir.y / dir.x;
-	GLfloat slope2 = (line1.y - line2.y) / (line1.x - line2.x);
-	GLfloat xval = (point.y - line1.y + (line1.x * slope2) + (point.x * slope1)) /
-		(slope2 - slope1);
-	return xval / point.x;
+
+	GLfloat slope1 = dir.y / dir.x;			//X coefficient 1
+	GLfloat deltay = -(line1.y - line2.y);
+	GLfloat deltax = -(line1.x - line2.y);
+	GLfloat slope2 = deltay / deltax; //X coefficient 2
+	GLfloat yCo1 = 1;
+	GLfloat yCo2 = 1;
+	GLfloat const1 = point.y + (slope1 * point.x);
+	GLfloat const2 = line1.y + (slope2 * line1.x);
+	
+	if (dir.x == 0) {
+		yCo1 = 0;
+		const1 = point.x;
+		slope1 = 1;
+	}
+	if (deltax == 0) {
+		yCo2 = 0;
+		const2 = line1.x;
+		slope2 = 1;
+	}
+	glm::mat2x2 A(yCo1, slope1, yCo2, slope2);
+	glm::vec2 B(const1, const2);
+	glm::vec2 ans;
+	ans = glm::inverse(A) * B;
+	/*
+	[yCo1, slope1] * [x] = [const1]
+	[yCo2, slope2] * [y] = [const2]
+	*/
+	//std::cout << ans.x << "," << ans.y << std::endl;
+	if (dir.x == 0) {
+		return (ans.y - point.y) / dir.y;
+	}
+	return (ans.x - point.x) / dir.x;
 }
 
 std::vector<glm::vec2> GameObject::getVerticies() {

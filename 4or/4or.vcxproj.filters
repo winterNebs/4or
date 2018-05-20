@@ -15,12 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Documents\ExternC++\src\glad.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="resources\shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -33,16 +27,10 @@
     <ClCompile Include="resources\resource_manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="resources\sprite_renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="resources\sprite_renderer.h">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="svg\svg_reader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game\game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="game\game_object.cpp">
@@ -52,6 +40,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="game\game_entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\winter Nebs\Documents\ExternC++\src\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game\game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resources\sprite_renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game\game_rect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -86,6 +89,9 @@
     <ClInclude Include="game\game_entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="game\game_rect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="svg\2rect.svg" />
@@ -94,6 +100,7 @@
     <None Include="resources\shaders\sprite.vs" />
     <None Include="resources\shaders\sprite.fs" />
     <None Include="svg\3rect.svg" />
+    <None Include="svg\complexLevel.svg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\container.jpg">

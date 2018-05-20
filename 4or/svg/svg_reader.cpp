@@ -4,6 +4,8 @@ svgReader::svgReader(std::string file) {
 	/*for (auto i : svgReader::read(file)) {
 		svgReader::verticies.push_back(i->convert());
 	}*/
+	///TODO: 
+	//MATRIX TRANSFORRMS
 }
 std::vector<shape*> svgReader::getShapes() const{
 	return svgReader::shapes;

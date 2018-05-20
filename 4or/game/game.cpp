@@ -31,45 +31,47 @@ void Game::init() {
 	// Load levels
 	GameLevel* one = new GameLevel(); one->load(".\\svg\\2rect.svg");
 	GameLevel* two = new GameLevel(); two->load(".\\svg\\3rect.svg");
+	GameLevel* three = new GameLevel(); three->load(".\\svg\\complexLevel.svg");
 	levels.push_back(one);
 	levels.push_back(two);
+	levels.push_back(three);
 	level = 1;
-	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
+	glm::vec2 playerPos = glm::vec2(300.0f, 0.0f);
 	GameEntity* player = new GameEntity(playerPos, PLAYER_SIZE, ResourceManager::getTexture("player"));
 	levels[level]->setPlayer(player);
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
-		levels[level]->getPlayer()->acceleration.x = 0.0f;
-		levels[level]->getPlayer()->acceleration.y = 0.0f;
+		levels[level]->getPlayer()->appliedF = glm::vec2(0, 0);
+
 		GLfloat velocity = PLAYER_VELOCITY * dt;
 		if (keys[GLFW_KEY_LEFT]) {
-			levels[level]->getPlayer()->acceleration.x = -600.0f;
+			levels[level]->getPlayer()->appliedF.x = -600.0f;
 		}
 		if (keys[GLFW_KEY_RIGHT]) {
-			levels[level]->getPlayer()->acceleration.x = 600.0f;
+			levels[level]->getPlayer()->appliedF.x = 600.0f;
 		}
 		if (keys[GLFW_KEY_UP]) {
-			levels[level]->getPlayer()->acceleration.y = -600.0f;
+			levels[level]->getPlayer()->appliedF.y = -800.0f;
 		}
 		if (keys[GLFW_KEY_DOWN]) {
-			levels[level]->getPlayer()->acceleration.y = 600.0f;
+			levels[level]->getPlayer()->appliedF.y = 600.0f;
 		}
 	}
 }
 void Game::update(GLfloat dt) {
 	for (GameObject* i : levels[level]->objects) {
-		i->move(dt);
 		if (!i->isSolid) {
 			for (GameObject* j : levels[level]->objects) {
 				if (j != i) {
 					if (i->collide(j, dt)) {
-
-						std::cout << "collide lol";
+						///Nothing for now.
+						std::cout << "colliding" << std::endl;
 					}
 				}
 			}
 		}
+		i->move(dt);
 	}
 }
 void Game::render() {

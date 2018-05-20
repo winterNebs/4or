@@ -125,11 +125,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Documents\ExternC++\src\glad.c" />
+    <ClCompile Include="..\..\..\..\..\winter Nebs\Documents\ExternC++\src\glad.c" />
     <ClCompile Include="game\game.cpp" />
     <ClCompile Include="game\game_entity.cpp" />
     <ClCompile Include="game\game_level.cpp" />
     <ClCompile Include="game\game_object.cpp" />
+    <ClCompile Include="game\game_rect.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="resources\resource_manager.cpp" />
     <ClCompile Include="resources\shader.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="game\game_entity.h" />
     <ClInclude Include="game\game_level.h" />
     <ClInclude Include="game\game_object.h" />
+    <ClInclude Include="game\game_rect.h" />
     <ClInclude Include="resources\resource_manager.h" />
     <ClInclude Include="resources\shader.h" />
     <ClInclude Include="resources\texture.h" />
@@ -160,6 +162,7 @@
     <None Include="resources\shader.fs" />
     <None Include="resources\shader.vs" />
     <None Include="svg\3rect.svg" />
+    <None Include="svg\complexLevel.svg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\container.jpg" />

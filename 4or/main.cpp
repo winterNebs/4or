@@ -1,5 +1,4 @@
 #include "resources/shader.h"
-#include "camera.h"
 #include "svg/svg_reader.h"
 #include "game/game.h"
 #include "resources/resource_manager.h"
@@ -28,7 +27,7 @@ Game game(SCR_WIDTH, SCR_HEIGHT);
 
 int main(int argc, char *argv[]) {
 
-	
+
 	///GLFW: initialize & configure
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -82,12 +81,12 @@ int main(int argc, char *argv[]) {
 		glClearColor(0.1f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		game.render();
-	
+
 		glfwSwapBuffers(window);
 	}
 	///Deallocate 
 	ResourceManager::clear();
-	
+
 	glfwTerminate();
 	return 0;
 }
