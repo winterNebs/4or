@@ -52,40 +52,99 @@ glm::vec2 GameObject::interpolate(GLfloat dt) {
 glm::vec2 GameObject::normal(GameObject* obj, GLfloat dt) {
 	///Axis rectangle assumption
 	///Check collision first
-	GLfloat fastest = calcTime(velocity, getVerticies()[0],
-		obj->getVerticies()[0], obj->getVerticies()[(0 + 1) % obj->getVerticies().size()]);;
-	int indexj = 0;
+	GLfloat closest = INFINITY;
+	int indexj = -1;
 	
 	for (int i = 0; i < getVerticies().size(); i++) {
 		for (int j = 0; j < obj->getVerticies().size(); j++) {
-			GLfloat temp = calcTime(velocity, getVerticies()[i],
+			GLfloat temp = calcDist(velocity, getVerticies()[i],
 				obj->getVerticies()[j], obj->getVerticies()[(j+1)%(obj->getVerticies().size())]);
-			if (fastest > temp) {
-				fastest = temp;
+			if (closest > temp && temp >= 0) {
+				closest = temp;
 				indexj = j;
 			}
 		}
 	}
+	//std::cout << "j:" << indexj << ", j+1:" << (indexj + 1) % obj->getVerticies().size() << std::endl;
 	glm::vec2 normal = glm::vec2(obj->getVerticies()[indexj].y - obj->getVerticies()[(indexj + 1) % obj->getVerticies().size()].y,
 		-(obj->getVerticies()[indexj].x - obj->getVerticies()[(indexj + 1) % obj->getVerticies().size()].x));
 	normal = glm::normalize(normal);
-	if (glm::distance(interpolate(dt), normal + interpolate(dt)) > glm::distance(interpolate(dt), interpolate(dt) - normal)) {
+	if (glm::distance(interpolate(calcTime(closest)), normal + interpolate(calcTime(closest))) > glm::distance(interpolate(calcTime(closest)), interpolate(calcTime(closest)) - normal)) {
 		normal = -normal;
 		std::cout << "flip" << std::endl;
 	}
 
 	return normal;
 }
-GLfloat GameObject::calcTime(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, glm::vec2 line2) {
+GLfloat GameObject::getCloseDist(GameObject* obj) {
+	GLfloat closest = INFINITY;
+	int indexj = -1;
+
+	for (int i = 0; i < getVerticies().size(); i++) {
+		for (int j = 0; j < obj->getVerticies().size(); j++) {
+			GLfloat temp = calcDist(velocity, getVerticies()[i],
+				obj->getVerticies()[j], obj->getVerticies()[(j + 1) % (obj->getVerticies().size())]);
+			if (closest > temp && temp >= 0) {
+				closest = temp;
+			}
+		}
+	}
+	return closest;
+}
+GLfloat GameObject::calcDist(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, glm::vec2 line2) {
 	//Dir * time = 
 	//function y = (dir.y/dir.x)(x-point.x)+point.y
 	//function y = ((line1.y-line2.y)/(line1.x-line1.y))(x-line1.x) + line1.y
-	//Trust me the algebra works out
-	GLfloat slope1 = dir.y / dir.x;
-	GLfloat slope2 = (line1.y - line2.y) / (line1.x - line2.x);
-	GLfloat xval = (point.y - line1.y + (line1.x * slope2) + (point.x * slope1)) /
+	//Redo
+
+	GLfloat slope1 = dir.y / dir.x;								//M1
+	GLfloat slope2 = (line1.y - line2.y) / (line1.x - line2.x);	//M2
+	GLfloat yCo1 = 1;
+	GLfloat yCo2 = 1;
+	GLfloat const1 = point.y - (slope1 * point.x);
+	GLfloat const2 = line1.y - (slope2 * line1.x);
+	if (slope1 == slope2 ) {
+		return -1;
+	}
+	///Bad coding lol
+	if (dir.x == 0) {
+		slope1 = 1;
+		const1 = point.x;
+		yCo1 = 0;
+	}
+	if (line1.x - line2.x == 0) {
+		slope2 = 1;
+		const2 = line1.x;
+		yCo2 = 0;
+	}
+		//std::cout << slope1 << "," << slope2 << "," << yCo1 << "," << yCo2 << "," << const1 << "," << const2 << std::endl;
+	/*
+	-slope1 x + yCo1 y = const1
+	-slope2 x + yCo2 y = const2
+	[-slope1 yCo1 C]
+	[D E F]
+	*/
+	
+	GLfloat xval = ((const1 * yCo2) - (yCo1 * const2)) / (((-slope1) * yCo2) - (yCo1 * (-slope2)));
+	GLfloat yval = (((-slope1) * const2) - (const1 * (-slope2))) / (((-slope1) * yCo2) - (yCo1 * (-slope2)));
+	
+	if (dir.y == 0 && line1.x - line2.x == 0) {
+		xval = line1.x;
+		yval = point.y;
+	}
+	if (dir.x == 0 && line1.y - line2.y == 0) {
+		xval = point.x;
+		yval = line1.y;
+	}
+	//std::cout << (xval / dir.x) << "," << (yval / dir.y) << std::endl;
+	/*GLfloat xval = (point.y - line1.y + (line1.x * slope2) + (point.x * slope1)) /
 		(slope2 - slope1);
-	return xval / point.x;
+	return xval / point.x;*/
+	if (((xval >= line1.x && xval <= line2.x) || (xval >= line2.x && xval <= line1.x)) &&
+		((yval >= line1.y && yval <= line2.y) || (yval >= line2.y && yval <= line1.y))) {
+		return sqrt(pow(xval-point.x, 2) + pow(yval-point.y, 2));
+	}
+	else return -1;
 }
 
 std::vector<glm::vec2> GameObject::getVerticies() {
@@ -95,4 +154,11 @@ std::vector<glm::vec2> GameObject::getVerticies() {
 	verts.push_back(glm::vec2(position.x + size.x, position.y + size.y));
 	verts.push_back(glm::vec2(position.x, position.y + size.y));
 	return verts;
+}
+GLfloat GameObject::calcTime(GLfloat dist) {
+	//std::cout << "Dist:\t" << dist << " Accel:\t" << sqrt(pow(acceleration.x, 2) + pow(acceleration.y, 2));
+	if (abs(acceleration.x) > 0 || abs(acceleration.y) > 0) {
+		return sqrt((dist) / sqrt(pow(acceleration.x, 2) + pow(acceleration.y, 2)));
+	}
+	return (dist) / sqrt(pow(velocity.x, 2) + pow(velocity.y, 2));
 }

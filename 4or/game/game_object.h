@@ -11,7 +11,7 @@
 class GameObject {
 public:
 	glm::vec3 color;
-	glm::vec2 acceleration;
+	glm::vec2 acceleration, appliedF, normalF;
 	GLfloat rotation;
 	GLboolean isSolid, isStatic;
 
@@ -32,8 +32,11 @@ public:
 
 	GLboolean relocate(glm::vec2 loc);
 	void setFriction(glm::vec2 fric);
+
+	GLfloat getCloseDist(GameObject* obj);
+	GLfloat calcTime(GLfloat dist);
 protected:
 	glm::vec2 position, size, velocity, friction;
-	GLfloat calcTime(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, glm::vec2 line2);
+	GLfloat calcDist(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, glm::vec2 line2);
 	virtual std::vector<glm::vec2> getVerticies();
 };

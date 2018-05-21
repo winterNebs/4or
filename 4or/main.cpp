@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
 		glfwPollEvents();
-
+		//std::cout << "FPS: " << 1 / (deltaTime) << std::endl;
 		game.processInput(deltaTime);
 
 		game.update(deltaTime);

@@ -31,44 +31,53 @@ void Game::init() {
 	// Load levels
 	GameLevel* one = new GameLevel(); one->load(".\\svg\\2rect.svg");
 	GameLevel* two = new GameLevel(); two->load(".\\svg\\3rect.svg");
+	GameLevel* three = new GameLevel(); three->load(".\\svg\\1box.svg");
 	levels.push_back(one);
 	levels.push_back(two);
-	level = 1;
+	levels.push_back(three);
+	level = 2;
 	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
 	GameEntity* player = new GameEntity(playerPos, PLAYER_SIZE, ResourceManager::getTexture("player"));
 	levels[level]->setPlayer(player);
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
-		levels[level]->getPlayer()->acceleration.x = 0.0f;
-		levels[level]->getPlayer()->acceleration.y = 0.0f;
+		levels[level]->getPlayer()->appliedF = glm::vec2(0);
 		GLfloat velocity = PLAYER_VELOCITY * dt;
 		if (keys[GLFW_KEY_LEFT]) {
-			levels[level]->getPlayer()->acceleration.x = -600.0f;
+			levels[level]->getPlayer()->appliedF.x -= 600.0f;
 		}
 		if (keys[GLFW_KEY_RIGHT]) {
-			levels[level]->getPlayer()->acceleration.x = 600.0f;
+			levels[level]->getPlayer()->appliedF.x += 600.0f;
 		}
 		if (keys[GLFW_KEY_UP]) {
-			levels[level]->getPlayer()->acceleration.y = -600.0f;
+			levels[level]->getPlayer()->appliedF.y -= 600.0f;
 		}
 		if (keys[GLFW_KEY_DOWN]) {
-			levels[level]->getPlayer()->acceleration.y = 600.0f;
+			levels[level]->getPlayer()->appliedF.y += 600.0f;
 		}
 	}
 }
 void Game::update(GLfloat dt) {
 	for (GameObject* i : levels[level]->objects) {
-		i->move(dt);
-		if (!i->isSolid) {
+		if (!i->isStatic) {
 			for (GameObject* j : levels[level]->objects) {
 				if (j != i) {
 					if (i->collide(j, dt)) {
+						GLfloat temp = i->calcTime(i->getCloseDist(j));
+						//std::cout << "Dist:\t"<< i->getCloseDist(j) << " Time:\t" << temp << " DT:\t" << dt << std::endl;
+						//i->move(temp);
+						//std::cout << "collide lol" << std::endl;
+					}
+					else {
+						///I know this is bad but im hopeful
 
-						std::cout << "collide lol";
+						i->move(dt);
 					}
 				}
 			}
+			//i->normalF = glm::vec2(0);
+
 		}
 	}
 }
