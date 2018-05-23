@@ -57,12 +57,12 @@ glm::vec2 GameObject::normal(GameObject* obj, GLfloat dt) {
 	file << "==CALC NORMAL==\n";
 	file << "Collider: ";
 	for (int i = 0; i < getVerticies().size(); i++) {
-		file << i << "(" << getVerticies()[i].x << "," << getVerticies()[i].y << ") ";
+		file << i << "(" << getVerticies()[i].x << ", " << getVerticies()[i].y << ")\t";
 	}
 	file << "\n"; 
 	file << "Collidee: ";
 	for (int i = 0; i < obj->getVerticies().size(); i++) {
-		file << i << "(" << obj->getVerticies()[i].x << "," << obj->getVerticies()[i].y << ") ";
+		file << i << "(" << obj->getVerticies()[i].x << ", " << obj->getVerticies()[i].y << ")\t";
 	}
 	file << "\n";
 	GLfloat closest = INFINITY;
@@ -118,18 +118,20 @@ GLfloat GameObject::calcDist(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, gl
 	//Redo
 	std::ofstream file;
 	file.open(".\\logs\\normals.txt", std::ios_base::app);
-	file << "Vertex: " << "(" << point.x << "," << point.y << ") Dir: (" << dir.x << "," << dir.y << ")\n";
+	file << "Vertex\t: (" << point.x << ", " << point.y << ")\n";
+	file << "Dir\t\t: (" << dir.x << ", " << dir.y << ")\n";
 	
-	file << "Lines: " << "(" << line1.x << "," << line1.x << ") (" << line2.x << ", " << line2.x << ")\n";
+	file << "Line1\t: (" << line1.x << ", " << line1.x << ")\n";
+	file << "Line2\t: (" << line2.x << ", " << line2.x << ")\n";
 	GLfloat slope1 = dir.y / dir.x;								//M1
 	GLfloat slope2 = (line1.y - line2.y) / (line1.x - line2.x);	//M2
 	GLfloat yCo1 = 1;
 	GLfloat yCo2 = 1;
 	GLfloat const1 = point.y - (slope1 * point.x);
 	GLfloat const2 = line1.y - (slope2 * line1.x);
-	file << "slope1, slope2: " << slope1 << "," << slope2 << "\n";
-	file << "yCo1, yCo2: " << yCo1 << "," << yCo2 << "\n";
-	file << "const1, const2: " << const1 << "," << const2 << "\n";
+	file << "slope1, slope2\t: " << slope1 << ", " << slope2 << "\n";
+	file << "yCo1, yCo2\t\t: " << yCo1 << ", " << yCo2 << "\n";
+	file << "const1, const2\t: " << const1 << ", " << const2 << "\n";
 
 	if (slope1 == slope2 ) {
 		return -1;
@@ -145,7 +147,7 @@ GLfloat GameObject::calcDist(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, gl
 		const2 = line1.x;
 		yCo2 = 0;
 	}
-		//std::cout << slope1 << "," << slope2 << "," << yCo1 << "," << yCo2 << "," << const1 << "," << const2 << std::endl;
+		//std::cout << slope1 << ", " << slope2 << ", " << yCo1 << ", " << yCo2 << ", " << const1 << ", " << const2 << std::endl;
 	/*
 	-slope1 x + yCo1 y = const1
 	-slope2 x + yCo2 y = const2
@@ -155,7 +157,7 @@ GLfloat GameObject::calcDist(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, gl
 	
 	GLfloat xval = ((const1 * yCo2) - (yCo1 * const2)) / (((-slope1) * yCo2) - (yCo1 * (-slope2)));
 	GLfloat yval = (((-slope1) * const2) - (const1 * (-slope2))) / (((-slope1) * yCo2) - (yCo1 * (-slope2)));
-	file << "POI: (" << xval << "," << yval << ")\n";
+	file << "POI\t\t:( " << xval << ", " << yval << ")\n";
 	if (dir.y == 0 && line1.x - line2.x == 0) {
 		xval = line1.x;
 		yval = point.y;
@@ -164,7 +166,7 @@ GLfloat GameObject::calcDist(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, gl
 		xval = point.x;
 		yval = line1.y;
 	}
-	//std::cout << (xval / dir.x) << "," << (yval / dir.y) << std::endl;
+	//std::cout << (xval / dir.x) << ", " << (yval / dir.y) << std::endl;
 	/*GLfloat xval = (point.y - line1.y + (line1.x * slope2) + (point.x * slope1)) /
 		(slope2 - slope1);
 	return xval / point.x;*/

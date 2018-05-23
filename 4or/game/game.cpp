@@ -75,9 +75,14 @@ void Game::processInput(GLfloat dt) {
 	}
 }
 void Game::update(GLfloat dt) {
+	
 	std::ofstream file;
 	file.open(".\\logs\\normals.txt", std::ios_base::app);
 	file << "===================" << "NUMBER " << counter << "===================\n";
+	file << "Delta Time: " << dt << "\n";
+	if (dt > 0.2) {
+		file << "Lagging :(" << "\n";
+	}
 	file.close();
 	for (GameObject* i : levels[level]->objects) {
 		if (!i->isStatic) {
