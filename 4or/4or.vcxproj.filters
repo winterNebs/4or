@@ -96,6 +96,7 @@
     <None Include="svg\3rect.svg" />
     <None Include="svg\1box.svg" />
     <None Include="svg\5rect.svg" />
+    <None Include="svg\normaldebug.svg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\container.jpg">

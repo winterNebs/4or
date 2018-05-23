@@ -127,9 +127,9 @@ GLfloat GameObject::calcDist(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, gl
 	GLfloat yCo2 = 1;
 	GLfloat const1 = point.y - (slope1 * point.x);
 	GLfloat const2 = line1.y - (slope2 * line1.x);
-	std::cout << "slope1, slope2: " << slope1 << "," << slope2 << "\n";
-	std::cout << "yCo1, yCo2: " << yCo1 << "," << yCo2 << "\n";
-	std::cout << "const1, const2: " << const1 << "," << const2 << "\n";
+	file << "slope1, slope2: " << slope1 << "," << slope2 << "\n";
+	file << "yCo1, yCo2: " << yCo1 << "," << yCo2 << "\n";
+	file << "const1, const2: " << const1 << "," << const2 << "\n";
 
 	if (slope1 == slope2 ) {
 		return -1;
