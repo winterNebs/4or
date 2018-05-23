@@ -11,9 +11,10 @@
 class GameObject {
 public:
 	glm::vec3 color;
-	glm::vec2 acceleration, appliedF, normalF;
+	glm::vec2 acceleration, appliedF, normalF, gravity;
 	GLfloat rotation;
 	GLboolean isSolid, isStatic;
+	GLboolean onGround;
 
 	Texture2D sprite;
 

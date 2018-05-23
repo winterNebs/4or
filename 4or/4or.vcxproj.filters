@@ -94,6 +94,8 @@
     <None Include="resources\shaders\sprite.vs" />
     <None Include="resources\shaders\sprite.fs" />
     <None Include="svg\3rect.svg" />
+    <None Include="svg\1box.svg" />
+    <None Include="svg\5rect.svg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\container.jpg">

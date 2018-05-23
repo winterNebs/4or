@@ -66,6 +66,9 @@ glm::vec2 GameObject::normal(GameObject* obj, GLfloat dt) {
 		}
 	}
 	//std::cout << "j:" << indexj << ", j+1:" << (indexj + 1) % obj->getVerticies().size() << std::endl;
+	if (indexj == -1) {
+		return glm::vec2(0, 0);
+	}
 	glm::vec2 normal = glm::vec2(obj->getVerticies()[indexj].y - obj->getVerticies()[(indexj + 1) % obj->getVerticies().size()].y,
 		-(obj->getVerticies()[indexj].x - obj->getVerticies()[(indexj + 1) % obj->getVerticies().size()].x));
 	normal = glm::normalize(normal);

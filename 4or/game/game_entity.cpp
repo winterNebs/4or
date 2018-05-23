@@ -9,6 +9,8 @@ GameEntity::GameEntity(glm::vec2 pos, glm::vec2 size, Texture2D sprt, glm::vec3 
 	GameObject::GameObject(pos, size, sprt, false, color, vel) {
 	appliedF = glm::vec2(0);
 	normalF = glm::vec2(0);
+	gravity = glm::vec2(0, 400.0f);
+	onGround = false;
 }
 
 void GameEntity::move(GLfloat dt) {
@@ -37,12 +39,11 @@ void GameEntity::move(GLfloat dt) {
 		velocity.y = 0;
 	}
 	acceleration = normalF + appliedF;
+	if (!onGround) {
+		acceleration += gravity;
+	}
 	velocity += (acceleration * dt);
-	/*
-	GLfloat speed = sqrt(pow(velocity.x, 2) + pow(velocity.y, 2));
-	if (speed > 200) {
-		velocity = glm::vec2(200 * velocity.x / speed, 200 * velocity.y / speed);
-	}*/
+	
 	position += velocity * dt;
 	/*
 	std::cout <<
@@ -54,21 +55,42 @@ void GameEntity::move(GLfloat dt) {
 		")\tNormal: (" << normalF.x << "," << normalF.y <<
 		std::endl;*/
 }
-
+//static int counter = 0;
 GLboolean GameEntity::collide(GameObject* obj, GLfloat dt) { ///Two axis collision
+	//if (counter == 1) {
+		//int i = 0;
+	//}
 	GLboolean col = GameObject::collide(obj, dt);
-	if (GameObject::collide(obj, dt)) {
+	if (col) {
+		//counter++;
 		//move(dt-calcTime(getCloseDist(obj)));
 		//move(getFastestTime(obj)-dt);
 		
 		glm::vec2 normal = GameObject::normal(obj, dt);
-		GLfloat speed = abs(sqrt(pow(velocity.x, 2) + pow(velocity.y, 2)));
-		glm::vec2 reflection = glm::vec2(velocity - (2 * (glm::dot(velocity, normal)))*normal);
-		velocity += glm::vec2(reflection.x, reflection.y);
-		glm::vec2 normF = glm::vec2(appliedF - (2 * (glm::dot(appliedF, normal)))*normal);
-		normalF = glm::vec2(normF.x, normF.y); 
+		if (normal.x == 0 && normal.y == 0) {
+			//normal = glm::vec2(1.0f);
+		}
+		if (normal.y > 0) {
+			onGround = true;
+			//std::cout << "grounded" << std::endl;
+		}
+		//GLfloat speed = abs(sqrt(pow(velocity.x, 2) + pow(velocity.y, 2)));
+		//glm::vec2 reflection = glm::vec2(velocity - (2 * (glm::dot(velocity, normal)))*normal);
+		velocity = glm::vec2(velocity.x * normal.y, velocity.y * normal.x);
+		//velocity += reflection ;
+		//velocity *= -glm::vec2(normal.y, normal.x); ///Bad but whatever
+		//velocity -= glm::vec2(velocity.x * normal.y, velocity.y * normal.x);
+		glm::vec2 normF;
+		if(onGround){
+			normF = glm::vec2((appliedF) - (2 * (glm::dot((appliedF), normal)))*normal);
+		}
+		else {
+			normF = glm::vec2((appliedF + gravity) - (2 * (glm::dot((appliedF + gravity), normal)))*normal);
+		}
+		normalF += glm::vec2(normF.x*normal.x, normF.y*normal.y); 
 		position -= normal * 0.01f;
-	std::cout <<
+		
+		std::cout <<
 			//"Delta Time: " << dt <<
 			"\tPostiton: (" << position.x << ", " << position.y <<
 			")\tVelocity: (" << velocity.x << "," << velocity.y <<
@@ -77,12 +99,12 @@ GLboolean GameEntity::collide(GameObject* obj, GLfloat dt) { ///Two axis collisi
 			")\tAppliedF: (" << appliedF.x << "," << appliedF.y <<
 			")\tNormalF: (" << normalF.x << "," << normalF.y <<
 			")" <<
-			std::endl;
+			std::endl; 
 	}
 	else {
 		normalF = glm::vec2(0);
 	}
-	return GameObject::collide(obj, dt);
+	return col;
 }
 
 void GameEntity::draw(SpriteRenderer &renderer) {
@@ -117,11 +139,10 @@ glm::vec2 GameEntity::interpolate(GLfloat dt) {
 		vel.y = 0;
 	}
 	acc = normalF + appliedF;
+	if (!onGround) {
+		acc += gravity;
+	}
 	vel += (acc * dt);
-	/*
-	GLfloat speed = sqrt(pow(vel.x, 2) + pow(vel.y, 2));
-	if (speed > 200) {
-		vel = glm::vec2(200 * vel.x / speed, 200 * vel.y / speed);
-	}*/
+	
 	return (position + (vel * dt));
 }

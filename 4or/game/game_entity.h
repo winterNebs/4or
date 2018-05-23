@@ -10,5 +10,4 @@ public:
 	virtual void move(GLfloat dt) override;
 	virtual void draw(SpriteRenderer &renderer) override;
 	virtual glm::vec2 interpolate(GLfloat dt) override;
-
 };

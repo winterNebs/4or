@@ -154,12 +154,14 @@
   <ItemGroup>
     <None Include="resources\shaders\sprite.fs" />
     <None Include="resources\shaders\sprite.vs" />
+    <None Include="svg\1box.svg" />
     <None Include="svg\2rect.svg">
       <SubType>Designer</SubType>
     </None>
     <None Include="resources\shader.fs" />
     <None Include="resources\shader.vs" />
     <None Include="svg\3rect.svg" />
+    <None Include="svg\5rect.svg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\container.jpg" />

@@ -32,10 +32,12 @@ void Game::init() {
 	GameLevel* one = new GameLevel(); one->load(".\\svg\\2rect.svg");
 	GameLevel* two = new GameLevel(); two->load(".\\svg\\3rect.svg");
 	GameLevel* three = new GameLevel(); three->load(".\\svg\\1box.svg");
+	GameLevel* four = new GameLevel(); four->load(".\\svg\\5rect.svg");
 	levels.push_back(one);
 	levels.push_back(two);
 	levels.push_back(three);
-	level = 2;
+	levels.push_back(four);
+	level = 3;
 	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
 	GameEntity* player = new GameEntity(playerPos, PLAYER_SIZE, ResourceManager::getTexture("player"));
 	levels[level]->setPlayer(player);
@@ -61,20 +63,25 @@ void Game::processInput(GLfloat dt) {
 void Game::update(GLfloat dt) {
 	for (GameObject* i : levels[level]->objects) {
 		if (!i->isStatic) {
+			bool colliding = false;
+			i->normalF = glm::vec2(0, 0);
 			for (GameObject* j : levels[level]->objects) {
 				if (j != i) {
 					if (i->collide(j, dt)) {
+						colliding = true;
 						GLfloat temp = i->calcTime(i->getCloseDist(j));
 						//std::cout << "Dist:\t"<< i->getCloseDist(j) << " Time:\t" << temp << " DT:\t" << dt << std::endl;
 						//i->move(temp);
 						//std::cout << "collide lol" << std::endl;
 					}
 					else {
-						///I know this is bad but im hopeful
 
-						i->move(dt);
 					}
 				}
+			}
+			if (!colliding) {
+				i->onGround = false;
+				i->move(dt);
 			}
 			//i->normalF = glm::vec2(0);
 
