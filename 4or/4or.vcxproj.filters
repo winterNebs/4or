@@ -105,4 +105,8 @@
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="logs\normals.txt" />
+    <Text Include="logs\collide.txt" />
+  </ItemGroup>
 </Project>

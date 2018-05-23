@@ -1,6 +1,7 @@
 #include "game_entity.h"
 
 #include <iostream>
+#include <fstream>
 
 GameEntity::GameEntity() {
 
@@ -55,20 +56,18 @@ void GameEntity::move(GLfloat dt) {
 		")\tNormal: (" << normalF.x << "," << normalF.y <<
 		std::endl;*/
 }
-//static int counter = 0;
+static int c = 0;
 GLboolean GameEntity::collide(GameObject* obj, GLfloat dt) { ///Two axis collision
-	//if (counter == 1) {
-		//int i = 0;
-	//}
+
 	GLboolean col = GameObject::collide(obj, dt);
 	if (col) {
-		//counter++;
+
 		//move(dt-calcTime(getCloseDist(obj)));
 		//move(getFastestTime(obj)-dt);
 		
 		glm::vec2 normal = GameObject::normal(obj, dt);
 		if (normal.x == 0 && normal.y == 0) {
-			//normal = glm::vec2(1.0f);
+			return false;
 		}
 		if (normal.y > 0) {
 			onGround = true;
@@ -76,7 +75,7 @@ GLboolean GameEntity::collide(GameObject* obj, GLfloat dt) { ///Two axis collisi
 		}
 		//GLfloat speed = abs(sqrt(pow(velocity.x, 2) + pow(velocity.y, 2)));
 		//glm::vec2 reflection = glm::vec2(velocity - (2 * (glm::dot(velocity, normal)))*normal);
-		velocity = glm::vec2(velocity.x * normal.y, velocity.y * normal.x);
+		 velocity = glm::vec2(velocity.x * normal.y, velocity.y * normal.x);
 		//velocity += reflection ;
 		//velocity *= -glm::vec2(normal.y, normal.x); ///Bad but whatever
 		//velocity -= glm::vec2(velocity.x * normal.y, velocity.y * normal.x);
@@ -89,21 +88,18 @@ GLboolean GameEntity::collide(GameObject* obj, GLfloat dt) { ///Two axis collisi
 		}
 		normalF += glm::vec2(normF.x*normal.x, normF.y*normal.y); 
 		position -= normal * 0.01f;
-		
-		std::cout <<
-			//"Delta Time: " << dt <<
-			"\tPostiton: (" << position.x << ", " << position.y <<
+		std::ofstream file;
+		file.open(".\\logs\\normals.txt", std::ios_base::app);
+		file << "Delta Time:" << dt <<"\tPostiton: (" << position.x << ", " << position.y <<
 			")\tVelocity: (" << velocity.x << "," << velocity.y <<
-			")\tAcceleration: (" << acceleration.x << "," << acceleration.y <<
+				")\tAcceleration: (" << acceleration.x << "," << acceleration.y <<
 			")\tNormal: (" << normal.x << "," << normal.y <<
 			")\tAppliedF: (" << appliedF.x << "," << appliedF.y <<
 			")\tNormalF: (" << normalF.x << "," << normalF.y <<
-			")" <<
-			std::endl; 
+			")\t"; 
+		file.close();
 	}
-	else {
-		normalF = glm::vec2(0);
-	}
+
 	return col;
 }
 

@@ -12,6 +12,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include <iostream>
+#include <fstream>
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
@@ -74,9 +75,11 @@ int main(int argc, char *argv[]) {
 		lastFrame = currentFrame;
 		glfwPollEvents();
 		//std::cout << "FPS: " << 1 / (deltaTime) << std::endl;
-		game.processInput(deltaTime);
+		if (game.state == GameState::GAME_ACTIVE) {
+			game.processInput(deltaTime);
 
-		game.update(deltaTime);
+			game.update(deltaTime);
+		}
 
 		///Render stuff
 		glClearColor(0.1f, 0.0f, 0.0f, 1.0f);

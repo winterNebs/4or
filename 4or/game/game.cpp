@@ -4,10 +4,13 @@
 #include "../resources/sprite_renderer.h"
 #include <glm/gtc/matrix_transform.hpp>
 
+#include <iostream>
+#include <fstream>
+int counter = 0;
 SpriteRenderer* renderer;
-
 Game::Game(GLuint w, GLuint h) :
 	state(GameState::GAME_ACTIVE), keys(), width(w), height(h) {
+	counter = 0;
 }
 Game::~Game() {
 	delete renderer;
@@ -17,6 +20,11 @@ Game::~Game() {
 }
 
 void Game::init() {
+	///Deugging
+	std::ofstream file;
+	file.open(".\\logs\\normals.txt", std::ofstream::out | std::ofstream::trunc);
+	file << "";
+	file.close();
 	ResourceManager::loadShader(".\\resources\\shaders\\sprite.vs", ".\\resources\\shaders\\sprite.fs", nullptr, "sprite");
 	// Configure shaders
 	glm::mat4 projection = glm::ortho(0.0f, static_cast<GLfloat>(this->width), static_cast<GLfloat>(this->height), 0.0f, -1.0f, 1.0f);
@@ -33,18 +41,21 @@ void Game::init() {
 	GameLevel* two = new GameLevel(); two->load(".\\svg\\3rect.svg");
 	GameLevel* three = new GameLevel(); three->load(".\\svg\\1box.svg");
 	GameLevel* four = new GameLevel(); four->load(".\\svg\\5rect.svg");
+	GameLevel* five = new GameLevel(); five->load(".\\svg\\normaldebug.svg");
 	levels.push_back(one);
 	levels.push_back(two);
 	levels.push_back(three);
 	levels.push_back(four);
-	level = 3;
+	levels.push_back(five);
+	level = 4;
 	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
 	GameEntity* player = new GameEntity(playerPos, PLAYER_SIZE, ResourceManager::getTexture("player"));
 	levels[level]->setPlayer(player);
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
-		levels[level]->getPlayer()->appliedF = glm::vec2(0);
+		//levels[level]->getPlayer()->appliedF = glm::vec2(0);
+		levels[level]->getPlayer()->appliedF = glm::vec2(600.0f, 0);
 		GLfloat velocity = PLAYER_VELOCITY * dt;
 		if (keys[GLFW_KEY_LEFT]) {
 			levels[level]->getPlayer()->appliedF.x -= 600.0f;
@@ -58,9 +69,16 @@ void Game::processInput(GLfloat dt) {
 		if (keys[GLFW_KEY_DOWN]) {
 			levels[level]->getPlayer()->appliedF.y += 600.0f;
 		}
+		if (keys[GLFW_KEY_SPACE]) {
+			state = GameState::GAME_MENU;
+		}
 	}
 }
 void Game::update(GLfloat dt) {
+	std::ofstream file;
+	file.open(".\\logs\\normals.txt", std::ios_base::app);
+	file << "===================" << "NUMBER " << counter << "===================\n";
+	file.close();
 	for (GameObject* i : levels[level]->objects) {
 		if (!i->isStatic) {
 			bool colliding = false;
@@ -87,6 +105,7 @@ void Game::update(GLfloat dt) {
 
 		}
 	}
+	counter++;
 }
 void Game::render() {
 	if (state == GameState::GAME_ACTIVE) {
