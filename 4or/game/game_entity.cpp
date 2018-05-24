@@ -56,7 +56,6 @@ void GameEntity::move(GLfloat dt) {
 		")\tNormal: (" << normalF.x << "," << normalF.y <<
 		std::endl;*/
 }
-static int c = 0;
 GLboolean GameEntity::collide(GameObject* obj, GLfloat dt) { ///Two axis collision
 
 	GLboolean col = GameObject::collide(obj, dt);
@@ -87,12 +86,12 @@ GLboolean GameEntity::collide(GameObject* obj, GLfloat dt) { ///Two axis collisi
 			normF = glm::vec2((appliedF + gravity) - (2 * (glm::dot((appliedF + gravity), normal)))*normal);
 		}
 		normalF += glm::vec2(normF.x*normal.x, normF.y*normal.y); 
-		position -= normal * 0.01f;
+		position += normal * getCloseDist(obj);
 		std::ofstream file;
 		file.open(".\\logs\\normals.txt", std::ios_base::app);
 		file << "Delta Time:" << dt <<"\tPostiton: (" << position.x << ", " << position.y <<
 			")\tVelocity: (" << velocity.x << "," << velocity.y <<
-				")\tAcceleration: (" << acceleration.x << "," << acceleration.y <<
+			")\tAcceleration: (" << acceleration.x << "," << acceleration.y <<
 			")\tNormal: (" << normal.x << "," << normal.y <<
 			")\tAppliedF: (" << appliedF.x << "," << appliedF.y <<
 			")\tNormalF: (" << normalF.x << "," << normalF.y <<

@@ -1,1462 +1,1405 @@
 ===================NUMBER 0===================
-Delta Time: 0.729451
+Delta Time: 0.44664
 Lagging :(
 ===================NUMBER 1===================
-Delta Time: 0.0588854
+Delta Time: 0.132753
 ===================NUMBER 2===================
-Delta Time: 0.0678084
+Delta Time: 0.018075
 ===================NUMBER 3===================
-Delta Time: 0.00322759
+Delta Time: 0.014782
 ===================NUMBER 4===================
-Delta Time: 0.00275409
+Delta Time: 0.0159073
 ===================NUMBER 5===================
-Delta Time: 0.00674301
+Delta Time: 0.0182158
 ===================NUMBER 6===================
-Delta Time: 0.00689787
+Delta Time: 0.0139388
 ===================NUMBER 7===================
-Delta Time: 0.00716341
+Delta Time: 0.0115204
 ===================NUMBER 8===================
-Delta Time: 0.00716114
+Delta Time: 0.0123558
 ===================NUMBER 9===================
-Delta Time: 0.012388
+Delta Time: 0.0185403
 ===================NUMBER 10===================
-Delta Time: 0.00566393
+Delta Time: 0.0142579
 ===================NUMBER 11===================
-Delta Time: 0.00436252
+Delta Time: 0.0131709
 ===================NUMBER 12===================
-Delta Time: 0.00567102
+Delta Time: 0.0033648
 ===================NUMBER 13===================
-Delta Time: 0.0066365
+Delta Time: 0.014875
 ===================NUMBER 14===================
-Delta Time: 0.00746006
+Delta Time: 0.0129626
 ===================NUMBER 15===================
-Delta Time: 0.00917047
+Delta Time: 0.0131884
 ===================NUMBER 16===================
-Delta Time: 0.00624442
+Delta Time: 0.0145715
 ===================NUMBER 17===================
-Delta Time: 0.00564861
+Delta Time: 0.0137661
 ===================NUMBER 18===================
-Delta Time: 0.00639242
+Delta Time: 0.0143772
 ===================NUMBER 19===================
-Delta Time: 0.0079965
+Delta Time: 0.0132694
 ===================NUMBER 20===================
-Delta Time: 0.00652969
+Delta Time: 0.00987715
 ===================NUMBER 21===================
-Delta Time: 0.00569689
+Delta Time: 0.0100802
 ===================NUMBER 22===================
-Delta Time: 0.00774044
+Delta Time: 0.0141398
 ===================NUMBER 23===================
-Delta Time: 0.0068084
+Delta Time: 0.0102528
 ===================NUMBER 24===================
-Delta Time: 0.0102929
+Delta Time: 0.0101864
 ===================NUMBER 25===================
-Delta Time: 0.00837934
+Delta Time: 0.0121676
 ===================NUMBER 26===================
-Delta Time: 0.00986087
+Delta Time: 0.0124218
 ===================NUMBER 27===================
-Delta Time: 0.0061028
+Delta Time: 0.0138867
 ===================NUMBER 28===================
-Delta Time: 0.012249
+Delta Time: 0.0145668
 ===================NUMBER 29===================
-Delta Time: 0.0047816
+Delta Time: 0.0121644
 ===================NUMBER 30===================
-Delta Time: 0.00726485
+Delta Time: 0.0157236
 ===================NUMBER 31===================
-Delta Time: 0.00639415
+Delta Time: 0.0192445
 ===================NUMBER 32===================
-Delta Time: 0.00605321
+Delta Time: 0.0131169
 ===================NUMBER 33===================
-Delta Time: 0.00735188
+Delta Time: 0.0102819
 ===================NUMBER 34===================
-Delta Time: 0.0037632
+Delta Time: 0.0109825
 ===================NUMBER 35===================
-Delta Time: 0.00547552
+Delta Time: 0.0116973
 ===================NUMBER 36===================
-Delta Time: 0.00527287
+Delta Time: 0.0135208
 ===================NUMBER 37===================
-Delta Time: 0.00630009
+Delta Time: 0.0173504
 ===================NUMBER 38===================
-Delta Time: 0.00801837
+Delta Time: 0.0118011
 ===================NUMBER 39===================
-Delta Time: 0.00480282
+Delta Time: 0.0100908
 ===================NUMBER 40===================
-Delta Time: 0.00502026
+Delta Time: 0.0149987
 ===================NUMBER 41===================
-Delta Time: 0.00699151
+Delta Time: 0.0148494
 ===================NUMBER 42===================
-Delta Time: 0.00704193
-Vertex	: (830.112, 450.714)
-Dir		: (632.383, 408.608)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.64614, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -85.6547, 500.5
-POI		:( 907.164, 500.5)
-Vertex	: (830.112, 450.714)
-Dir		: (632.383, 408.608)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.64614, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -85.6547, inf
-POI		:( -1858.5, -1286.51)
-Vertex	: (830.112, 450.714)
-Dir		: (632.383, 408.608)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0.64614, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -85.6547, 547.5
-POI		:( 979.903, 547.5)
-Vertex	: (830.112, 450.714)
-Dir		: (632.383, 408.608)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0.64614, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -85.6547, -inf
-POI		:( -13.5, -94.3776)
-Vertex	: (880.112, 450.714)
-Dir		: (632.383, 408.608)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.64614, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -117.962, 500.5
-POI		:( 957.164, 500.5)
-Vertex	: (880.112, 450.714)
-Dir		: (632.383, 408.608)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.64614, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -117.962, inf
-POI		:( -1858.5, -1318.81)
-Vertex	: (880.112, 450.714)
-Dir		: (632.383, 408.608)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0.64614, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -117.962, 547.5
-POI		:( 1029.9, 547.5)
-Vertex	: (880.112, 450.714)
-Dir		: (632.383, 408.608)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0.64614, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -117.962, -inf
-POI		:( -13.5, -126.685)
-Vertex	: (880.112, 500.714)
-Dir		: (632.383, 408.608)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.64614, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -67.9617, 500.5
-POI		:( 879.781, 500.5)
-Vertex	: (880.112, 500.714)
-Dir		: (632.383, 408.608)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.64614, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -67.9617, inf
-POI		:( -1858.5, -1268.81)
-Vertex	: (880.112, 500.714)
-Dir		: (632.383, 408.608)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0.64614, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -67.9617, 547.5
-POI		:( 952.521, 547.5)
-Vertex	: (880.112, 500.714)
-Dir		: (632.383, 408.608)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0.64614, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -67.9617, -inf
-POI		:( -13.5, -76.6846)
-Vertex	: (830.112, 500.714)
-Dir		: (632.383, 408.608)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.64614, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -35.6547, 500.5
-POI		:( 829.781, 500.5)
-Vertex	: (830.112, 500.714)
-Dir		: (632.383, 408.608)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.64614, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -35.6547, inf
-POI		:( -1858.5, -1236.51)
-Vertex	: (830.112, 500.714)
-Dir		: (632.383, 408.608)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0.64614, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -35.6547, 547.5
-POI		:( 902.521, 547.5)
-Vertex	: (830.112, 500.714)
-Dir		: (632.383, 408.608)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0.64614, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -35.6547, -inf
-POI		:( -13.5, -44.3776)
-==CALC NORMAL==
-Collider: 0(830.112, 450.714)	1(880.112, 450.714)	2(880.112, 500.714)	3(830.112, 500.714)	
-Collidee: 0(13.5, 500.5)	1(1858.5, 500.5)	2(1858.5, 547.5)	3(13.5, 547.5)	
-i:0 j:0 dist:91.7365
-i:0 j:1 dist:-1
-i:0 j:2 dist:178.339
-i:0 j:3 dist:-1
-i:1 j:0 dist:91.7365
-i:1 j:1 dist:-1
-i:1 j:2 dist:178.339
-i:1 j:3 dist:-1
-i:2 j:0 dist:0.39428
-i:2 j:1 dist:-1
-i:2 j:2 dist:86.2086
-i:2 j:3 dist:-1
-i:3 j:0 dist:0.39428
-i:3 j:1 dist:-1
-i:3 j:2 dist:86.2086
-i:3 j:3 dist:-1
-indexj:0 closest:0.39428
-Delta Time:0.00704193	Postiton: (830.112, 450.704)	Velocity: (632.383,0)	Acceleration: (600,400)	Normal: (0,1)	AppliedF: (600,0)	NormalF: (0,0)	Vertex	: (830.112, 450.704)
-Dir		: (632.383, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, 500.5
-Vertex	: (830.112, 450.704)
-Dir		: (632.383, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, inf
-POI		:( -1858.5, 450.704)
-Vertex	: (830.112, 450.704)
-Dir		: (632.383, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, 547.5
-Vertex	: (830.112, 450.704)
-Dir		: (632.383, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, -inf
-POI		:( -13.5, 450.704)
-Vertex	: (880.112, 450.704)
-Dir		: (632.383, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, 500.5
-Vertex	: (880.112, 450.704)
-Dir		: (632.383, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, inf
-POI		:( -1858.5, 450.704)
-Vertex	: (880.112, 450.704)
-Dir		: (632.383, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, 547.5
-Vertex	: (880.112, 450.704)
-Dir		: (632.383, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, -inf
-POI		:( -13.5, 450.704)
-Vertex	: (880.112, 500.704)
-Dir		: (632.383, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, 500.5
-Vertex	: (880.112, 500.704)
-Dir		: (632.383, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, inf
-POI		:( -1858.5, 500.704)
-Vertex	: (880.112, 500.704)
-Dir		: (632.383, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, 547.5
-Vertex	: (880.112, 500.704)
-Dir		: (632.383, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, -inf
-POI		:( -13.5, 500.704)
-Vertex	: (830.112, 500.704)
-Dir		: (632.383, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, 500.5
-Vertex	: (830.112, 500.704)
-Dir		: (632.383, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, inf
-POI		:( -1858.5, 500.704)
-Vertex	: (830.112, 500.704)
-Dir		: (632.383, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, 547.5
-Vertex	: (830.112, 500.704)
-Dir		: (632.383, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, -inf
-POI		:( -13.5, 500.704)
+Delta Time: 0.014034
 ===================NUMBER 43===================
-Delta Time: 0.197716
-Vertex	: (830.112, 450.704)
-Dir		: (632.383, 0)
+Delta Time: 0.0433172
+===================NUMBER 44===================
+Delta Time: 0.038939
+===================NUMBER 45===================
+Delta Time: 0.0150981
+===================NUMBER 46===================
+Delta Time: 0.0177764
+===================NUMBER 47===================
+Delta Time: 0.0212862
+===================NUMBER 48===================
+Delta Time: 0.0163567
+===================NUMBER 49===================
+Delta Time: 0.0154344
+===================NUMBER 50===================
+Delta Time: 0.0174907
+===================NUMBER 51===================
+Delta Time: 0.0124192
+Vertex	: (847.6, 452.029)
+Dir		: (701.497, 438.764)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -0
+slope1, slope2	: 0.625468, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, 500.5
-Vertex	: (830.112, 450.704)
-Dir		: (632.383, 0)
+const1, const2	: -78.1171, 500.5
+POI		:( 925.095, 500.5)
+Vertex	: (847.6, 452.029)
+Dir		: (701.497, 438.764)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -inf
+slope1, slope2	: 0.625468, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, inf
-POI		:( -1858.5, 450.704)
-Vertex	: (830.112, 450.704)
-Dir		: (632.383, 0)
+const1, const2	: -78.1171, inf
+POI		:( -1858.5, -1240.55)
+Vertex	: (847.6, 452.029)
+Dir		: (701.497, 438.764)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: 0, 0
+slope1, slope2	: 0.625468, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, 547.5
-Vertex	: (830.112, 450.704)
-Dir		: (632.383, 0)
+const1, const2	: -78.1171, 547.5
+POI		:( 1000.24, 547.5)
+Vertex	: (847.6, 452.029)
+Dir		: (701.497, 438.764)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: 0, inf
+slope1, slope2	: 0.625468, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, -inf
-POI		:( -13.5, 450.704)
-Vertex	: (880.112, 450.704)
-Dir		: (632.383, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, 500.5
-Vertex	: (880.112, 450.704)
-Dir		: (632.383, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, inf
-POI		:( -1858.5, 450.704)
-Vertex	: (880.112, 450.704)
-Dir		: (632.383, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, 547.5
-Vertex	: (880.112, 450.704)
-Dir		: (632.383, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 450.704, -inf
-POI		:( -13.5, 450.704)
-Vertex	: (880.112, 500.704)
-Dir		: (632.383, 0)
+const1, const2	: -78.1171, -inf
+POI		:( -13.5, -86.5609)
+Vertex	: (897.6, 452.029)
+Dir		: (701.497, 438.764)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -0
+slope1, slope2	: 0.625468, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, 500.5
-Vertex	: (880.112, 500.704)
-Dir		: (632.383, 0)
+const1, const2	: -109.39, 500.5
+POI		:( 975.095, 500.5)
+Vertex	: (897.6, 452.029)
+Dir		: (701.497, 438.764)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -inf
+slope1, slope2	: 0.625468, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, inf
-POI		:( -1858.5, 500.704)
-Vertex	: (880.112, 500.704)
-Dir		: (632.383, 0)
+const1, const2	: -109.39, inf
+POI		:( -1858.5, -1271.82)
+Vertex	: (897.6, 452.029)
+Dir		: (701.497, 438.764)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: 0, 0
+slope1, slope2	: 0.625468, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, 547.5
-Vertex	: (880.112, 500.704)
-Dir		: (632.383, 0)
+const1, const2	: -109.39, 547.5
+POI		:( 1050.24, 547.5)
+Vertex	: (897.6, 452.029)
+Dir		: (701.497, 438.764)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: 0, inf
+slope1, slope2	: 0.625468, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, -inf
-POI		:( -13.5, 500.704)
-Vertex	: (830.112, 500.704)
-Dir		: (632.383, 0)
+const1, const2	: -109.39, -inf
+POI		:( -13.5, -117.834)
+Vertex	: (897.6, 502.029)
+Dir		: (701.497, 438.764)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -0
+slope1, slope2	: 0.625468, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, 500.5
-Vertex	: (830.112, 500.704)
-Dir		: (632.383, 0)
+const1, const2	: -59.3904, 500.5
+POI		:( 895.154, 500.5)
+Vertex	: (897.6, 502.029)
+Dir		: (701.497, 438.764)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0, -inf
+slope1, slope2	: 0.625468, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, inf
-POI		:( -1858.5, 500.704)
-Vertex	: (830.112, 500.704)
-Dir		: (632.383, 0)
+const1, const2	: -59.3904, inf
+POI		:( -1858.5, -1221.82)
+Vertex	: (897.6, 502.029)
+Dir		: (701.497, 438.764)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: 0, 0
+slope1, slope2	: 0.625468, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, 547.5
-Vertex	: (830.112, 500.704)
-Dir		: (632.383, 0)
+const1, const2	: -59.3904, 547.5
+POI		:( 970.298, 547.5)
+Vertex	: (897.6, 502.029)
+Dir		: (701.497, 438.764)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: 0, inf
+slope1, slope2	: 0.625468, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 500.704, -inf
-POI		:( -13.5, 500.704)
+const1, const2	: -59.3904, -inf
+POI		:( -13.5, -67.8343)
+Vertex	: (847.6, 502.029)
+Dir		: (701.497, 438.764)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0.625468, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: -28.1171, 500.5
+POI		:( 845.154, 500.5)
+Vertex	: (847.6, 502.029)
+Dir		: (701.497, 438.764)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0.625468, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -28.1171, inf
+POI		:( -1858.5, -1190.55)
+Vertex	: (847.6, 502.029)
+Dir		: (701.497, 438.764)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0.625468, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: -28.1171, 547.5
+POI		:( 920.298, 547.5)
+Vertex	: (847.6, 502.029)
+Dir		: (701.497, 438.764)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0.625468, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -28.1171, -inf
+POI		:( -13.5, -36.5609)
 ==CALC NORMAL==
-Collider: 0(830.112, 450.704)	1(880.112, 450.704)	2(880.112, 500.704)	3(830.112, 500.704)	
+Collider: 0(847.6, 452.029)	1(897.6, 452.029)	2(897.6, 502.029)	3(847.6, 502.029)	
 Collidee: 0(13.5, 500.5)	1(1858.5, 500.5)	2(1858.5, 547.5)	3(13.5, 547.5)	
 i:0 j:0 dist:-1
 i:0 j:1 dist:-1
-i:0 j:2 dist:-1
+i:0 j:2 dist:180.037
 i:0 j:3 dist:-1
 i:1 j:0 dist:-1
 i:1 j:1 dist:-1
-i:1 j:2 dist:-1
+i:1 j:2 dist:180.037
 i:1 j:3 dist:-1
 i:2 j:0 dist:-1
-i:2 j:1 dist:978.388
-i:2 j:2 dist:-1
-i:2 j:3 dist:866.612
+i:2 j:1 dist:-1
+i:2 j:2 dist:85.7475
+i:2 j:3 dist:-1
 i:3 j:0 dist:-1
-i:3 j:1 dist:1028.39
-i:3 j:2 dist:-1
-i:3 j:3 dist:816.612
-indexj:3 closest:816.612
-Delta Time:0.197716	Postiton: (830.102, 450.704)	Velocity: (-0,0)	Acceleration: (600,400)	Normal: (1,-0)	AppliedF: (600,0)	NormalF: (-600,0)	Vertex	: (830.102, 450.704)
-Dir		: (-0, 0)
+i:3 j:1 dist:-1
+i:3 j:2 dist:85.7476
+i:3 j:3 dist:-1
+indexj:2 closest:85.7475
+Vertex	: (847.6, 452.029)
+Dir		: (-701.497, 0)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
+slope1, slope2	: -0, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 450.704)
-Dir		: (-0, 0)
+const1, const2	: 452.029, 500.5
+Vertex	: (847.6, 452.029)
+Dir		: (-701.497, 0)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
+slope1, slope2	: -0, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 450.704)
-Dir		: (-0, 0)
+const1, const2	: 452.029, inf
+POI		:( -1858.5, 452.029)
+Vertex	: (847.6, 452.029)
+Dir		: (-701.497, 0)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
+slope1, slope2	: -0, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 450.704)
-Dir		: (-0, 0)
+const1, const2	: 452.029, 547.5
+Vertex	: (847.6, 452.029)
+Dir		: (-701.497, 0)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
+slope1, slope2	: -0, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 450.704)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 450.704)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 450.704)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 450.704)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: 452.029, -inf
+POI		:( -13.5, 452.029)
+Vertex	: (897.6, 452.029)
+Dir		: (-701.497, 0)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
+slope1, slope2	: -0, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: 452.029, 500.5
+Vertex	: (897.6, 452.029)
+Dir		: (-701.497, 0)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
+slope1, slope2	: -0, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: 452.029, inf
+POI		:( -1858.5, 452.029)
+Vertex	: (897.6, 452.029)
+Dir		: (-701.497, 0)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
+slope1, slope2	: -0, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: 452.029, 547.5
+Vertex	: (897.6, 452.029)
+Dir		: (-701.497, 0)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
+slope1, slope2	: -0, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (830.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: 452.029, -inf
+POI		:( -13.5, 452.029)
+Vertex	: (897.6, 502.029)
+Dir		: (-701.497, 0)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
+slope1, slope2	: -0, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: 502.029, 500.5
+Vertex	: (897.6, 502.029)
+Dir		: (-701.497, 0)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
+slope1, slope2	: -0, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: 502.029, inf
+POI		:( -1858.5, 502.029)
+Vertex	: (897.6, 502.029)
+Dir		: (-701.497, 0)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
+slope1, slope2	: -0, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: 502.029, 547.5
+Vertex	: (897.6, 502.029)
+Dir		: (-701.497, 0)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
+slope1, slope2	: -0, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-===================NUMBER 44===================
-Delta Time: 0.235323
+const1, const2	: 502.029, -inf
+POI		:( -13.5, 502.029)
+Vertex	: (847.6, 502.029)
+Dir		: (-701.497, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 502.029, 500.5
+Vertex	: (847.6, 502.029)
+Dir		: (-701.497, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 502.029, inf
+POI		:( -1858.5, 502.029)
+Vertex	: (847.6, 502.029)
+Dir		: (-701.497, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 502.029, 547.5
+Vertex	: (847.6, 502.029)
+Dir		: (-701.497, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 502.029, -inf
+POI		:( -13.5, 502.029)
+Delta Time:0.0124192	Postiton: (847.6, -382.07)	Velocity: (-701.497,0)	Acceleration: (600,400)	Normal: (0,-1)	AppliedF: (600,0)	NormalF: (0,400)
+Vertex	: (847.6, -382.07)
+Dir		: (-701.497, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: -382.07, 500.5
+Vertex	: (847.6, -382.07)
+Dir		: (-701.497, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -382.07, inf
+POI		:( -1858.5, -382.07)
+Vertex	: (847.6, -382.07)
+Dir		: (-701.497, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: -382.07, 547.5
+Vertex	: (847.6, -382.07)
+Dir		: (-701.497, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -382.07, -inf
+POI		:( -13.5, -382.07)
+Vertex	: (897.6, -382.07)
+Dir		: (-701.497, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: -382.07, 500.5
+Vertex	: (897.6, -382.07)
+Dir		: (-701.497, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -382.07, inf
+POI		:( -1858.5, -382.07)
+Vertex	: (897.6, -382.07)
+Dir		: (-701.497, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: -382.07, 547.5
+Vertex	: (897.6, -382.07)
+Dir		: (-701.497, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -382.07, -inf
+POI		:( -13.5, -382.07)
+Vertex	: (897.6, -332.07)
+Dir		: (-701.497, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: -332.07, 500.5
+Vertex	: (897.6, -332.07)
+Dir		: (-701.497, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -332.07, inf
+POI		:( -1858.5, -332.07)
+Vertex	: (897.6, -332.07)
+Dir		: (-701.497, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: -332.07, 547.5
+Vertex	: (897.6, -332.07)
+Dir		: (-701.497, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -332.07, -inf
+POI		:( -13.5, -332.07)
+Vertex	: (847.6, -332.07)
+Dir		: (-701.497, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: -332.07, 500.5
+Vertex	: (847.6, -332.07)
+Dir		: (-701.497, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -332.07, inf
+POI		:( -1858.5, -332.07)
+Vertex	: (847.6, -332.07)
+Dir		: (-701.497, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: -332.07, 547.5
+Vertex	: (847.6, -332.07)
+Dir		: (-701.497, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -332.07, -inf
+POI		:( -13.5, -332.07)
+===================NUMBER 52===================
+Delta Time: 0.814068
 Lagging :(
-Vertex	: (830.102, 450.704)
-Dir		: (-0, 0)
+===================NUMBER 53===================
+Delta Time: 0.0152957
+===================NUMBER 54===================
+Delta Time: 0.0125356
+===================NUMBER 55===================
+Delta Time: 0.0142376
+===================NUMBER 56===================
+Delta Time: 0.0174072
+===================NUMBER 57===================
+Delta Time: 0.0232618
+===================NUMBER 58===================
+Delta Time: 0.0163257
+===================NUMBER 59===================
+Delta Time: 0.0192335
+===================NUMBER 60===================
+Delta Time: 0.0169244
+===================NUMBER 61===================
+Delta Time: 0.0148716
+===================NUMBER 62===================
+Delta Time: 0.0142529
+===================NUMBER 63===================
+Delta Time: 0.0136814
+===================NUMBER 64===================
+Delta Time: 0.0182106
+===================NUMBER 65===================
+Delta Time: 0.0142391
+===================NUMBER 66===================
+Delta Time: 0.016078
+===================NUMBER 67===================
+Delta Time: 0.0147462
+===================NUMBER 68===================
+Delta Time: 0.0161116
+===================NUMBER 69===================
+Delta Time: 0.0206656
+===================NUMBER 70===================
+Delta Time: 0.0180407
+===================NUMBER 71===================
+Delta Time: 0.0212164
+===================NUMBER 72===================
+Delta Time: 0.0130334
+===================NUMBER 73===================
+Delta Time: 0.0137107
+===================NUMBER 74===================
+Delta Time: 0.0160255
+===================NUMBER 75===================
+Delta Time: 0.0136504
+===================NUMBER 76===================
+Delta Time: 0.0146153
+===================NUMBER 77===================
+Delta Time: 0.0144744
+===================NUMBER 78===================
+Delta Time: 0.0157323
+===================NUMBER 79===================
+Delta Time: 0.0156889
+===================NUMBER 80===================
+Delta Time: 0.0186818
+===================NUMBER 81===================
+Delta Time: 0.0161028
+===================NUMBER 82===================
+Delta Time: 0.0260239
+===================NUMBER 83===================
+Delta Time: 0.0284884
+===================NUMBER 84===================
+Delta Time: 0.018091
+===================NUMBER 85===================
+Delta Time: 0.0183496
+===================NUMBER 86===================
+Delta Time: 0.0163052
+===================NUMBER 87===================
+Delta Time: 0.0128307
+===================NUMBER 88===================
+Delta Time: 0.0164051
+===================NUMBER 89===================
+Delta Time: 0.0235648
+===================NUMBER 90===================
+Delta Time: 0.0143371
+===================NUMBER 91===================
+Delta Time: 0.0153475
+===================NUMBER 92===================
+Delta Time: 0.0246727
+===================NUMBER 93===================
+Delta Time: 0.0280268
+===================NUMBER 94===================
+Delta Time: 0.0256245
+===================NUMBER 95===================
+Delta Time: 0.0132062
+===================NUMBER 96===================
+Delta Time: 0.018074
+===================NUMBER 97===================
+Delta Time: 0.0218585
+===================NUMBER 98===================
+Delta Time: 0.0165818
+===================NUMBER 99===================
+Delta Time: 0.0158238
+===================NUMBER 100===================
+Delta Time: 0.0145023
+===================NUMBER 101===================
+Delta Time: 0.0135026
+===================NUMBER 102===================
+Delta Time: 0.0137358
+===================NUMBER 103===================
+Delta Time: 0.0131447
+===================NUMBER 104===================
+Delta Time: 0.017292
+===================NUMBER 105===================
+Delta Time: 0.0156126
+===================NUMBER 106===================
+Delta Time: 0.0198064
+===================NUMBER 107===================
+Delta Time: 0.0163581
+===================NUMBER 108===================
+Delta Time: 0.0160329
+===================NUMBER 109===================
+Delta Time: 0.0201879
+===================NUMBER 110===================
+Delta Time: 0.0158687
+===================NUMBER 111===================
+Delta Time: 0.0192087
+===================NUMBER 112===================
+Delta Time: 0.0152919
+===================NUMBER 113===================
+Delta Time: 0.0151668
+===================NUMBER 114===================
+Delta Time: 0.0142193
+===================NUMBER 115===================
+Delta Time: 0.0159194
+===================NUMBER 116===================
+Delta Time: 0.0207057
+===================NUMBER 117===================
+Delta Time: 0.0173967
+===================NUMBER 118===================
+Delta Time: 0.0209205
+===================NUMBER 119===================
+Delta Time: 0.0195043
+Vertex	: (960.421, 450.599)
+Dir		: (476.366, 666.888)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
+slope1, slope2	: 1.39995, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 450.704)
-Dir		: (-0, 0)
+const1, const2	: -893.94, 500.5
+POI		:( 996.065, 500.5)
+Vertex	: (960.421, 450.599)
+Dir		: (476.366, 666.888)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
+slope1, slope2	: 1.39995, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 450.704)
-Dir		: (-0, 0)
+const1, const2	: -893.94, inf
+POI		:( -1858.5, -3495.74)
+Vertex	: (960.421, 450.599)
+Dir		: (476.366, 666.888)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
+slope1, slope2	: 1.39995, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 450.704)
-Dir		: (-0, 0)
+const1, const2	: -893.94, 547.5
+POI		:( 1029.64, 547.5)
+Vertex	: (960.421, 450.599)
+Dir		: (476.366, 666.888)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
+slope1, slope2	: 1.39995, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 450.704)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 450.704)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 450.704)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 450.704)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: -893.94, -inf
+POI		:( -13.5, -912.839)
+Vertex	: (1010.42, 450.599)
+Dir		: (476.366, 666.888)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
+slope1, slope2	: 1.39995, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: -963.937, 500.5
+POI		:( 1046.07, 500.5)
+Vertex	: (1010.42, 450.599)
+Dir		: (476.366, 666.888)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
+slope1, slope2	: 1.39995, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: -963.937, inf
+POI		:( -1858.5, -3565.74)
+Vertex	: (1010.42, 450.599)
+Dir		: (476.366, 666.888)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
+slope1, slope2	: 1.39995, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: -963.937, 547.5
+POI		:( 1079.64, 547.5)
+Vertex	: (1010.42, 450.599)
+Dir		: (476.366, 666.888)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
+slope1, slope2	: 1.39995, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (830.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: -963.937, -inf
+POI		:( -13.5, -982.837)
+Vertex	: (1010.42, 500.599)
+Dir		: (476.366, 666.888)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
+slope1, slope2	: 1.39995, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: -913.937, 500.5
+POI		:( 1010.35, 500.5)
+Vertex	: (1010.42, 500.599)
+Dir		: (476.366, 666.888)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
+slope1, slope2	: 1.39995, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: -913.937, inf
+POI		:( -1858.5, -3515.74)
+Vertex	: (1010.42, 500.599)
+Dir		: (476.366, 666.888)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
+slope1, slope2	: 1.39995, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 500.704)
-Dir		: (-0, 0)
+const1, const2	: -913.937, 547.5
+POI		:( 1043.92, 547.5)
+Vertex	: (1010.42, 500.599)
+Dir		: (476.366, 666.888)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
+slope1, slope2	: 1.39995, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
+const1, const2	: -913.937, -inf
+POI		:( -13.5, -932.837)
+Vertex	: (960.421, 500.599)
+Dir		: (476.366, 666.888)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 1.39995, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: -843.94, 500.5
+POI		:( 960.35, 500.5)
+Vertex	: (960.421, 500.599)
+Dir		: (476.366, 666.888)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 1.39995, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -843.94, inf
+POI		:( -1858.5, -3445.74)
+Vertex	: (960.421, 500.599)
+Dir		: (476.366, 666.888)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 1.39995, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: -843.94, 547.5
+POI		:( 993.922, 547.5)
+Vertex	: (960.421, 500.599)
+Dir		: (476.366, 666.888)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 1.39995, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -843.94, -inf
+POI		:( -13.5, -862.839)
 ==CALC NORMAL==
-Collider: 0(830.102, 450.704)	1(880.102, 450.704)	2(880.102, 500.704)	3(830.102, 500.704)	
+Collider: 0(960.421, 450.599)	1(1010.42, 450.599)	2(1010.42, 500.599)	3(960.421, 500.599)	
 Collidee: 0(13.5, 500.5)	1(1858.5, 500.5)	2(1858.5, 547.5)	3(13.5, 547.5)	
-i:0 j:0 dist:49.7961
+i:0 j:0 dist:61.3239
 i:0 j:1 dist:-1
-i:0 j:2 dist:96.7961
+i:0 j:2 dist:119.083
 i:0 j:3 dist:-1
-i:1 j:0 dist:49.7961
+i:1 j:0 dist:61.324
 i:1 j:1 dist:-1
-i:1 j:2 dist:96.7961
+i:1 j:2 dist:119.083
 i:1 j:3 dist:-1
-i:2 j:0 dist:0.203949
-i:2 j:1 dist:978.398
-i:2 j:2 dist:46.7961
-i:2 j:3 dist:866.602
-i:3 j:0 dist:0.203949
-i:3 j:1 dist:1028.4
-i:3 j:2 dist:46.7961
-i:3 j:3 dist:816.602
-indexj:0 closest:0.203949
-Delta Time:0.235323	Postiton: (830.102, 450.694)	Velocity: (-0,0)	Acceleration: (600,400)	Normal: (0,1)	AppliedF: (600,0)	NormalF: (0,0)	Vertex	: (830.102, 450.694)
-Dir		: (-0, 0)
+i:2 j:0 dist:0.122005
+i:2 j:1 dist:-1
+i:2 j:2 dist:57.6372
+i:2 j:3 dist:-1
+i:3 j:0 dist:0.122005
+i:3 j:1 dist:-1
+i:3 j:2 dist:57.6372
+i:3 j:3 dist:-1
+indexj:0 closest:0.122005
+Vertex	: (960.421, 450.599)
+Dir		: (476.366, 0)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
+slope1, slope2	: 0, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 450.694)
-Dir		: (-0, 0)
+const1, const2	: 450.599, 500.5
+Vertex	: (960.421, 450.599)
+Dir		: (476.366, 0)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
+slope1, slope2	: 0, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 450.694)
-Dir		: (-0, 0)
+const1, const2	: 450.599, inf
+POI		:( -1858.5, 450.599)
+Vertex	: (960.421, 450.599)
+Dir		: (476.366, 0)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
+slope1, slope2	: 0, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 450.694)
-Dir		: (-0, 0)
+const1, const2	: 450.599, 547.5
+Vertex	: (960.421, 450.599)
+Dir		: (476.366, 0)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
+slope1, slope2	: 0, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 450.694)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 450.694)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 450.694)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 450.694)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 500.694)
-Dir		: (-0, 0)
+const1, const2	: 450.599, -inf
+POI		:( -13.5, 450.599)
+Vertex	: (1010.42, 450.599)
+Dir		: (476.366, 0)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
+slope1, slope2	: 0, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 500.694)
-Dir		: (-0, 0)
+const1, const2	: 450.599, 500.5
+Vertex	: (1010.42, 450.599)
+Dir		: (476.366, 0)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
+slope1, slope2	: 0, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 500.694)
-Dir		: (-0, 0)
+const1, const2	: 450.599, inf
+POI		:( -1858.5, 450.599)
+Vertex	: (1010.42, 450.599)
+Dir		: (476.366, 0)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
+slope1, slope2	: 0, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 500.694)
-Dir		: (-0, 0)
+const1, const2	: 450.599, 547.5
+Vertex	: (1010.42, 450.599)
+Dir		: (476.366, 0)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
+slope1, slope2	: 0, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (830.102, 500.694)
-Dir		: (-0, 0)
+const1, const2	: 450.599, -inf
+POI		:( -13.5, 450.599)
+Vertex	: (1010.42, 500.599)
+Dir		: (476.366, 0)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
+slope1, slope2	: 0, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 500.694)
-Dir		: (-0, 0)
+const1, const2	: 500.599, 500.5
+Vertex	: (1010.42, 500.599)
+Dir		: (476.366, 0)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
+slope1, slope2	: 0, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 500.694)
-Dir		: (-0, 0)
+const1, const2	: 500.599, inf
+POI		:( -1858.5, 500.599)
+Vertex	: (1010.42, 500.599)
+Dir		: (476.366, 0)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
+slope1, slope2	: 0, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 500.694)
-Dir		: (-0, 0)
+const1, const2	: 500.599, 547.5
+Vertex	: (1010.42, 500.599)
+Dir		: (476.366, 0)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
+slope1, slope2	: 0, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-===================NUMBER 45===================
-Delta Time: 0.250078
+const1, const2	: 500.599, -inf
+POI		:( -13.5, 500.599)
+Vertex	: (960.421, 500.599)
+Dir		: (476.366, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 500.599, 500.5
+Vertex	: (960.421, 500.599)
+Dir		: (476.366, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 500.599, inf
+POI		:( -1858.5, 500.599)
+Vertex	: (960.421, 500.599)
+Dir		: (476.366, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 500.599, 547.5
+Vertex	: (960.421, 500.599)
+Dir		: (476.366, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 500.599, -inf
+POI		:( -13.5, 500.599)
+Delta Time:0.0195043	Postiton: (960.421, 1298.68)	Velocity: (476.366,0)	Acceleration: (600,400)	Normal: (0,1)	AppliedF: (600,0)	NormalF: (0,0)
+Vertex	: (960.421, 1298.68)
+Dir		: (476.366, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 1298.68, 500.5
+Vertex	: (960.421, 1298.68)
+Dir		: (476.366, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 1298.68, inf
+POI		:( -1858.5, 1298.68)
+Vertex	: (960.421, 1298.68)
+Dir		: (476.366, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 1298.68, 547.5
+Vertex	: (960.421, 1298.68)
+Dir		: (476.366, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 1298.68, -inf
+POI		:( -13.5, 1298.68)
+Vertex	: (1010.42, 1298.68)
+Dir		: (476.366, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 1298.68, 500.5
+Vertex	: (1010.42, 1298.68)
+Dir		: (476.366, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 1298.68, inf
+POI		:( -1858.5, 1298.68)
+Vertex	: (1010.42, 1298.68)
+Dir		: (476.366, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 1298.68, 547.5
+Vertex	: (1010.42, 1298.68)
+Dir		: (476.366, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 1298.68, -inf
+POI		:( -13.5, 1298.68)
+Vertex	: (1010.42, 1348.68)
+Dir		: (476.366, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 1348.68, 500.5
+Vertex	: (1010.42, 1348.68)
+Dir		: (476.366, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 1348.68, inf
+POI		:( -1858.5, 1348.68)
+Vertex	: (1010.42, 1348.68)
+Dir		: (476.366, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 1348.68, 547.5
+Vertex	: (1010.42, 1348.68)
+Dir		: (476.366, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 1348.68, -inf
+POI		:( -13.5, 1348.68)
+Vertex	: (960.421, 1348.68)
+Dir		: (476.366, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 1348.68, 500.5
+Vertex	: (960.421, 1348.68)
+Dir		: (476.366, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 1348.68, inf
+POI		:( -1858.5, 1348.68)
+Vertex	: (960.421, 1348.68)
+Dir		: (476.366, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 1348.68, 547.5
+Vertex	: (960.421, 1348.68)
+Dir		: (476.366, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 1348.68, -inf
+POI		:( -13.5, 1348.68)
+===================NUMBER 120===================
+Delta Time: 0.952735
 Lagging :(
-Vertex	: (830.102, 450.694)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 450.694)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 450.694)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 450.694)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 450.694)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 450.694)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 450.694)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 450.694)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 500.694)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 500.694)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 500.694)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 500.694)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (830.102, 500.694)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 500.694)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 500.694)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 500.694)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-==CALC NORMAL==
-Collider: 0(830.102, 450.694)	1(880.102, 450.694)	2(880.102, 500.694)	3(830.102, 500.694)	
-Collidee: 0(13.5, 500.5)	1(1858.5, 500.5)	2(1858.5, 547.5)	3(13.5, 547.5)	
-i:0 j:0 dist:49.8061
-i:0 j:1 dist:-1
-i:0 j:2 dist:96.8061
-i:0 j:3 dist:-1
-i:1 j:0 dist:49.8061
-i:1 j:1 dist:-1
-i:1 j:2 dist:96.8061
-i:1 j:3 dist:-1
-i:2 j:0 dist:0.193939
-i:2 j:1 dist:978.398
-i:2 j:2 dist:46.8061
-i:2 j:3 dist:866.602
-i:3 j:0 dist:0.193939
-i:3 j:1 dist:1028.4
-i:3 j:2 dist:46.8061
-i:3 j:3 dist:816.602
-indexj:0 closest:0.193939
-Delta Time:0.250078	Postiton: (830.102, 450.684)	Velocity: (-0,0)	Acceleration: (600,400)	Normal: (0,1)	AppliedF: (600,0)	NormalF: (0,0)	Vertex	: (830.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (830.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-===================NUMBER 46===================
-Delta Time: 0.278432
-Lagging :(
-Vertex	: (830.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 450.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (830.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 500.684)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-==CALC NORMAL==
-Collider: 0(830.102, 450.684)	1(880.102, 450.684)	2(880.102, 500.684)	3(830.102, 500.684)	
-Collidee: 0(13.5, 500.5)	1(1858.5, 500.5)	2(1858.5, 547.5)	3(13.5, 547.5)	
-i:0 j:0 dist:49.8161
-i:0 j:1 dist:-1
-i:0 j:2 dist:96.8161
-i:0 j:3 dist:-1
-i:1 j:0 dist:49.8161
-i:1 j:1 dist:-1
-i:1 j:2 dist:96.8161
-i:1 j:3 dist:-1
-i:2 j:0 dist:0.183929
-i:2 j:1 dist:978.398
-i:2 j:2 dist:46.8161
-i:2 j:3 dist:866.602
-i:3 j:0 dist:0.183929
-i:3 j:1 dist:1028.4
-i:3 j:2 dist:46.8161
-i:3 j:3 dist:816.602
-indexj:0 closest:0.183929
-Delta Time:0.278432	Postiton: (830.102, 450.674)	Velocity: (-0,0)	Acceleration: (600,400)	Normal: (0,1)	AppliedF: (600,0)	NormalF: (0,0)	Vertex	: (830.102, 450.674)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 450.674)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 450.674)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 450.674)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 450.674)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 450.674)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 450.674)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 450.674)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (880.102, 500.674)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -880.102, 500.5)
-Vertex	: (880.102, 500.674)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (880.102, 500.674)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -880.102, 547.5)
-Vertex	: (880.102, 500.674)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
-Vertex	: (830.102, 500.674)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 500.5
-POI		:( -830.102, 500.5)
-Vertex	: (830.102, 500.674)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -nan(ind), -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), inf
-POI		:( -nan(ind), -inf)
-Vertex	: (830.102, 500.674)
-Dir		: (-0, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), 547.5
-POI		:( -830.102, 547.5)
-Vertex	: (830.102, 500.674)
-Dir		: (-0, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -nan(ind), inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -nan(ind), -inf
-POI		:( -nan(ind), inf)
+===================NUMBER 121===================
+Delta Time: 0.0231175
+===================NUMBER 122===================
+Delta Time: 0.0209761
+===================NUMBER 123===================
+Delta Time: 0.0286665
+===================NUMBER 124===================
+Delta Time: 0.0185304
+===================NUMBER 125===================
+Delta Time: 0.0179625
+===================NUMBER 126===================
+Delta Time: 0.0185537
+===================NUMBER 127===================
+Delta Time: 0.0186052
+===================NUMBER 128===================
+Delta Time: 0.0172539
+===================NUMBER 129===================
+Delta Time: 0.0160122
+===================NUMBER 130===================
+Delta Time: 0.0179348
+===================NUMBER 131===================
+Delta Time: 0.0159378
+===================NUMBER 132===================
+Delta Time: 0.0177341
+===================NUMBER 133===================
+Delta Time: 0.0239472
+===================NUMBER 134===================
+Delta Time: 0.0180497
+===================NUMBER 135===================
+Delta Time: 0.0147858
+===================NUMBER 136===================
+Delta Time: 0.0153189
+===================NUMBER 137===================
+Delta Time: 0.0158701
+===================NUMBER 138===================
+Delta Time: 0.0168271
+===================NUMBER 139===================
+Delta Time: 0.0164609
+===================NUMBER 140===================
+Delta Time: 0.0173769
+===================NUMBER 141===================
+Delta Time: 0.0153527
+===================NUMBER 142===================
+Delta Time: 0.0166078
+===================NUMBER 143===================
+Delta Time: 0.0181384
+===================NUMBER 144===================
+Delta Time: 0.0222335
+===================NUMBER 145===================
+Delta Time: 0.0215044
+===================NUMBER 146===================
+Delta Time: 0.0163074
+===================NUMBER 147===================
+Delta Time: 0.0201249
+===================NUMBER 148===================
+Delta Time: 0.0148535
+===================NUMBER 149===================
+Delta Time: 0.0168424
+===================NUMBER 150===================
+Delta Time: 0.017499
+===================NUMBER 151===================
+Delta Time: 0.0169468
+===================NUMBER 152===================
+Delta Time: 0.0160837
+===================NUMBER 153===================
+Delta Time: 0.0157118
+===================NUMBER 154===================
+Delta Time: 0.0147567
+===================NUMBER 155===================
+Delta Time: 0.0176377
+===================NUMBER 156===================
+Delta Time: 0.0185862
+===================NUMBER 157===================
+Delta Time: 0.0177927
+===================NUMBER 158===================
+Delta Time: 0.0186877
+===================NUMBER 159===================
+Delta Time: 0.0189061
+===================NUMBER 160===================
+Delta Time: 0.015131
+===================NUMBER 161===================
+Delta Time: 0.0217028
+===================NUMBER 162===================
+Delta Time: 0.0151744
+===================NUMBER 163===================
+Delta Time: 0.0224128
+===================NUMBER 164===================
+Delta Time: 0.0188746
+===================NUMBER 165===================
+Delta Time: 0.0175328
+===================NUMBER 166===================
+Delta Time: 0.0168781
+===================NUMBER 167===================
+Delta Time: 0.0214829
+===================NUMBER 168===================
+Delta Time: 0.0278583
+===================NUMBER 169===================
+Delta Time: 0.0199318
+===================NUMBER 170===================
+Delta Time: 0.0134587
+===================NUMBER 171===================
+Delta Time: 0.0152192
+===================NUMBER 172===================
+Delta Time: 0.0122924
+===================NUMBER 173===================
+Delta Time: 0.0155334
+===================NUMBER 174===================
+Delta Time: 0.015532
+===================NUMBER 175===================
+Delta Time: 0.0134058
+===================NUMBER 176===================
+Delta Time: 0.0152373
+===================NUMBER 177===================
+Delta Time: 0.0150385
+===================NUMBER 178===================
+Delta Time: 0.0170646
+===================NUMBER 179===================
+Delta Time: 0.0156255
+===================NUMBER 180===================
+Delta Time: 0.0172439
+===================NUMBER 181===================
+Delta Time: 0.0195084
+===================NUMBER 182===================
+Delta Time: 0.0238676
+===================NUMBER 183===================
+Delta Time: 0.021121
+===================NUMBER 184===================
+Delta Time: 0.0217009
+===================NUMBER 185===================
+Delta Time: 0.0156956
+===================NUMBER 186===================
+Delta Time: 0.0141759
+===================NUMBER 187===================
+Delta Time: 0.0138478
+===================NUMBER 188===================
+Delta Time: 0.0149641
+===================NUMBER 189===================
+Delta Time: 0.015738
+===================NUMBER 190===================
+Delta Time: 0.0177784
+===================NUMBER 191===================
+Delta Time: 0.0241385
+===================NUMBER 192===================
+Delta Time: 0.0154433
+===================NUMBER 193===================
+Delta Time: 0.0300093
+===================NUMBER 194===================
+Delta Time: 0.0178161
+===================NUMBER 195===================
+Delta Time: 0.0232635
+===================NUMBER 196===================
+Delta Time: 0.0236721
+===================NUMBER 197===================
+Delta Time: 0.018703
+===================NUMBER 198===================
+Delta Time: 0.0178876
+===================NUMBER 199===================
+Delta Time: 0.0183859
+===================NUMBER 200===================
+Delta Time: 0.0156684
+===================NUMBER 201===================
+Delta Time: 0.0187936
+===================NUMBER 202===================
+Delta Time: 0.018436
+===================NUMBER 203===================
+Delta Time: 0.0228558
+===================NUMBER 204===================
+Delta Time: 0.0170794
+===================NUMBER 205===================
+Delta Time: 0.0162458
+===================NUMBER 206===================
+Delta Time: 0.0163536
+===================NUMBER 207===================
+Delta Time: 0.0167365
+===================NUMBER 208===================
+Delta Time: 0.0162435
+===================NUMBER 209===================
+Delta Time: 0.0153184
+===================NUMBER 210===================
+Delta Time: 0.0172472
+===================NUMBER 211===================
+Delta Time: 0.0180268
+===================NUMBER 212===================
+Delta Time: 0.0161262
+===================NUMBER 213===================
+Delta Time: 0.0180335
+===================NUMBER 214===================
+Delta Time: 0.0209999
+===================NUMBER 215===================
+Delta Time: 0.0273118
+===================NUMBER 216===================
+Delta Time: 0.0189462
+===================NUMBER 217===================
+Delta Time: 0.0190916
+===================NUMBER 218===================
+Delta Time: 0.0172586
+===================NUMBER 219===================
+Delta Time: 0.0174713
+===================NUMBER 220===================
+Delta Time: 0.0164585
+===================NUMBER 221===================
+Delta Time: 0.0187917
+===================NUMBER 222===================
+Delta Time: 0.0180211
+===================NUMBER 223===================
+Delta Time: 0.0212879
+===================NUMBER 224===================
+Delta Time: 0.020926
+===================NUMBER 225===================
+Delta Time: 0.032124
+===================NUMBER 226===================
+Delta Time: 0.0238061
+===================NUMBER 227===================
+Delta Time: 0.0169353
+===================NUMBER 228===================
+Delta Time: 0.0159311
+===================NUMBER 229===================
+Delta Time: 0.0167937
+===================NUMBER 230===================
+Delta Time: 0.0180764
+===================NUMBER 231===================
+Delta Time: 0.0240436
+===================NUMBER 232===================
+Delta Time: 0.0178761
+===================NUMBER 233===================
+Delta Time: 0.0167561
+===================NUMBER 234===================
+Delta Time: 0.0181522
+===================NUMBER 235===================
+Delta Time: 0.0241504
+===================NUMBER 236===================
+Delta Time: 0.0227308
+===================NUMBER 237===================
+Delta Time: 0.0225701
+===================NUMBER 238===================
+Delta Time: 0.019176
+===================NUMBER 239===================
+Delta Time: 0.0180397
+===================NUMBER 240===================
+Delta Time: 0.0174255
+===================NUMBER 241===================
+Delta Time: 0.0178914
+===================NUMBER 242===================
+Delta Time: 0.0176764
+===================NUMBER 243===================
+Delta Time: 0.0169144
+===================NUMBER 244===================
+Delta Time: 0.0173602
+===================NUMBER 245===================
+Delta Time: 0.0175338
+===================NUMBER 246===================
+Delta Time: 0.0200973
+===================NUMBER 247===================
+Delta Time: 0.0276346
+===================NUMBER 248===================
+Delta Time: 0.0224681
+===================NUMBER 249===================
+Delta Time: 0.0229883
+===================NUMBER 250===================
+Delta Time: 0.0194631
+===================NUMBER 251===================
+Delta Time: 0.019084
+===================NUMBER 252===================
+Delta Time: 0.020185
+===================NUMBER 253===================
+Delta Time: 0.0175395
+===================NUMBER 254===================
+Delta Time: 0.0185814
+===================NUMBER 255===================
+Delta Time: 0.0197754
+===================NUMBER 256===================
+Delta Time: 0.0294051
+===================NUMBER 257===================
+Delta Time: 0.0248423
+===================NUMBER 258===================
+Delta Time: 0.0181103
+===================NUMBER 259===================
+Delta Time: 0.0220599
+===================NUMBER 260===================
+Delta Time: 0.0222244
+===================NUMBER 261===================
+Delta Time: 0.0171185
+===================NUMBER 262===================
+Delta Time: 0.0165629
+===================NUMBER 263===================
+Delta Time: 0.0166383
+===================NUMBER 264===================
+Delta Time: 0.0162721
+===================NUMBER 265===================
+Delta Time: 0.0165954
+===================NUMBER 266===================
+Delta Time: 0.0195713
+===================NUMBER 267===================
+Delta Time: 0.0235443
+===================NUMBER 268===================
+Delta Time: 0.0193872
+===================NUMBER 269===================
+Delta Time: 0.0168095
+===================NUMBER 270===================
+Delta Time: 0.0173616
+===================NUMBER 271===================
+Delta Time: 0.0162139
+===================NUMBER 272===================
+Delta Time: 0.0169902
+===================NUMBER 273===================
+Delta Time: 0.00311995
+===================NUMBER 274===================
+Delta Time: 0.0172634
+===================NUMBER 275===================
+Delta Time: 0.0218005
+===================NUMBER 276===================
+Delta Time: 0.025938
+===================NUMBER 277===================
+Delta Time: 0.0293546
+===================NUMBER 278===================
+Delta Time: 0.0243735
+===================NUMBER 279===================
+Delta Time: 0.0189848
+===================NUMBER 280===================
+Delta Time: 0.0178127
+===================NUMBER 281===================
+Delta Time: 0.0171418
+===================NUMBER 282===================
+Delta Time: 0.0186262
+===================NUMBER 283===================
+Delta Time: 0.0212526
+===================NUMBER 284===================
+Delta Time: 0.0210104
+===================NUMBER 285===================
+Delta Time: 0.0210772
+===================NUMBER 286===================
+Delta Time: 0.0213509
+===================NUMBER 287===================
+Delta Time: 0.0265708
+===================NUMBER 288===================
+Delta Time: 0.0309472
+===================NUMBER 289===================
+Delta Time: 0.0190172
+===================NUMBER 290===================
+Delta Time: 0.0238118
+===================NUMBER 291===================
+Delta Time: 0.0167842
+===================NUMBER 292===================
+Delta Time: 0.0167499
+===================NUMBER 293===================
+Delta Time: 0.0171304
+===================NUMBER 294===================
+Delta Time: 0.0169849
+===================NUMBER 295===================
+Delta Time: 0.0169868
+===================NUMBER 296===================
+Delta Time: 0.016047
+===================NUMBER 297===================
+Delta Time: 0.0180182
+===================NUMBER 298===================
+Delta Time: 0.0266991
+===================NUMBER 299===================
+Delta Time: 0.0340762
+===================NUMBER 300===================
+Delta Time: 0.0188498
+===================NUMBER 301===================
+Delta Time: 0.0208607
+===================NUMBER 302===================
+Delta Time: 0.0201569
+===================NUMBER 303===================
+Delta Time: 0.0192194
+===================NUMBER 304===================
+Delta Time: 0.0222378
+===================NUMBER 305===================
+Delta Time: 0.0204587
+===================NUMBER 306===================
+Delta Time: 0.021172
+===================NUMBER 307===================
+Delta Time: 0.0233607
+===================NUMBER 308===================
+Delta Time: 0.025167
+===================NUMBER 309===================
+Delta Time: 0.0237732
+===================NUMBER 310===================
+Delta Time: 0.0200639
+===================NUMBER 311===================
+Delta Time: 0.0217319
