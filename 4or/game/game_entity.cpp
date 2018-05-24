@@ -96,7 +96,7 @@ GLboolean GameEntity::collide(GameObject* obj, GLfloat dt) { ///Two axis collisi
 			")\tNormal: (" << normal.x << "," << normal.y <<
 			")\tAppliedF: (" << appliedF.x << "," << appliedF.y <<
 			")\tNormalF: (" << normalF.x << "," << normalF.y <<
-			")\t"; 
+			")\n"; 
 		file.close();
 	}
 
