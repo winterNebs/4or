@@ -77,7 +77,7 @@ GLboolean GameEntity::collide(GameObject* obj, GLfloat dt) { ///Two axis collisi
 		}
 		normalF += glm::vec2(normF.x*normal.x, normF.y*normal.y); 
 		//position += normal * getCloseDist(obj);
-		position -= normal * 0.01f;
+		position += normal * 0.1f;
 		std::ofstream file;
 		file.open(".\\logs\\normals.txt", std::ios_base::app);
 		file << "Delta Time:" << dt <<"\tPostiton: (" << position.x << ", " << position.y <<

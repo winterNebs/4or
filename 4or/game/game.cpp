@@ -76,8 +76,16 @@ void Game::update(GLfloat dt) {
 	std::ofstream file;
 	file.open(".\\logs\\normals.txt", std::ios_base::app);
 	file << "===================" << "NUMBER " << counter << "===================\n";
-	file << "Delta Time: " << dt << "\n";
-	if (dt > 0.007) {
+	file << "Delta Time: " << dt << "\tPostiton: (" << levels[level]->getPlayer()->getPos().x << ", " << levels[level]->getPlayer()->getPos().y <<
+		")\tVelocity: (" << levels[level]->getPlayer()->getVel().x << "," << levels[level]->getPlayer()->getVel().y <<
+		")\tAcceleration: (" << levels[level]->getPlayer()->acceleration.x << "," << levels[level]->getPlayer()->acceleration.y <<
+		")\tNormal: (" << levels[level]->getPlayer()->normalF.x << "," << levels[level]->getPlayer()->normalF.y <<
+		")\tAppliedF: (" << levels[level]->getPlayer()->appliedF.x << "," << levels[level]->getPlayer()->appliedF.y <<
+		 ") \n";
+	/*if (dt > 0.007) {
+		file << "Lagging :(" << "\n";
+	}*/
+	if (dt > 0.017) {
 		file << "Lagging :(" << "\n";
 	}
 	file.close();
@@ -88,14 +96,15 @@ void Game::update(GLfloat dt) {
 			if (i->collide(j, dt)) {
 				colliding = true;
 				//GLfloat temp = i->calcTime(i->getCloseDist(j));
+				//i->move(temp);
 			}
 		}
-		for (GameObject* j : levels[level]->movingObjects) {
+		/*for (GameObject* j : levels[level]->movingObjects) {
 			if (j != i) {
 				colliding = true;
 				///Nothing for now.
 			}
-		}
+		}*/
 		if (!colliding) {
 			i->onGround = false;
 			i->move(dt);

@@ -1,772 +1,631 @@
 ===================NUMBER 0===================
-Delta Time: 0.00694102
+Delta Time: 0.00149083	Postiton: (300, 100)	Velocity: (0,0)	Acceleration: (0,0)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 1===================
-Delta Time: 0.00722921
-Lagging :(
+Delta Time: 0.0135096	Postiton: (300.001, 100.001)	Velocity: (0.894499,0.596333)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 2===================
-Delta Time: 0.00684887
+Delta Time: 0.00794506	Postiton: (300.111, 100.074)	Velocity: (8.10578,5.40385)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 3===================
-Delta Time: 0.00690275
+Delta Time: 0.00812495	Postiton: (300.207, 100.136)	Velocity: (12.0783,7.78737)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 4===================
-Delta Time: 0.00714487
-Lagging :(
+Delta Time: 0.008991	Postiton: (300.338, 100.219)	Velocity: (16.1408,10.2249)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 5===================
-Delta Time: 0.00694853
+Delta Time: 0.0115615	Postiton: (300.523, 100.335)	Velocity: (20.6363,12.9222)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 6===================
-Delta Time: 0.00706953
-Lagging :(
+Delta Time: 0.00853217	Postiton: (300.829, 100.525)	Velocity: (26.417,16.3906)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 7===================
-Delta Time: 0.00658995
+Delta Time: 0.0071516	Postiton: (301.091, 100.686)	Velocity: (30.6831,18.9503)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 8===================
-Delta Time: 0.00702077
-Lagging :(
+Delta Time: 0.00833821	Postiton: (301.336, 100.837)	Velocity: (34.2589,21.0957)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 9===================
-Delta Time: 0.00705361
-Lagging :(
+Delta Time: 0.00249982	Postiton: (301.656, 101.034)	Velocity: (38.428,23.5972)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 10===================
-Delta Time: 0.00677329
+Delta Time: 0.00897241	Postiton: (301.755, 101.095)	Velocity: (39.6779,24.3472)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 11===================
-Delta Time: 0.00694638
+Delta Time: 0.0282613	Postiton: (302.152, 101.337)	Velocity: (44.1641,27.0389)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
+Lagging :(
 ===================NUMBER 12===================
-Delta Time: 0.00696886
+Delta Time: 0.0108501	Postiton: (303.799, 102.341)	Velocity: (58.2948,35.5173)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 13===================
-Delta Time: 0.00753343
-Lagging :(
+Delta Time: 0.00848126	Postiton: (304.49, 102.762)	Velocity: (63.7198,38.7723)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 14===================
-Delta Time: 0.00634736
+Delta Time: 0.0081588	Postiton: (305.067, 103.112)	Velocity: (67.9605,41.3167)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 15===================
-Delta Time: 0.00691324
+Delta Time: 0.0077157	Postiton: (305.655, 103.469)	Velocity: (72.0399,43.7643)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 16===================
-Delta Time: 0.00697052
+Delta Time: 0.00752831	Postiton: (306.24, 103.825)	Velocity: (75.8977,46.079)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 17===================
-Delta Time: 0.00692517
+Delta Time: 0.0080049	Postiton: (306.84, 104.189)	Velocity: (79.6619,48.3375)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 18===================
-Delta Time: 0.00719386
-Lagging :(
+Delta Time: 0.00889361	Postiton: (307.51, 104.595)	Velocity: (83.6643,50.739)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 19===================
-Delta Time: 0.00694078
+Delta Time: 0.00763404	Postiton: (308.293, 105.07)	Velocity: (88.1111,53.4071)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 20===================
-Delta Time: 0.00712043
-Lagging :(
+Delta Time: 0.00912702	Postiton: (308.995, 105.495)	Velocity: (91.9282,55.6973)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 21===================
-Delta Time: 0.00664216
+Delta Time: 0.00802124	Postiton: (309.876, 106.028)	Velocity: (96.4917,58.4354)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 22===================
-Delta Time: 0.00751543
-Lagging :(
+Delta Time: 0.00772011	Postiton: (310.682, 106.516)	Velocity: (100.502,60.8418)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 23===================
-Delta Time: 0.00618571
+Delta Time: 0.00771534	Postiton: (311.488, 107.004)	Velocity: (104.362,63.1578)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 24===================
-Delta Time: 0.00702733
-Lagging :(
+Delta Time: 0.00901294	Postiton: (312.323, 107.509)	Velocity: (108.22,65.4724)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 25===================
-Delta Time: 0.00694102
+Delta Time: 0.00775909	Postiton: (313.339, 108.124)	Velocity: (112.726,68.1763)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 26===================
-Delta Time: 0.00697321
+Delta Time: 0.0101682	Postiton: (314.243, 108.671)	Velocity: (116.606,70.504)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 27===================
-Delta Time: 0.00760293
-Lagging :(
+Delta Time: 0.00916851	Postiton: (315.481, 109.419)	Velocity: (121.69,73.5545)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 28===================
-Delta Time: 0.00623864
+Delta Time: 0.0105708	Postiton: (316.638, 110.118)	Velocity: (126.274,76.305)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 29===================
-Delta Time: 0.00691855
+Delta Time: 0.0100763	Postiton: (318.029, 110.958)	Velocity: (131.56,79.4762)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 30===================
-Delta Time: 0.00695616
+Delta Time: 0.00751328	Postiton: (319.406, 111.79)	Velocity: (136.598,82.4991)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 31===================
-Delta Time: 0.00696784
+Delta Time: 0.00907159	Postiton: (320.46, 112.426)	Velocity: (140.355,84.7531)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 32===================
-Delta Time: 0.00697494
+Delta Time: 0.0083276	Postiton: (321.774, 113.22)	Velocity: (144.89,87.4746)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 33===================
-Delta Time: 0.00704223
-Lagging :(
+Delta Time: 0.00796556	Postiton: (323.016, 113.969)	Velocity: (149.054,89.9729)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 34===================
-Delta Time: 0.00680733
+Delta Time: 0.00613928	Postiton: (324.235, 114.705)	Velocity: (153.037,92.3625)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 35===================
-Delta Time: 0.00691593
+Delta Time: 0.0072372	Postiton: (325.193, 115.283)	Velocity: (156.107,94.2043)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 36===================
-Delta Time: 0.0069474
+Delta Time: 0.00926673	Postiton: (326.349, 115.981)	Velocity: (159.725,96.3755)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 37===================
-Delta Time: 0.00695419
+Delta Time: 0.00986767	Postiton: (327.872, 116.9)	Velocity: (164.359,99.1555)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 38===================
-Delta Time: 0.00696659
+Delta Time: 0.00853515	Postiton: (329.543, 117.907)	Velocity: (169.292,102.116)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 39===================
-Delta Time: 0.00695419
+Delta Time: 0.01114	Postiton: (331.024, 118.801)	Velocity: (173.56,104.676)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 40===================
-Delta Time: 0.00756228
-Lagging :(
+Delta Time: 0.00586128	Postiton: (333.02, 120.004)	Velocity: (179.13,108.018)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 41===================
-Delta Time: 0.00630689
+Delta Time: 0.00224352	Postiton: (334.087, 120.647)	Velocity: (182.061,109.777)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 42===================
-Delta Time: 0.00698268
+Delta Time: 0.00872409	Postiton: (334.498, 120.895)	Velocity: (183.182,110.45)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 43===================
-Delta Time: 0.00689912
+Delta Time: 0.0064193	Postiton: (336.134, 121.882)	Velocity: (187.544,113.067)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 44===================
-Delta Time: 0.00700557
-Lagging :(
+Delta Time: 0.00865138	Postiton: (337.358, 122.62)	Velocity: (190.754,114.993)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 45===================
-Delta Time: 0.00694716
+Delta Time: 0.00806737	Postiton: (339.046, 123.637)	Velocity: (195.08,117.588)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 46===================
-Delta Time: 0.0069468
+Delta Time: 0.00939751	Postiton: (340.652, 124.605)	Velocity: (199.113,120.008)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 47===================
-Delta Time: 0.00690591
+Delta Time: 0.00239372	Postiton: (342.568, 125.759)	Velocity: (203.812,122.828)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 48===================
-Delta Time: 0.0069021
+Delta Time: 0.00232267	Postiton: (343.058, 126.055)	Velocity: (205.009,123.546)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 49===================
-Delta Time: 0.00700879
-Lagging :(
+Delta Time: 0.00200784	Postiton: (343.537, 126.344)	Velocity: (206.17,124.243)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 50===================
-Delta Time: 0.00695515
+Delta Time: 0.00947344	Postiton: (343.953, 126.594)	Velocity: (207.174,124.845)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 51===================
-Delta Time: 0.00688231
+Delta Time: 0.00648892	Postiton: (345.961, 127.804)	Velocity: (211.911,127.687)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 52===================
-Delta Time: 0.00696635
+Delta Time: 0.00830686	Postiton: (347.357, 128.645)	Velocity: (215.155,129.634)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 53===================
-Delta Time: 0.00694048
+Delta Time: 0.00719357	Postiton: (349.179, 129.743)	Velocity: (219.309,132.126)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 54===================
-Delta Time: 0.006953
+Delta Time: 0.00604916	Postiton: (350.782, 130.709)	Velocity: (222.906,134.284)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 55===================
-Delta Time: 0.0069164
+Delta Time: 0.00822663	Postiton: (352.149, 131.532)	Velocity: (225.93,136.099)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 56===================
-Delta Time: 0.00690615
+Delta Time: 0.00731897	Postiton: (354.041, 132.672)	Velocity: (230.044,138.567)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 57===================
-Delta Time: 0.00702417
-Lagging :(
+Delta Time: 0.00771976	Postiton: (355.752, 133.702)	Velocity: (233.703,140.762)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 58===================
-Delta Time: 0.00690877
+Delta Time: 0.00263798	Postiton: (357.586, 134.807)	Velocity: (237.563,143.078)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 59===================
-Delta Time: 0.00692737
+Delta Time: 0.00662827	Postiton: (358.216, 135.186)	Velocity: (238.882,143.87)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 60===================
-Delta Time: 0.00698006
+Delta Time: 0.0106324	Postiton: (359.821, 136.153)	Velocity: (242.196,145.858)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 61===================
-Delta Time: 0.00695491
+Delta Time: 0.00613999	Postiton: (362.453, 137.738)	Velocity: (247.512,149.048)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 62===================
-Delta Time: 0.00698543
+Delta Time: 0.00850153	Postiton: (363.991, 138.664)	Velocity: (250.582,150.89)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 63===================
-Delta Time: 0.00689662
+Delta Time: 0.00716662	Postiton: (366.158, 139.969)	Velocity: (254.833,153.44)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 64===================
-Delta Time: 0.00696135
+Delta Time: 0.00941944	Postiton: (368.01, 141.084)	Velocity: (258.416,155.59)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 65===================
-Delta Time: 0.00693345
+Delta Time: 0.007056	Postiton: (370.488, 142.576)	Velocity: (263.126,158.416)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 66===================
-Delta Time: 0.00692153
+Delta Time: 0.0103301	Postiton: (372.37, 143.709)	Velocity: (266.654,160.533)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 67===================
-Delta Time: 0.00695705
+Delta Time: 0.00760889	Postiton: (375.178, 145.399)	Velocity: (271.819,163.632)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 68===================
-Delta Time: 0.00696397
+Delta Time: 0.0086267	Postiton: (377.275, 146.661)	Velocity: (275.624,165.915)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 69===================
-Delta Time: 0.0072192
-Lagging :(
+Delta Time: 0.00234485	Postiton: (379.69, 148.115)	Velocity: (279.937,168.503)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 70===================
-Delta Time: 0.00748885
-Lagging :(
+Delta Time: 0.00204682	Postiton: (380.349, 148.512)	Velocity: (281.109,169.206)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 71===================
-Delta Time: 0.00607407
+Delta Time: 0.00908983	Postiton: (380.927, 148.859)	Velocity: (282.133,169.82)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 72===================
-Delta Time: 0.00704825
-Lagging :(
+Delta Time: 0.00768292	Postiton: (383.532, 150.428)	Velocity: (286.678,172.547)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 73===================
-Delta Time: 0.00687814
+Delta Time: 0.0104592	Postiton: (385.764, 151.771)	Velocity: (290.519,174.852)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 74===================
-Delta Time: 0.00703859
+Delta Time: 0.0181191	Postiton: (388.858, 153.633)	Velocity: (295.749,177.99)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 Lagging :(
 ===================NUMBER 75===================
-Delta Time: 0.00718629
-Lagging :(
+Delta Time: 0.00972724	Postiton: (394.381, 156.956)	Velocity: (304.808,183.425)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 76===================
-Delta Time: 0.00688803
+Delta Time: 0.0141277	Postiton: (397.393, 158.769)	Velocity: (309.672,186.344)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 77===================
-Delta Time: 0.00665236
+Delta Time: 0.0132937	Postiton: (401.868, 161.461)	Velocity: (316.736,190.582)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 78===================
-Delta Time: 0.00694788
+Delta Time: 0.00864196	Postiton: (406.167, 164.048)	Velocity: (323.383,194.57)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 79===================
-Delta Time: 0.00687444
+Delta Time: 0.00952816	Postiton: (408.999, 165.752)	Velocity: (327.704,197.163)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 80===================
-Delta Time: 0.0070349
-Lagging :(
+Delta Time: 0.01043	Postiton: (412.166, 167.658)	Velocity: (332.468,200.021)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 81===================
-Delta Time: 0.00702858
-Lagging :(
+Delta Time: 0.00793302	Postiton: (415.688, 169.777)	Velocity: (337.683,203.15)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 82===================
-Delta Time: 0.00680065
+Delta Time: 0.00936806	Postiton: (418.399, 171.407)	Velocity: (341.649,205.53)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 83===================
-Delta Time: 0.00696993
+Delta Time: 0.00673258	Postiton: (421.643, 173.359)	Velocity: (346.333,208.34)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 84===================
-Delta Time: 0.00698936
+Delta Time: 0.00906539	Postiton: (423.998, 174.775)	Velocity: (349.699,210.36)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 85===================
-Delta Time: 0.00690913
+Delta Time: 0.00757456	Postiton: (427.209, 176.707)	Velocity: (354.232,213.08)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 86===================
-Delta Time: 0.00695384
+Delta Time: 0.0081147	Postiton: (429.921, 178.338)	Velocity: (358.019,215.352)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 87===================
-Delta Time: 0.0069406
+Delta Time: 0.00712311	Postiton: (432.859, 180.105)	Velocity: (362.077,217.786)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 88===================
-Delta Time: 0.00696027
+Delta Time: 0.00892937	Postiton: (435.463, 181.672)	Velocity: (365.638,219.923)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 89===================
-Delta Time: 0.00688493
+Delta Time: 0.00684059	Postiton: (438.768, 183.659)	Velocity: (370.103,222.602)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 90===================
-Delta Time: 0.00694561
+Delta Time: 0.00770152	Postiton: (441.323, 185.196)	Velocity: (373.523,224.654)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 91===================
-Delta Time: 0.00701594
-Lagging :(
+Delta Time: 0.0072248	Postiton: (444.229, 186.944)	Velocity: (377.374,226.965)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 92===================
-Delta Time: 0.00687587
+Delta Time: 0.00687337	Postiton: (446.982, 188.6)	Velocity: (380.987,229.132)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 93===================
-Delta Time: 0.00706983
-Lagging :(
+Delta Time: 0.00933778	Postiton: (449.624, 190.189)	Velocity: (384.423,231.194)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 94===================
-Delta Time: 0.00682926
+Delta Time: 0.00726175	Postiton: (453.258, 192.374)	Velocity: (389.092,233.996)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 95===================
-Delta Time: 0.00719273
-Lagging :(
+Delta Time: 0.00836146	Postiton: (456.109, 194.089)	Velocity: (392.723,236.174)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 96===================
-Delta Time: 0.00671935
+Delta Time: 0.00675309	Postiton: (459.428, 196.084)	Velocity: (396.904,238.683)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 97===================
-Delta Time: 0.00693059
+Delta Time: 0.0105178	Postiton: (462.131, 197.71)	Velocity: (400.28,240.709)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 98===================
-Delta Time: 0.00700831
-Lagging :(
+Delta Time: 0.00696373	Postiton: (466.397, 200.275)	Velocity: (405.539,243.864)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 99===================
-Delta Time: 0.00689685
+Delta Time: 0.010662	Postiton: (469.245, 201.988)	Velocity: (409.021,245.953)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 100===================
-Delta Time: 0.00697565
+Delta Time: 0.0099479	Postiton: (473.663, 204.644)	Velocity: (414.352,249.152)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 101===================
-Delta Time: 0.007357
-Lagging :(
+Delta Time: 0.00767112	Postiton: (477.834, 207.152)	Velocity: (419.326,252.136)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 102===================
-Delta Time: 0.00655723
+Delta Time: 0.0088706	Postiton: (481.08, 209.104)	Velocity: (423.161,254.437)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 103===================
-Delta Time: 0.00772655
-Lagging :(
+Delta Time: 0.00861812	Postiton: (484.873, 211.385)	Velocity: (427.597,257.099)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 104===================
-Delta Time: 0.0061121
+Delta Time: 0.00965786	Postiton: (488.596, 213.623)	Velocity: (431.906,259.684)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 105===================
-Delta Time: 0.0070554
-Lagging :(
+Delta Time: 0.00815272	Postiton: (492.814, 216.159)	Velocity: (436.735,262.581)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 106===================
-Delta Time: 0.00725555
-Lagging :(
+Delta Time: 0.0090661	Postiton: (496.407, 218.319)	Velocity: (440.811,265.027)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 107===================
-Delta Time: 0.00653183
+Delta Time: 0.00720143	Postiton: (500.445, 220.747)	Velocity: (445.344,267.747)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 108===================
-Delta Time: 0.00694466
+Delta Time: 0.00836277	Postiton: (503.678, 222.691)	Velocity: (448.945,269.907)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 109===================
-Delta Time: 0.0068959
+Delta Time: 0.00769782	Postiton: (507.467, 224.969)	Velocity: (453.126,272.416)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 110===================
-Delta Time: 0.00700033
-Lagging :(
+Delta Time: 0.00917435	Postiton: (510.985, 227.083)	Velocity: (456.975,274.726)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 111===================
-Delta Time: 0.00693691
+Delta Time: 0.00838447	Postiton: (515.22, 229.629)	Velocity: (461.562,277.478)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 112===================
-Delta Time: 0.0069685
+Delta Time: 0.00837612	Postiton: (519.125, 231.977)	Velocity: (465.755,279.993)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 113===================
-Delta Time: 0.0069077
+Delta Time: 0.00734925	Postiton: (523.061, 234.343)	Velocity: (469.943,282.506)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 114===================
-Delta Time: 0.00696194
+Delta Time: 0.00836992	Postiton: (526.542, 236.435)	Velocity: (473.617,284.711)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 115===================
-Delta Time: 0.00696206
+Delta Time: 0.00790334	Postiton: (530.541, 238.84)	Velocity: (477.802,287.222)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 116===================
-Delta Time: 0.00694001
+Delta Time: 0.00823855	Postiton: (534.348, 241.128)	Velocity: (481.754,289.593)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 117===================
-Delta Time: 0.00695908
+Delta Time: 0.00847173	Postiton: (538.351, 243.534)	Velocity: (485.873,292.064)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 118===================
-Delta Time: 0.00692201
+Delta Time: 0.00814748	Postiton: (542.503, 246.03)	Velocity: (490.109,294.606)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 119===================
-Delta Time: 0.00691032
+Delta Time: 0.00740767	Postiton: (546.53, 248.45)	Velocity: (494.183,297.05)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 120===================
-Delta Time: 0.00701308
-Lagging :(
+Delta Time: 0.00739813	Postiton: (550.218, 250.667)	Velocity: (497.887,299.272)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 121===================
-Delta Time: 0.00693429
+Delta Time: 0.0104208	Postiton: (553.929, 252.898)	Velocity: (501.586,301.492)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 122===================
-Delta Time: 0.00696683
+Delta Time: 0.0090723	Postiton: (559.21, 256.072)	Velocity: (506.796,304.618)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 123===================
-Delta Time: 0.00688374
+Delta Time: 0.00978398	Postiton: (563.849, 258.86)	Velocity: (511.332,307.34)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 124===================
-Delta Time: 0.00694418
+Delta Time: 0.00978899	Postiton: (568.899, 261.896)	Velocity: (516.224,310.275)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 125===================
-Delta Time: 0.00694561
+Delta Time: 0.00718665	Postiton: (574.001, 264.962)	Velocity: (521.119,313.212)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 126===================
-Delta Time: 0.006984
+Delta Time: 0.0135829	Postiton: (577.772, 267.229)	Velocity: (524.712,315.368)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 127===================
-Delta Time: 0.00694001
+Delta Time: 0.0119083	Postiton: (584.991, 271.568)	Velocity: (531.504,319.443)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 128===================
-Delta Time: 0.00737083
-Lagging :(
+Delta Time: 0.00965357	Postiton: (591.391, 275.414)	Velocity: (537.458,323.015)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 129===================
-Delta Time: 0.00659418
+Delta Time: 0.0117147	Postiton: (596.626, 278.56)	Velocity: (542.284,325.911)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 130===================
-Delta Time: 0.00758946
-Lagging :(
+Delta Time: 0.0101099	Postiton: (603.047, 282.42)	Velocity: (548.142,329.425)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 131===================
-Delta Time: 0.00619376
+Delta Time: 0.00770497	Postiton: (608.64, 285.781)	Velocity: (553.197,332.458)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 132===================
-Delta Time: 0.00723433
-Lagging :(
+Delta Time: 0.00974989	Postiton: (612.932, 288.36)	Velocity: (557.049,334.77)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 133===================
-Delta Time: 0.00658655
+Delta Time: 0.0101001	Postiton: (618.411, 291.653)	Velocity: (561.924,337.695)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 134===================
-Delta Time: 0.00738919
-Lagging :(
+Delta Time: 0.0110345	Postiton: (624.138, 295.094)	Velocity: (566.974,340.725)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 135===================
-Delta Time: 0.00656521
+Delta Time: 0.00884151	Postiton: (630.455, 298.89)	Velocity: (572.491,344.035)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 136===================
-Delta Time: 0.00697374
+Delta Time: 0.009974	Postiton: (635.555, 301.955)	Velocity: (576.912,346.688)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 137===================
-Delta Time: 0.00692368
+Delta Time: 0.00924754	Postiton: (641.359, 305.443)	Velocity: (581.899,349.68)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 138===================
-Delta Time: 0.00689423
+Delta Time: 0.00919795	Postiton: (646.783, 308.702)	Velocity: (586.523,352.454)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 139===================
-Delta Time: 0.00745964
-Lagging :(
+Delta Time: 0.0109708	Postiton: (652.22, 311.97)	Velocity: (591.122,355.214)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 140===================
-Delta Time: 0.00644898
+Delta Time: 0.00775552	Postiton: (658.766, 315.903)	Velocity: (596.607,358.505)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 141===================
-Delta Time: 0.00704706
-Lagging :(
+Delta Time: 0.0101826	Postiton: (663.423, 318.701)	Velocity: (600.485,360.831)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 142===================
-Delta Time: 0.00688469
+Delta Time: 0.00802398	Postiton: (669.589, 322.407)	Velocity: (605.576,363.886)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 143===================
-Delta Time: 0.00692475
+Delta Time: 0.0161014	Postiton: (674.48, 325.346)	Velocity: (609.588,366.293)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 144===================
-Delta Time: 0.00693047
+Delta Time: 0.00965548	Postiton: (684.425, 331.321)	Velocity: (617.639,371.124)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 145===================
-Delta Time: 0.00698256
+Delta Time: 0.0142441	Postiton: (690.435, 334.933)	Velocity: (622.467,374.021)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 146===================
-Delta Time: 0.00707388
-Lagging :(
+Delta Time: 0.00962114	Postiton: (699.403, 340.321)	Velocity: (629.589,378.294)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 147===================
-Delta Time: 0.00679588
+Delta Time: 0.0120549	Postiton: (705.507, 343.988)	Velocity: (634.4,381.18)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 148===================
-Delta Time: 0.00694907
+Delta Time: 0.00943518	Postiton: (713.227, 348.627)	Velocity: (640.427,384.797)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 149===================
-Delta Time: 0.00696576
+Delta Time: 0.00948381	Postiton: (719.314, 352.285)	Velocity: (645.145,387.627)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 150===================
-Delta Time: 0.00687242
+Delta Time: 0.00990272	Postiton: (725.478, 355.988)	Velocity: (649.887,390.472)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 151===================
-Delta Time: 0.00699937
+Delta Time: 0.00734782	Postiton: (731.962, 359.884)	Velocity: (654.838,393.443)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 152===================
-Delta Time: 0.00699627
+Delta Time: 0.010042	Postiton: (736.801, 362.791)	Velocity: (658.512,395.647)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 153===================
-Delta Time: 0.0072366
-Lagging :(
+Delta Time: 0.00670552	Postiton: (743.464, 366.794)	Velocity: (663.533,398.66)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 154===================
-Delta Time: 0.00666034
+Delta Time: 0.00818157	Postiton: (747.936, 369.481)	Velocity: (666.885,400.672)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 155===================
-Delta Time: 0.00688887
+Delta Time: 0.00783443	Postiton: (753.425, 372.779)	Velocity: (670.976,403.126)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 156===================
-Delta Time: 0.00694835
+Delta Time: 0.0093894	Postiton: (758.713, 375.956)	Velocity: (674.893,405.477)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 157===================
-Delta Time: 0.00695586
+Delta Time: 0.00718141	Postiton: (765.094, 379.789)	Velocity: (679.588,408.293)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 158===================
-Delta Time: 0.00691247
+Delta Time: 0.00927758	Postiton: (770, 382.737)	Velocity: (683.179,410.448)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 159===================
-Delta Time: 0.00696981
+Delta Time: 0.00707865	Postiton: (776.381, 386.571)	Velocity: (687.818,413.231)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 160===================
-Delta Time: 0.00691378
+Delta Time: 0.00955868	Postiton: (781.275, 389.511)	Velocity: (691.357,415.355)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 161===================
-Delta Time: 0.00698078
+Delta Time: 0.00717759	Postiton: (787.929, 393.509)	Velocity: (696.136,418.222)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 162===================
-Delta Time: 0.0077548
-Lagging :(
+Delta Time: 0.00974703	Postiton: (792.952, 396.526)	Velocity: (699.725,420.375)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 163===================
-Delta Time: 0.0061518
+Delta Time: 0.00772047	Postiton: (799.819, 400.652)	Velocity: (704.599,423.3)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 164===================
-Delta Time: 0.00733924
-Lagging :(
+Delta Time: 0.00997853	Postiton: (805.289, 403.938)	Velocity: (708.459,425.616)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 165===================
-Delta Time: 0.00690174
+Delta Time: 0.00965381	Postiton: (812.408, 408.215)	Velocity: (713.448,428.609)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 166===================
-Delta Time: 0.00697589
+Delta Time: 0.00952888	Postiton: (819.342, 412.38)	Velocity: (718.275,431.505)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 167===================
-Delta Time: 0.00653529
+Delta Time: 0.0123718	Postiton: (826.232, 416.519)	Velocity: (723.039,434.364)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 168===================
-Delta Time: 0.00696588
+Delta Time: 0.00843501	Postiton: (835.254, 421.939)	Velocity: (729.225,438.076)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 169===================
-Delta Time: 0.00686789
+Delta Time: 0.00998354	Postiton: (841.44, 425.656)	Velocity: (733.443,440.606)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 170===================
-Delta Time: 0.00702906
-Lagging :(
+Delta Time: 0.00883484	Postiton: (848.813, 430.084)	Velocity: (738.435,443.601)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 171===================
-Delta Time: 0.0068903
+Delta Time: 0.00973964	Postiton: (855.376, 434.027)	Velocity: (742.852,446.252)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 172===================
-Delta Time: 0.00696254
+Delta Time: 0.00691605	Postiton: (862.658, 438.402)	Velocity: (747.722,449.173)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 173===================
-Delta Time: 0.00690484
+Delta Time: 0.0101769	Postiton: (867.853, 441.523)	Velocity: (751.18,451.248)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 174===================
-Delta Time: 0.0069989
+Delta Time: 0.00798488	Postiton: (875.55, 446.146)	Velocity: (756.268,454.301)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 ===================NUMBER 175===================
-Delta Time: 0.00693464
-===================NUMBER 176===================
-Delta Time: 0.00695932
-===================NUMBER 177===================
-Delta Time: 0.00695479
-===================NUMBER 178===================
-Delta Time: 0.00696445
-===================NUMBER 179===================
-Delta Time: 0.0069108
-===================NUMBER 180===================
-Delta Time: 0.00686693
-===================NUMBER 181===================
-Delta Time: 0.00699449
-===================NUMBER 182===================
-Delta Time: 0.00697875
-===================NUMBER 183===================
-Delta Time: 0.00689387
-===================NUMBER 184===================
-Delta Time: 0.0069561
-===================NUMBER 185===================
-Delta Time: 0.00693345
-===================NUMBER 186===================
-Delta Time: 0.00697732
-===================NUMBER 187===================
-Delta Time: 0.00689125
-===================NUMBER 188===================
-Delta Time: 0.00699925
-===================NUMBER 189===================
-Delta Time: 0.00710773
-Lagging :(
-===================NUMBER 190===================
-Delta Time: 0.00682092
-===================NUMBER 191===================
-Delta Time: 0.00735188
-Lagging :(
-===================NUMBER 192===================
-Delta Time: 0.00650907
-===================NUMBER 193===================
-Delta Time: 0.00702643
-Lagging :(
-===================NUMBER 194===================
-Delta Time: 0.00689197
-===================NUMBER 195===================
-Delta Time: 0.00692153
-===================NUMBER 196===================
-Delta Time: 0.00706029
-Lagging :(
-===================NUMBER 197===================
-Delta Time: 0.006814
-===================NUMBER 198===================
-Delta Time: 0.00697899
-===================NUMBER 199===================
-Delta Time: 0.00691128
-===================NUMBER 200===================
-Delta Time: 0.00694299
-===================NUMBER 201===================
-Delta Time: 0.00700974
-Lagging :(
-===================NUMBER 202===================
-Delta Time: 0.00685692
-===================NUMBER 203===================
-Delta Time: 0.00717497
-Lagging :(
-===================NUMBER 204===================
-Delta Time: 0.00669909
-===================NUMBER 205===================
-Delta Time: 0.00701404
-Lagging :(
-===================NUMBER 206===================
-Delta Time: 0.00696754
-===================NUMBER 207===================
-Delta Time: 0.00690937
-===================NUMBER 208===================
-Delta Time: 0.00688267
-===================NUMBER 209===================
-Delta Time: 0.0068624
-===================NUMBER 210===================
-Delta Time: 0.0070703
-Lagging :(
-===================NUMBER 211===================
-Delta Time: 0.0079155
-Lagging :(
-===================NUMBER 212===================
-Delta Time: 0.00590396
-===================NUMBER 213===================
-Delta Time: 0.00704646
-Lagging :(
-===================NUMBER 214===================
-Delta Time: 0.00693297
-===================NUMBER 215===================
-Delta Time: 0.00687289
-===================NUMBER 216===================
-Delta Time: 0.00690222
-===================NUMBER 217===================
-Delta Time: 0.00703263
-Lagging :(
-===================NUMBER 218===================
-Delta Time: 0.00698495
-===================NUMBER 219===================
-Delta Time: 0.00691319
-Vertex	: (882.093, 449.678)
-Dir		: (761.216, 457.007)
+Delta Time: 0.01092	Postiton: (881.62, 449.793)	Velocity: (760.261,456.697)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
+Vertex	: (881.62, 449.793)
+Dir		: (760.261, 456.697)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.600364, -0
+slope1, slope2	: 0.600711, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: -79.8989, 500.5
-POI		:( 966.745, 500.5)
-Vertex	: (882.093, 449.678)
-Dir		: (761.216, 457.007)
+const1, const2	: -79.8061, 500.5
+POI		: (966.033, 500.5)
+Vertex	: (881.62, 449.793)
+Dir		: (760.261, 456.697)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.600364, -inf
+slope1, slope2	: 0.600711, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -79.8989, inf
-POI		:( -1858.5, -1195.68)
-Vertex	: (882.093, 449.678)
-Dir		: (761.216, 457.007)
+const1, const2	: -79.8061, inf
+POI		: (-1858.5, -1196.23)
+Vertex	: (881.62, 449.793)
+Dir		: (760.261, 456.697)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: 0.600364, 0
+slope1, slope2	: 0.600711, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: -79.8989, 547.5
-POI		:( 1045.03, 547.5)
-Vertex	: (882.093, 449.678)
-Dir		: (761.216, 457.007)
+const1, const2	: -79.8061, 547.5
+POI		: (1044.27, 547.5)
+Vertex	: (881.62, 449.793)
+Dir		: (760.261, 456.697)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: 0.600364, inf
+slope1, slope2	: 0.600711, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -79.8989, -inf
-POI		:( -13.5, -88.0038)
-Vertex	: (932.093, 449.678)
-Dir		: (761.216, 457.007)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.600364, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: -109.917, 500.5
-POI		:( 1016.74, 500.5)
-Vertex	: (932.093, 449.678)
-Dir		: (761.216, 457.007)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.600364, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -109.917, inf
-POI		:( -1858.5, -1225.69)
-Vertex	: (932.093, 449.678)
-Dir		: (761.216, 457.007)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0.600364, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: -109.917, 547.5
-POI		:( 1095.03, 547.5)
-Vertex	: (932.093, 449.678)
-Dir		: (761.216, 457.007)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: 0.600364, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: -109.917, -inf
-POI		:( -13.5, -118.022)
-Vertex	: (932.093, 499.678)
-Dir		: (761.216, 457.007)
+const1, const2	: -79.8061, -inf
+POI		: (-13.5, -87.9156)
+Vertex	: (931.62, 449.793)
+Dir		: (760.261, 456.697)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.600364, -0
+slope1, slope2	: 0.600711, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: -59.9172, 500.5
-POI		:( 933.462, 500.5)
-Vertex	: (932.093, 499.678)
-Dir		: (761.216, 457.007)
+const1, const2	: -109.842, 500.5
+POI		: (1016.03, 500.5)
+Vertex	: (931.62, 449.793)
+Dir		: (760.261, 456.697)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.600364, -inf
+slope1, slope2	: 0.600711, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -59.9172, inf
-POI		:( -1858.5, -1175.69)
-Vertex	: (932.093, 499.678)
-Dir		: (761.216, 457.007)
+const1, const2	: -109.842, inf
+POI		: (-1858.5, -1226.26)
+Vertex	: (931.62, 449.793)
+Dir		: (760.261, 456.697)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: 0.600364, 0
+slope1, slope2	: 0.600711, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: -59.9172, 547.5
-POI		:( 1011.75, 547.5)
-Vertex	: (932.093, 499.678)
-Dir		: (761.216, 457.007)
+const1, const2	: -109.842, 547.5
+POI		: (1094.27, 547.5)
+Vertex	: (931.62, 449.793)
+Dir		: (760.261, 456.697)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: 0.600364, inf
+slope1, slope2	: 0.600711, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -59.9172, -inf
-POI		:( -13.5, -68.0221)
-Vertex	: (882.093, 499.678)
-Dir		: (761.216, 457.007)
+const1, const2	: -109.842, -inf
+POI		: (-13.5, -117.951)
+Vertex	: (931.62, 499.793)
+Dir		: (760.261, 456.697)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.600364, -0
+slope1, slope2	: 0.600711, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: -29.8989, 500.5
-POI		:( 883.462, 500.5)
-Vertex	: (882.093, 499.678)
-Dir		: (761.216, 457.007)
+const1, const2	: -59.8416, 500.5
+POI		: (932.798, 500.5)
+Vertex	: (931.62, 499.793)
+Dir		: (760.261, 456.697)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: 0.600364, -inf
+slope1, slope2	: 0.600711, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -29.8989, inf
-POI		:( -1858.5, -1145.68)
-Vertex	: (882.093, 499.678)
-Dir		: (761.216, 457.007)
+const1, const2	: -59.8416, inf
+POI		: (-1858.5, -1176.26)
+Vertex	: (931.62, 499.793)
+Dir		: (760.261, 456.697)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: 0.600364, 0
+slope1, slope2	: 0.600711, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: -29.8989, 547.5
-POI		:( 961.748, 547.5)
-Vertex	: (882.093, 499.678)
-Dir		: (761.216, 457.007)
+const1, const2	: -59.8416, 547.5
+POI		: (1011.04, 547.5)
+Vertex	: (931.62, 499.793)
+Dir		: (760.261, 456.697)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: 0.600364, inf
+slope1, slope2	: 0.600711, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: -29.8989, -inf
-POI		:( -13.5, -38.0038)
+const1, const2	: -59.8416, -inf
+POI		: (-13.5, -67.9512)
+Vertex	: (881.62, 499.793)
+Dir		: (760.261, 456.697)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0.600711, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: -29.8061, 500.5
+POI		: (882.798, 500.5)
+Vertex	: (881.62, 499.793)
+Dir		: (760.261, 456.697)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0.600711, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -29.8061, inf
+POI		: (-1858.5, -1146.23)
+Vertex	: (881.62, 499.793)
+Dir		: (760.261, 456.697)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0.600711, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: -29.8061, 547.5
+POI		: (961.039, 547.5)
+Vertex	: (881.62, 499.793)
+Dir		: (760.261, 456.697)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0.600711, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: -29.8061, -inf
+POI		: (-13.5, -37.9157)
 ==CALC NORMAL==
-Collider: 0(882.093, 449.678)	1(932.093, 449.678)	2(932.093, 499.678)	3(882.093, 499.678)	
+Collider: 0(881.62, 449.793)	1(931.62, 449.793)	2(931.62, 499.793)	3(881.62, 499.793)	
 Collidee: 0(13.5, 500.5)	1(1858.5, 500.5)	2(1858.5, 547.5)	3(13.5, 547.5)	
-i:0 j:0 dist:-1
+i:0 j:0 dist:98.4717
 i:0 j:1 dist:-1
-i:0 j:2 dist:190.046
+i:0 j:2 dist:189.744
 i:0 j:3 dist:-1
-i:1 j:0 dist:-1
+i:1 j:0 dist:98.4717
 i:1 j:1 dist:-1
-i:1 j:2 dist:190.046
+i:1 j:2 dist:189.744
 i:1 j:3 dist:-1
-i:2 j:0 dist:-1
+i:2 j:0 dist:1.37368
 i:2 j:1 dist:-1
-i:2 j:2 dist:92.9073
+i:2 j:2 dist:92.6458
 i:2 j:3 dist:-1
-i:3 j:0 dist:-1
+i:3 j:0 dist:1.37368
 i:3 j:1 dist:-1
-i:3 j:2 dist:92.9072
+i:3 j:2 dist:92.6458
 i:3 j:3 dist:-1
-indexj:2 closest:92.9072
-Delta Time:0.00691319	Postiton: (882.093, 449.688)	Velocity: (-761.216,0)	Acceleration: (600,400)	Normal: (0,-1)	AppliedF: (600,0)	NormalF: (0,400)
-===================NUMBER 220===================
-Delta Time: 0.0963585
+indexj:0 closest:1.37368
+Delta Time:0.01092	Postiton: (881.62, 449.693)	Velocity: (-760.261,-0)	Acceleration: (600,400)	Normal: (-0,-1)	AppliedF: (600,0)	NormalF: (0,400)
+===================NUMBER 176===================
+Delta Time: 0.154834	Postiton: (881.62, 449.693)	Velocity: (-760.261,-0)	Acceleration: (600,400)	Normal: (0,400)	AppliedF: (600,0) 
 Lagging :(
-Vertex	: (882.093, 449.688)
-Dir		: (-761.216, 0)
+Vertex	: (881.62, 449.693)
+Dir		: (-760.261, -0)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -0
+slope1, slope2	: 0, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: 449.688, 500.5
-Vertex	: (882.093, 449.688)
-Dir		: (-761.216, 0)
+const1, const2	: 449.693, 500.5
+Vertex	: (881.62, 449.693)
+Dir		: (-760.261, -0)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -inf
+slope1, slope2	: 0, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 449.688, inf
-POI		:( -1858.5, 449.688)
-Vertex	: (882.093, 449.688)
-Dir		: (-761.216, 0)
+const1, const2	: 449.693, inf
+POI		: (-1858.5, 449.693)
+Vertex	: (881.62, 449.693)
+Dir		: (-760.261, -0)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0, 0
+slope1, slope2	: 0, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: 449.688, 547.5
-Vertex	: (882.093, 449.688)
-Dir		: (-761.216, 0)
+const1, const2	: 449.693, 547.5
+Vertex	: (881.62, 449.693)
+Dir		: (-760.261, -0)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0, inf
+slope1, slope2	: 0, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 449.688, -inf
-POI		:( -13.5, 449.688)
-Vertex	: (932.093, 449.688)
-Dir		: (-761.216, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: 449.688, 500.5
-Vertex	: (932.093, 449.688)
-Dir		: (-761.216, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 449.688, inf
-POI		:( -1858.5, 449.688)
-Vertex	: (932.093, 449.688)
-Dir		: (-761.216, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -0, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: 449.688, 547.5
-Vertex	: (932.093, 449.688)
-Dir		: (-761.216, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -0, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 449.688, -inf
-POI		:( -13.5, 449.688)
-Vertex	: (932.093, 499.688)
-Dir		: (-761.216, 0)
+const1, const2	: 449.693, -inf
+POI		: (-13.5, 449.693)
+Vertex	: (931.62, 449.693)
+Dir		: (-760.261, -0)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -0
+slope1, slope2	: 0, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: 499.688, 500.5
-Vertex	: (932.093, 499.688)
-Dir		: (-761.216, 0)
+const1, const2	: 449.693, 500.5
+Vertex	: (931.62, 449.693)
+Dir		: (-760.261, -0)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -inf
+slope1, slope2	: 0, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 499.688, inf
-POI		:( -1858.5, 499.688)
-Vertex	: (932.093, 499.688)
-Dir		: (-761.216, 0)
+const1, const2	: 449.693, inf
+POI		: (-1858.5, 449.693)
+Vertex	: (931.62, 449.693)
+Dir		: (-760.261, -0)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0, 0
+slope1, slope2	: 0, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: 499.688, 547.5
-Vertex	: (932.093, 499.688)
-Dir		: (-761.216, 0)
+const1, const2	: 449.693, 547.5
+Vertex	: (931.62, 449.693)
+Dir		: (-760.261, -0)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0, inf
+slope1, slope2	: 0, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 499.688, -inf
-POI		:( -13.5, 499.688)
-Vertex	: (882.093, 499.688)
-Dir		: (-761.216, 0)
+const1, const2	: 449.693, -inf
+POI		: (-13.5, 449.693)
+Vertex	: (931.62, 499.693)
+Dir		: (-760.261, -0)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -0
+slope1, slope2	: 0, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: 499.688, 500.5
-Vertex	: (882.093, 499.688)
-Dir		: (-761.216, 0)
+const1, const2	: 499.693, 500.5
+Vertex	: (931.62, 499.693)
+Dir		: (-760.261, -0)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -inf
+slope1, slope2	: 0, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 499.688, inf
-POI		:( -1858.5, 499.688)
-Vertex	: (882.093, 499.688)
-Dir		: (-761.216, 0)
+const1, const2	: 499.693, inf
+POI		: (-1858.5, 499.693)
+Vertex	: (931.62, 499.693)
+Dir		: (-760.261, -0)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0, 0
+slope1, slope2	: 0, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: 499.688, 547.5
-Vertex	: (882.093, 499.688)
-Dir		: (-761.216, 0)
+const1, const2	: 499.693, 547.5
+Vertex	: (931.62, 499.693)
+Dir		: (-760.261, -0)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0, inf
+slope1, slope2	: 0, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 499.688, -inf
-POI		:( -13.5, 499.688)
+const1, const2	: 499.693, -inf
+POI		: (-13.5, 499.693)
+Vertex	: (881.62, 499.693)
+Dir		: (-760.261, -0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 499.693, 500.5
+Vertex	: (881.62, 499.693)
+Dir		: (-760.261, -0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 499.693, inf
+POI		: (-1858.5, 499.693)
+Vertex	: (881.62, 499.693)
+Dir		: (-760.261, -0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 499.693, 547.5
+Vertex	: (881.62, 499.693)
+Dir		: (-760.261, -0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 499.693, -inf
+POI		: (-13.5, 499.693)
 ==CALC NORMAL==
-Collider: 0(882.093, 449.688)	1(932.093, 449.688)	2(932.093, 499.688)	3(882.093, 499.688)	
+Collider: 0(881.62, 449.693)	1(931.62, 449.693)	2(931.62, 499.693)	3(881.62, 499.693)	
 Collidee: 0(13.5, 500.5)	1(1858.5, 500.5)	2(1858.5, 547.5)	3(13.5, 547.5)	
 i:0 j:0 dist:-1
 i:0 j:1 dist:-1
@@ -785,283 +644,585 @@ i:3 j:1 dist:-1
 i:3 j:2 dist:-1
 i:3 j:3 dist:-1
 indexj:-1 closest:inf
-===================NUMBER 221===================
-Delta Time: 0.0966151
+===================NUMBER 177===================
+Delta Time: 0.116239	Postiton: (780.688, 459.282)	Velocity: (-651.878,61.9334)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 Lagging :(
-Vertex	: (815.243, 453.402)
-Dir		: (-693.765, 38.5434)
+Vertex	: (780.688, 459.282)
+Dir		: (-651.878, 61.9334)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0.0555569, -0
+slope1, slope2	: -0.0950078, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: 498.695, 500.5
-POI		:( -32.4957, 500.5)
-Vertex	: (815.243, 453.402)
-Dir		: (-693.765, 38.5434)
+const1, const2	: 533.453, 500.5
+POI		: (346.85, 500.5)
+Vertex	: (780.688, 459.282)
+Dir		: (-651.878, 61.9334)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0.0555569, -inf
+slope1, slope2	: -0.0950078, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 498.695, inf
-POI		:( -1858.5, 601.947)
-Vertex	: (815.243, 453.402)
-Dir		: (-693.765, 38.5434)
+const1, const2	: 533.453, inf
+POI		: (-1858.5, 710.025)
+Vertex	: (780.688, 459.282)
+Dir		: (-651.878, 61.9334)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0.0555569, 0
+slope1, slope2	: -0.0950078, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: 498.695, 547.5
-POI		:( -878.475, 547.5)
-Vertex	: (815.243, 453.402)
-Dir		: (-693.765, 38.5434)
+const1, const2	: 533.453, 547.5
+POI		: (-147.847, 547.5)
+Vertex	: (780.688, 459.282)
+Dir		: (-651.878, 61.9334)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0.0555569, inf
+slope1, slope2	: -0.0950078, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 498.695, -inf
-POI		:( -13.5, 499.445)
-Vertex	: (865.243, 453.402)
-Dir		: (-693.765, 38.5434)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0.0555569, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: 501.473, 500.5
-POI		:( 17.5046, 500.5)
-Vertex	: (865.243, 453.402)
-Dir		: (-693.765, 38.5434)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0.0555569, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 501.473, inf
-POI		:( -1858.5, 604.725)
-Vertex	: (865.243, 453.402)
-Dir		: (-693.765, 38.5434)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -0.0555569, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: 501.473, 547.5
-POI		:( -828.475, 547.5)
-Vertex	: (865.243, 453.402)
-Dir		: (-693.765, 38.5434)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -0.0555569, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 501.473, -inf
-POI		:( -13.5, 502.223)
-Vertex	: (865.243, 503.402)
-Dir		: (-693.765, 38.5434)
+const1, const2	: 533.453, -inf
+POI		: (-13.5, 534.736)
+Vertex	: (830.688, 459.282)
+Dir		: (-651.878, 61.9334)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0.0555569, -0
+slope1, slope2	: -0.0950078, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: 551.472, 500.5
-POI		:( 917.482, 500.5)
-Vertex	: (865.243, 503.402)
-Dir		: (-693.765, 38.5434)
+const1, const2	: 538.204, 500.5
+POI		: (396.85, 500.5)
+Vertex	: (830.688, 459.282)
+Dir		: (-651.878, 61.9334)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0.0555569, -inf
+slope1, slope2	: -0.0950078, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 551.472, inf
-POI		:( -1858.5, 654.725)
-Vertex	: (865.243, 503.402)
-Dir		: (-693.765, 38.5434)
+const1, const2	: 538.204, inf
+POI		: (-1858.5, 714.776)
+Vertex	: (830.688, 459.282)
+Dir		: (-651.878, 61.9334)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0.0555569, 0
+slope1, slope2	: -0.0950078, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: 551.472, 547.5
-POI		:( 71.5028, 547.5)
-Vertex	: (865.243, 503.402)
-Dir		: (-693.765, 38.5434)
+const1, const2	: 538.204, 547.5
+POI		: (-97.8468, 547.5)
+Vertex	: (830.688, 459.282)
+Dir		: (-651.878, 61.9334)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0.0555569, inf
+slope1, slope2	: -0.0950078, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 551.472, -inf
-POI		:( -13.5, 552.222)
-Vertex	: (815.243, 503.402)
-Dir		: (-693.765, 38.5434)
+const1, const2	: 538.204, -inf
+POI		: (-13.5, 539.486)
+Vertex	: (830.688, 509.282)
+Dir		: (-651.878, 61.9334)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0.0555569, -0
+slope1, slope2	: -0.0950078, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: 548.695, 500.5
-POI		:( 867.483, 500.5)
-Vertex	: (815.243, 503.402)
-Dir		: (-693.765, 38.5434)
+const1, const2	: 588.204, 500.5
+POI		: (923.122, 500.5)
+Vertex	: (830.688, 509.282)
+Dir		: (-651.878, 61.9334)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0.0555569, -inf
+slope1, slope2	: -0.0950078, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 548.695, inf
-POI		:( -1858.5, 651.947)
-Vertex	: (815.243, 503.402)
-Dir		: (-693.765, 38.5434)
+const1, const2	: 588.204, inf
+POI		: (-1858.5, 764.776)
+Vertex	: (830.688, 509.282)
+Dir		: (-651.878, 61.9334)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0.0555569, 0
+slope1, slope2	: -0.0950078, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: 548.695, 547.5
-POI		:( 21.503, 547.5)
-Vertex	: (815.243, 503.402)
-Dir		: (-693.765, 38.5434)
+const1, const2	: 588.204, 547.5
+POI		: (428.426, 547.5)
+Vertex	: (830.688, 509.282)
+Dir		: (-651.878, 61.9334)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0.0555569, inf
+slope1, slope2	: -0.0950078, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 548.695, -inf
-POI		:( -13.5, 549.445)
+const1, const2	: 588.204, -inf
+POI		: (-13.5, 589.486)
+Vertex	: (780.688, 509.282)
+Dir		: (-651.878, 61.9334)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0.0950078, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 583.453, 500.5
+POI		: (873.123, 500.5)
+Vertex	: (780.688, 509.282)
+Dir		: (-651.878, 61.9334)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0.0950078, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 583.453, inf
+POI		: (-1858.5, 760.025)
+Vertex	: (780.688, 509.282)
+Dir		: (-651.878, 61.9334)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0.0950078, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 583.453, 547.5
+POI		: (378.426, 547.5)
+Vertex	: (780.688, 509.282)
+Dir		: (-651.878, 61.9334)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0.0950078, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 583.453, -inf
+POI		: (-13.5, 584.736)
 ==CALC NORMAL==
-Collider: 0(815.243, 453.402)	1(865.243, 453.402)	2(865.243, 503.402)	3(815.243, 503.402)	
+Collider: 0(780.688, 459.282)	1(830.688, 459.282)	2(830.688, 509.282)	3(780.688, 509.282)	
 Collidee: 0(13.5, 500.5)	1(1858.5, 500.5)	2(1858.5, 547.5)	3(13.5, 547.5)	
-i:0 j:0 dist:-1
+i:0 j:0 dist:435.792
 i:0 j:1 dist:-1
 i:0 j:2 dist:-1
 i:0 j:3 dist:-1
-i:1 j:0 dist:849.046
+i:1 j:0 dist:435.792
 i:1 j:1 dist:-1
 i:1 j:2 dist:-1
 i:1 j:3 dist:-1
-i:2 j:0 dist:52.3201
+i:2 j:0 dist:92.8508
 i:2 j:1 dist:-1
-i:2 j:2 dist:794.964
+i:2 j:2 dist:404.073
 i:2 j:3 dist:-1
-i:3 j:0 dist:52.3203
+i:3 j:0 dist:92.8511
 i:3 j:1 dist:-1
-i:3 j:2 dist:794.964
+i:3 j:2 dist:404.073
 i:3 j:3 dist:-1
-indexj:0 closest:52.3201
-Delta Time:0.0966151	Postiton: (815.243, 453.392)	Velocity: (-693.765,0)	Acceleration: (600,400)	Normal: (0,1)	AppliedF: (600,0)	NormalF: (0,0)
-===================NUMBER 222===================
-Delta Time: 0.104134
+indexj:0 closest:92.8508
+===================NUMBER 178===================
+Delta Time: 0.161873	Postiton: (714.372, 470.535)	Velocity: (-570.51,96.8051)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
 Lagging :(
-Vertex	: (815.243, 453.392)
-Dir		: (-693.765, 0)
+Vertex	: (714.372, 470.535)
+Dir		: (-570.51, 96.8051)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -0
+slope1, slope2	: -0.169682, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: 453.392, 500.5
-Vertex	: (815.243, 453.392)
-Dir		: (-693.765, 0)
+const1, const2	: 591.75, 500.5
+POI		: (537.774, 500.5)
+Vertex	: (714.372, 470.535)
+Dir		: (-570.51, 96.8051)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -inf
+slope1, slope2	: -0.169682, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 453.392, inf
-POI		:( -1858.5, 453.392)
-Vertex	: (815.243, 453.392)
-Dir		: (-693.765, 0)
+const1, const2	: 591.75, inf
+POI		: (-1858.5, 907.103)
+Vertex	: (714.372, 470.535)
+Dir		: (-570.51, 96.8051)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0, 0
+slope1, slope2	: -0.169682, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: 453.392, 547.5
-Vertex	: (815.243, 453.392)
-Dir		: (-693.765, 0)
+const1, const2	: 591.75, 547.5
+POI		: (260.784, 547.5)
+Vertex	: (714.372, 470.535)
+Dir		: (-570.51, 96.8051)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0, inf
+slope1, slope2	: -0.169682, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 453.392, -inf
-POI		:( -13.5, 453.392)
-Vertex	: (865.243, 453.392)
-Dir		: (-693.765, 0)
-Line1	: (13.5, 13.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -0
-yCo1, yCo2		: 1, 1
-const1, const2	: 453.392, 500.5
-Vertex	: (865.243, 453.392)
-Dir		: (-693.765, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 453.392, inf
-POI		:( -1858.5, 453.392)
-Vertex	: (865.243, 453.392)
-Dir		: (-693.765, 0)
-Line1	: (1858.5, 1858.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -0, 0
-yCo1, yCo2		: 1, 1
-const1, const2	: 453.392, 547.5
-Vertex	: (865.243, 453.392)
-Dir		: (-693.765, 0)
-Line1	: (13.5, 13.5)
-Line2	: (13.5, 13.5)
-slope1, slope2	: -0, inf
-yCo1, yCo2		: 1, 1
-const1, const2	: 453.392, -inf
-POI		:( -13.5, 453.392)
-Vertex	: (865.243, 503.392)
-Dir		: (-693.765, 0)
+const1, const2	: 591.75, -inf
+POI		: (-13.5, 594.041)
+Vertex	: (764.372, 470.535)
+Dir		: (-570.51, 96.8051)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -0
+slope1, slope2	: -0.169682, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: 503.392, 500.5
-Vertex	: (865.243, 503.392)
-Dir		: (-693.765, 0)
+const1, const2	: 600.234, 500.5
+POI		: (587.774, 500.5)
+Vertex	: (764.372, 470.535)
+Dir		: (-570.51, 96.8051)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -inf
+slope1, slope2	: -0.169682, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 503.392, inf
-POI		:( -1858.5, 503.392)
-Vertex	: (865.243, 503.392)
-Dir		: (-693.765, 0)
+const1, const2	: 600.234, inf
+POI		: (-1858.5, 915.588)
+Vertex	: (764.372, 470.535)
+Dir		: (-570.51, 96.8051)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0, 0
+slope1, slope2	: -0.169682, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: 503.392, 547.5
-Vertex	: (865.243, 503.392)
-Dir		: (-693.765, 0)
+const1, const2	: 600.234, 547.5
+POI		: (310.784, 547.5)
+Vertex	: (764.372, 470.535)
+Dir		: (-570.51, 96.8051)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0, inf
+slope1, slope2	: -0.169682, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 503.392, -inf
-POI		:( -13.5, 503.392)
-Vertex	: (815.243, 503.392)
-Dir		: (-693.765, 0)
+const1, const2	: 600.234, -inf
+POI		: (-13.5, 602.525)
+Vertex	: (764.372, 520.535)
+Dir		: (-570.51, 96.8051)
 Line1	: (13.5, 13.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -0
+slope1, slope2	: -0.169682, -0
 yCo1, yCo2		: 1, 1
-const1, const2	: 503.392, 500.5
-Vertex	: (815.243, 503.392)
-Dir		: (-693.765, 0)
+const1, const2	: 650.234, 500.5
+POI		: (882.444, 500.5)
+Vertex	: (764.372, 520.535)
+Dir		: (-570.51, 96.8051)
 Line1	: (1858.5, 1858.5)
 Line2	: (1858.5, 1858.5)
-slope1, slope2	: -0, -inf
+slope1, slope2	: -0.169682, -inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 503.392, inf
-POI		:( -1858.5, 503.392)
-Vertex	: (815.243, 503.392)
-Dir		: (-693.765, 0)
+const1, const2	: 650.234, inf
+POI		: (-1858.5, 965.588)
+Vertex	: (764.372, 520.535)
+Dir		: (-570.51, 96.8051)
 Line1	: (1858.5, 1858.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0, 0
+slope1, slope2	: -0.169682, 0
 yCo1, yCo2		: 1, 1
-const1, const2	: 503.392, 547.5
-Vertex	: (815.243, 503.392)
-Dir		: (-693.765, 0)
+const1, const2	: 650.234, 547.5
+POI		: (605.454, 547.5)
+Vertex	: (764.372, 520.535)
+Dir		: (-570.51, 96.8051)
 Line1	: (13.5, 13.5)
 Line2	: (13.5, 13.5)
-slope1, slope2	: -0, inf
+slope1, slope2	: -0.169682, inf
 yCo1, yCo2		: 1, 1
-const1, const2	: 503.392, -inf
-POI		:( -13.5, 503.392)
+const1, const2	: 650.234, -inf
+POI		: (-13.5, 652.525)
+Vertex	: (714.372, 520.535)
+Dir		: (-570.51, 96.8051)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0.169682, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 641.75, 500.5
+POI		: (832.444, 500.5)
+Vertex	: (714.372, 520.535)
+Dir		: (-570.51, 96.8051)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0.169682, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 641.75, inf
+POI		: (-1858.5, 957.104)
+Vertex	: (714.372, 520.535)
+Dir		: (-570.51, 96.8051)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0.169682, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 641.75, 547.5
+POI		: (555.454, 547.5)
+Vertex	: (714.372, 520.535)
+Dir		: (-570.51, 96.8051)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0.169682, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 641.75, -inf
+POI		: (-13.5, 644.041)
 ==CALC NORMAL==
-Collider: 0(815.243, 453.392)	1(865.243, 453.392)	2(865.243, 503.392)	3(815.243, 503.392)	
+Collider: 0(714.372, 470.535)	1(764.372, 470.535)	2(764.372, 520.535)	3(714.372, 520.535)	
+Collidee: 0(13.5, 500.5)	1(1858.5, 500.5)	2(1858.5, 547.5)	3(13.5, 547.5)	
+i:0 j:0 dist:179.123
+i:0 j:1 dist:-1
+i:0 j:2 dist:460.071
+i:0 j:3 dist:-1
+i:1 j:0 dist:179.123
+i:1 j:1 dist:-1
+i:1 j:2 dist:460.072
+i:1 j:3 dist:-1
+i:2 j:0 dist:119.759
+i:2 j:1 dist:-1
+i:2 j:2 dist:161.19
+i:2 j:3 dist:-1
+i:3 j:0 dist:119.759
+i:3 j:1 dist:-1
+i:3 j:2 dist:161.189
+i:3 j:3 dist:-1
+indexj:0 closest:119.759
+===================NUMBER 179===================
+Delta Time: 0.173123	Postiton: (640.364, 494.065)	Velocity: (-457.199,145.367)	Acceleration: (600,400)	Normal: (0,0)	AppliedF: (600,0) 
+Lagging :(
+Vertex	: (640.364, 494.065)
+Dir		: (-457.199, 145.367)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0.317951, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 697.67, 500.5
+POI		: (620.127, 500.5)
+Vertex	: (640.364, 494.065)
+Dir		: (-457.199, 145.367)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0.317951, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 697.67, inf
+POI		: (-1858.5, 1288.58)
+Vertex	: (640.364, 494.065)
+Dir		: (-457.199, 145.367)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0.317951, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 697.67, 547.5
+POI		: (472.305, 547.5)
+Vertex	: (640.364, 494.065)
+Dir		: (-457.199, 145.367)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0.317951, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 697.67, -inf
+POI		: (-13.5, 701.962)
+Vertex	: (690.364, 494.065)
+Dir		: (-457.199, 145.367)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0.317951, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 713.567, 500.5
+POI		: (670.127, 500.5)
+Vertex	: (690.364, 494.065)
+Dir		: (-457.199, 145.367)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0.317951, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 713.567, inf
+POI		: (-1858.5, 1304.48)
+Vertex	: (690.364, 494.065)
+Dir		: (-457.199, 145.367)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0.317951, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 713.567, 547.5
+POI		: (522.305, 547.5)
+Vertex	: (690.364, 494.065)
+Dir		: (-457.199, 145.367)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0.317951, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 713.567, -inf
+POI		: (-13.5, 717.86)
+Vertex	: (690.364, 544.065)
+Dir		: (-457.199, 145.367)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0.317951, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 763.567, 500.5
+POI		: (827.384, 500.5)
+Vertex	: (690.364, 544.065)
+Dir		: (-457.199, 145.367)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0.317951, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 763.567, inf
+POI		: (-1858.5, 1354.48)
+Vertex	: (690.364, 544.065)
+Dir		: (-457.199, 145.367)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0.317951, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 763.567, 547.5
+POI		: (679.562, 547.5)
+Vertex	: (690.364, 544.065)
+Dir		: (-457.199, 145.367)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0.317951, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 763.567, -inf
+POI		: (-13.5, 767.86)
+Vertex	: (640.364, 544.065)
+Dir		: (-457.199, 145.367)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0.317951, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 747.67, 500.5
+POI		: (777.384, 500.5)
+Vertex	: (640.364, 544.065)
+Dir		: (-457.199, 145.367)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: -0.317951, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 747.67, inf
+POI		: (-1858.5, 1338.58)
+Vertex	: (640.364, 544.065)
+Dir		: (-457.199, 145.367)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0.317951, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 747.67, 547.5
+POI		: (629.562, 547.5)
+Vertex	: (640.364, 544.065)
+Dir		: (-457.199, 145.367)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: -0.317951, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 747.67, -inf
+POI		: (-13.5, 751.962)
+==CALC NORMAL==
+Collider: 0(640.364, 494.065)	1(690.364, 494.065)	2(690.364, 544.065)	3(640.364, 544.065)	
+Collidee: 0(13.5, 500.5)	1(1858.5, 500.5)	2(1858.5, 547.5)	3(13.5, 547.5)	
+i:0 j:0 dist:21.2356
+i:0 j:1 dist:-1
+i:0 j:2 dist:176.349
+i:0 j:3 dist:-1
+i:1 j:0 dist:21.2357
+i:1 j:1 dist:-1
+i:1 j:2 dist:176.349
+i:1 j:3 dist:-1
+i:2 j:0 dist:143.779
+i:2 j:1 dist:-1
+i:2 j:2 dist:11.3348
+i:2 j:3 dist:-1
+i:3 j:0 dist:143.779
+i:3 j:1 dist:-1
+i:3 j:2 dist:11.3347
+i:3 j:3 dist:-1
+indexj:2 closest:11.3347
+Delta Time:0.173123	Postiton: (640.364, 493.965)	Velocity: (457.199,0)	Acceleration: (600,400)	Normal: (0,-1)	AppliedF: (600,0)	NormalF: (0,400)
+===================NUMBER 180===================
+Delta Time: 0.156272	Postiton: (640.364, 493.965)	Velocity: (457.199,0)	Acceleration: (600,400)	Normal: (0,400)	AppliedF: (600,0) 
+Lagging :(
+Vertex	: (640.364, 493.965)
+Dir		: (457.199, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 493.965, 500.5
+Vertex	: (640.364, 493.965)
+Dir		: (457.199, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 493.965, inf
+POI		: (-1858.5, 493.965)
+Vertex	: (640.364, 493.965)
+Dir		: (457.199, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 493.965, 547.5
+Vertex	: (640.364, 493.965)
+Dir		: (457.199, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 493.965, -inf
+POI		: (-13.5, 493.965)
+Vertex	: (690.364, 493.965)
+Dir		: (457.199, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 493.965, 500.5
+Vertex	: (690.364, 493.965)
+Dir		: (457.199, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 493.965, inf
+POI		: (-1858.5, 493.965)
+Vertex	: (690.364, 493.965)
+Dir		: (457.199, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 493.965, 547.5
+Vertex	: (690.364, 493.965)
+Dir		: (457.199, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 493.965, -inf
+POI		: (-13.5, 493.965)
+Vertex	: (690.364, 543.965)
+Dir		: (457.199, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 543.965, 500.5
+Vertex	: (690.364, 543.965)
+Dir		: (457.199, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 543.965, inf
+POI		: (-1858.5, 543.965)
+Vertex	: (690.364, 543.965)
+Dir		: (457.199, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 543.965, 547.5
+Vertex	: (690.364, 543.965)
+Dir		: (457.199, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 543.965, -inf
+POI		: (-13.5, 543.965)
+Vertex	: (640.364, 543.965)
+Dir		: (457.199, 0)
+Line1	: (13.5, 13.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -0
+yCo1, yCo2		: 1, 1
+const1, const2	: 543.965, 500.5
+Vertex	: (640.364, 543.965)
+Dir		: (457.199, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (1858.5, 1858.5)
+slope1, slope2	: 0, -inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 543.965, inf
+POI		: (-1858.5, 543.965)
+Vertex	: (640.364, 543.965)
+Dir		: (457.199, 0)
+Line1	: (1858.5, 1858.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, 0
+yCo1, yCo2		: 1, 1
+const1, const2	: 543.965, 547.5
+Vertex	: (640.364, 543.965)
+Dir		: (457.199, 0)
+Line1	: (13.5, 13.5)
+Line2	: (13.5, 13.5)
+slope1, slope2	: 0, inf
+yCo1, yCo2		: 1, 1
+const1, const2	: 543.965, -inf
+POI		: (-13.5, 543.965)
+==CALC NORMAL==
+Collider: 0(640.364, 493.965)	1(690.364, 493.965)	2(690.364, 543.965)	3(640.364, 543.965)	
 Collidee: 0(13.5, 500.5)	1(1858.5, 500.5)	2(1858.5, 547.5)	3(13.5, 547.5)	
 i:0 j:0 dist:-1
 i:0 j:1 dist:-1
@@ -1072,12 +1233,12 @@ i:1 j:1 dist:-1
 i:1 j:2 dist:-1
 i:1 j:3 dist:-1
 i:2 j:0 dist:-1
-i:2 j:1 dist:993.257
+i:2 j:1 dist:1168.14
 i:2 j:2 dist:-1
-i:2 j:3 dist:851.743
+i:2 j:3 dist:676.864
 i:3 j:0 dist:-1
-i:3 j:1 dist:1043.26
+i:3 j:1 dist:1218.14
 i:3 j:2 dist:-1
-i:3 j:3 dist:801.743
-indexj:3 closest:801.743
-Delta Time:0.104134	Postiton: (815.233, 453.392)	Velocity: (0,0)	Acceleration: (600,400)	Normal: (1,-0)	AppliedF: (600,0)	NormalF: (-600,0)
+i:3 j:3 dist:626.864
+indexj:3 closest:626.864
+Delta Time:0.156272	Postiton: (640.464, 493.965)	Velocity: (-0,0)	Acceleration: (600,400)	Normal: (1,-0)	AppliedF: (600,0)	NormalF: (-600,0)
