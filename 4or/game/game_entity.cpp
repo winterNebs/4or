@@ -44,23 +44,13 @@ void GameEntity::move(GLfloat dt) {
 		acceleration += gravity;
 	}
 	velocity += (acceleration * dt);
-	
+
 	position += velocity * dt;
-	/*
-	std::cout <<
-		//"Delta Time: " << dt <<
-		"\tPostiton: (" << position.x << ", " << position.y <<
-		")\tVelocity: (" << velocity.x << "," << velocity.y <<
-		")\tAcceleration: (" << acceleration.x << "," << acceleration.y <<
-		")\tApplied: (" << appliedF.x << "," << appliedF.y <<
-		")\tNormal: (" << normalF.x << "," << normalF.y <<
-		std::endl;*/
 }
 GLboolean GameEntity::collide(GameObject* obj, GLfloat dt) { ///Two axis collision
 
 	GLboolean col = GameObject::collide(obj, dt);
 	if (col) {
-
 		//move(dt-calcTime(getCloseDist(obj)));
 		//move(getFastestTime(obj)-dt);
 		
@@ -74,7 +64,7 @@ GLboolean GameEntity::collide(GameObject* obj, GLfloat dt) { ///Two axis collisi
 		}
 		//GLfloat speed = abs(sqrt(pow(velocity.x, 2) + pow(velocity.y, 2)));
 		//glm::vec2 reflection = glm::vec2(velocity - (2 * (glm::dot(velocity, normal)))*normal);
-		 velocity = glm::vec2(velocity.x * normal.y, velocity.y * normal.x);
+		velocity = glm::vec2(velocity.x * normal.y, velocity.y * normal.x);
 		//velocity += reflection ;
 		//velocity *= -glm::vec2(normal.y, normal.x); ///Bad but whatever
 		//velocity -= glm::vec2(velocity.x * normal.y, velocity.y * normal.x);
@@ -86,7 +76,8 @@ GLboolean GameEntity::collide(GameObject* obj, GLfloat dt) { ///Two axis collisi
 			normF = glm::vec2((appliedF + gravity) - (2 * (glm::dot((appliedF + gravity), normal)))*normal);
 		}
 		normalF += glm::vec2(normF.x*normal.x, normF.y*normal.y); 
-		position += normal * getCloseDist(obj);
+		//position += normal * getCloseDist(obj);
+		position -= normal * 0.01f;
 		std::ofstream file;
 		file.open(".\\logs\\normals.txt", std::ios_base::app);
 		file << "Delta Time:" << dt <<"\tPostiton: (" << position.x << ", " << position.y <<

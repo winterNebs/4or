@@ -5,38 +5,14 @@
 #include <fstream>
 GameObject::GameObject() :
 	position(0, 0), size(1, 1), velocity(0.0f), color(1.0f), rotation(0.0f), sprite(), 
-	isSolid(false), isStatic(true), friction(100.0f), acceleration(0.0f) {
+	isSolid(false),  friction(100.0f), acceleration(0.0f) {
 }
 GameObject::GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, bool s, glm::vec3 color, glm::vec2 vel):
 	position(pos), size(size), velocity(vel), color(color), rotation(0.0f), sprite(sprt), 
-	isSolid(false), isStatic(s), friction(100.0f), acceleration(0.0f) {
+	isSolid(false), friction(100.0f), acceleration(0.0f) {
 }
-glm::vec2 GameObject::getPos() const {
-	return position;
-}
-glm::vec2 GameObject::getSize() const {
-	return size;
-}
-glm::vec2 GameObject::getVel() const {
-	return velocity;
-}
-glm::vec2 GameObject::getFriction() const {
-	return friction;
-}
-void GameObject::setFriction(glm::vec2 fric) {
-	friction = fric;
-}
-GLboolean GameObject::relocate(glm::vec2 loc) {
-	position = loc;
-	return true;
-}
-void GameObject::move(GLfloat dt){
 
-}
-void GameObject::draw(SpriteRenderer &renderer) {
-	renderer.drawSprite(sprite, position, size, rotation, color);
-	//std::cout << position.x << ", " << position.y << std::endl;
-}
+
 GLboolean GameObject::collide(GameObject* obj, GLfloat dt) { ///Two axis collision
 	glm::vec2 intperPos = interpolate(dt);
 	glm::vec2 objPos = obj->interpolate(dt);
@@ -46,9 +22,6 @@ GLboolean GameObject::collide(GameObject* obj, GLfloat dt) { ///Two axis collisi
 	return colX && colY;
 }
 
-glm::vec2 GameObject::interpolate(GLfloat dt) {
-	return position;
-}
 glm::vec2 GameObject::normal(GameObject* obj, GLfloat dt) {
 	///Axis rectangle assumption
 	///Check collision first
@@ -194,4 +167,36 @@ GLfloat GameObject::calcTime(GLfloat dist) {
 		return sqrt((dist) / sqrt(pow(acceleration.x, 2) + pow(acceleration.y, 2)));
 	}
 	return (dist) / sqrt(pow(velocity.x, 2) + pow(velocity.y, 2));
+}
+
+
+void GameObject::move(GLfloat dt) {
+
+}
+glm::vec2 GameObject::interpolate(GLfloat dt) {
+	return position;
+}
+void GameObject::draw(SpriteRenderer &renderer) {
+	renderer.drawSprite(sprite, position, size, rotation, color);
+	//std::cout << position.x << ", " << position.y << std::endl;
+}
+///Get/Set Land
+glm::vec2 GameObject::getPos() const {
+	return position;
+}
+glm::vec2 GameObject::getSize() const {
+	return size;
+}
+glm::vec2 GameObject::getVel() const {
+	return velocity;
+}
+glm::vec2 GameObject::getFriction() const {
+	return friction;
+}
+void GameObject::setFriction(glm::vec2 fric) {
+	friction = fric;
+}
+GLboolean GameObject::relocate(glm::vec2 loc) {
+	position = loc;
+	return true;
 }

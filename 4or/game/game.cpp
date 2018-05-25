@@ -56,7 +56,7 @@ void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
 		//levels[level]->getPlayer()->appliedF = glm::vec2(0);
 		levels[level]->getPlayer()->appliedF = glm::vec2(600.0f, 0);
-		GLfloat velocity = PLAYER_VELOCITY * dt;
+		//GLfloat velocity = PLAYER_VELOCITY * dt;
 		if (keys[GLFW_KEY_LEFT]) {
 			levels[level]->getPlayer()->appliedF.x -= 600.0f;
 		}
@@ -69,9 +69,6 @@ void Game::processInput(GLfloat dt) {
 		if (keys[GLFW_KEY_DOWN]) {
 			levels[level]->getPlayer()->appliedF.y += 600.0f;
 		}
-		if (keys[GLFW_KEY_SPACE]) {
-			state = GameState::GAME_MENU;
-		}
 	}
 }
 void Game::update(GLfloat dt) {
@@ -80,35 +77,30 @@ void Game::update(GLfloat dt) {
 	file.open(".\\logs\\normals.txt", std::ios_base::app);
 	file << "===================" << "NUMBER " << counter << "===================\n";
 	file << "Delta Time: " << dt << "\n";
-	if (dt > 0.2) {
+	if (dt > 0.007) {
 		file << "Lagging :(" << "\n";
 	}
 	file.close();
-	for (GameObject* i : levels[level]->objects) {
-		if (!i->isStatic) {
-			bool colliding = false;
-			i->normalF = glm::vec2(0, 0);
-			for (GameObject* j : levels[level]->objects) {
-				if (j != i) {
-					if (i->collide(j, dt)) {
-						colliding = true;
-						GLfloat temp = i->calcTime(i->getCloseDist(j));
-						//std::cout << "Dist:\t"<< i->getCloseDist(j) << " Time:\t" << temp << " DT:\t" << dt << std::endl;
-						//i->move(temp);
-						//std::cout << "collide lol" << std::endl;
-					}
-					else {
-
-					}
-				}
+	for (GameObject* i : levels[level]->movingObjects) {
+		bool colliding = false;
+		i->normalF = glm::vec2(0, 0);
+		for (GameObject* j : levels[level]->staticObjects) {
+			if (i->collide(j, dt)) {
+				colliding = true;
+				//GLfloat temp = i->calcTime(i->getCloseDist(j));
 			}
-			if (!colliding) {
-				i->onGround = false;
-				i->move(dt);
-			}
-			//i->normalF = glm::vec2(0);
-
 		}
+		for (GameObject* j : levels[level]->movingObjects) {
+			if (j != i) {
+				colliding = true;
+				///Nothing for now.
+			}
+		}
+		if (!colliding) {
+			i->onGround = false;
+			i->move(dt);
+		}
+		//i->normalF = glm::vec2(0);
 	}
 	counter++;
 }

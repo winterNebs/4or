@@ -64,11 +64,9 @@ int main(int argc, char *argv[]) {
 	///Frame tracker
 	float deltaTime = 0.0f;
 	float lastFrame = 0.0f;
-
-	game.state = GameState::GAME_ACTIVE;
-
+	game.state = GameState::GAME_MENU;
 	while (!glfwWindowShouldClose(window)) {
-
+		
 		///Calculate frame time
 		GLfloat currentFrame = (GLfloat)glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
@@ -98,6 +96,14 @@ int main(int argc, char *argv[]) {
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, GL_TRUE);
+	}
+	if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
+		if (game.state == GameState::GAME_ACTIVE) {
+			game.state = GameState::GAME_MENU;
+		}
+		else {
+			game.state = GameState::GAME_ACTIVE;
+		}
 	}
 	if (key >= 0 && key < 1024) {
 		if (action == GLFW_PRESS) {

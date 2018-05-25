@@ -10,10 +10,12 @@
 
 class GameLevel {
 public:
-	std::vector<GameObject*> objects;
+	std::vector<GameObject*> staticObjects;
+	std::vector<GameEntity*> movingObjects;
 	GameEntity* player;
 
 	GameLevel() {}
+	GameLevel(std::string file);
 	~GameLevel();
 	void setPlayer(GameEntity* p);
 	GameEntity* getPlayer();
