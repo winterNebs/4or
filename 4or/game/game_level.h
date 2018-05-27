@@ -7,11 +7,16 @@
 #include "../resources/resource_manager.h"
 
 #include <vector>
+struct Pair {
+	GameObject* A;
+	GameObject* B;
+	Pair(GameObject* a, GameObject* b) : A(a), B(b) {}
+};
 
 class GameLevel {
 public:
-	std::vector<GameObject*> staticObjects;
-	std::vector<GameEntity*> movingObjects;
+	std::vector<GameObject*> objects;
+	std::vector<Pair> pairs;
 	GameEntity* player;
 
 	GameLevel() {}
@@ -22,6 +27,7 @@ public:
 	void load(std::string file);
 	void draw(SpriteRenderer &renderer);
 	GLboolean isCompleted();
+	void BroadPhasePair();
 private:
 	void init(std::vector<shape*> blockData);
 };

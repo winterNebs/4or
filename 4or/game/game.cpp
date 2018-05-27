@@ -6,6 +6,10 @@
 
 #include <iostream>
 #include <fstream>
+///TODO:
+/*
+- Remove all SQRTs when possible
+*/
 int counter = 0;
 SpriteRenderer* renderer;
 Game::Game(GLuint w, GLuint h) :
@@ -82,19 +86,19 @@ void Game::update(GLfloat dt) {
 		")\tNormal: (" << levels[level]->getPlayer()->normalF.x << "," << levels[level]->getPlayer()->normalF.y <<
 		")\tAppliedF: (" << levels[level]->getPlayer()->appliedF.x << "," << levels[level]->getPlayer()->appliedF.y <<
 		 ") \n";
-	/*if (dt > 0.007) {
-		file << "Lagging :(" << "\n";
-	}*/
-	if (dt > 0.017) {
+	if (dt > 0.007) {
 		file << "Lagging :(" << "\n";
 	}
+	//if (dt > 0.017) {
+	//	file << "Lagging :(" << "\n";
+	//}
 	file.close();
 	for (GameObject* i : levels[level]->movingObjects) {
 		bool colliding = false;
 		i->normalF = glm::vec2(0, 0);
 		for (GameObject* j : levels[level]->staticObjects) {
 			if (i->collide(j, dt)) {
-				colliding = true;
+				//colliding = true;
 				//GLfloat temp = i->calcTime(i->getCloseDist(j));
 				//i->move(temp);
 			}
@@ -105,10 +109,11 @@ void Game::update(GLfloat dt) {
 				///Nothing for now.
 			}
 		}*/
-		if (!colliding) {
-			i->onGround = false;
-			i->move(dt);
-		}
+		//if (!colliding) {
+		//	i->onGround = false;
+			//i->move(dt);
+		//}
+		i->move(dt);
 		//i->normalF = glm::vec2(0);
 	}
 	counter++;

@@ -6,8 +6,10 @@ class GameEntity : public GameObject {
 public:
 	GameEntity();
 	GameEntity(glm::vec2 pos, glm::vec2 size, Texture2D sprt, glm::vec3 color = glm::vec3(1.0f), glm::vec2 vel = glm::vec2(0.0f, 0.0f));
-	virtual GLboolean collide(GameObject* obj, GLfloat dt) override;
+	virtual GLboolean collide(GameObject* obj) override;
 	virtual void move(GLfloat dt) override;
 	virtual void draw(SpriteRenderer &renderer) override;
 	virtual glm::vec2 interpolate(GLfloat dt) override;
+	virtual void resolveCollision(GameObject* obj, GLfloat dt) override;
+	virtual void positionCorrection(GameObject* obj) override;
 };

@@ -5,14 +5,15 @@
 #include <fstream>
 GameObject::GameObject() :
 	position(0, 0), size(1, 1), velocity(0.0f), color(1.0f), rotation(0.0f), sprite(), 
-	isSolid(false),  friction(100.0f), acceleration(0.0f) {
+	isSolid(false){
+
 }
 GameObject::GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, bool s, glm::vec3 color, glm::vec2 vel):
 	position(pos), size(size), velocity(vel), color(color), rotation(0.0f), sprite(sprt), 
-	isSolid(false), friction(100.0f), acceleration(0.0f) {
+	isSolid(false) {
 }
 GLfloat magnitude(glm::vec2 input) {
-	return sqrt(pow(input.x, 2) + pow(input.y, 2));
+	return sqrt(pow(input.x, 2) + pow(input.y, 2)); //dont sqrt if possible
 }
 GLfloat calcAng(glm::vec2 input) {
 	GLfloat ang = acos(input.x / magnitude(input));
@@ -21,17 +22,42 @@ GLfloat calcAng(glm::vec2 input) {
 	}
 	return ang;
 }
+void GameObject::resolveCollision(GameObject* obj, GLfloat dt) {
+	glm::vec2 rv = obj->getVel() - velocity;
+	float velAlongNormal = glm::dot(rv, normal(obj));
 
-GLboolean GameObject::collide(GameObject* obj, GLfloat dt) { ///Two axis collision
-	glm::vec2 intperPos = interpolate(dt);
-	glm::vec2 objPos = obj->interpolate(dt);
+	if (velAlongNormal > 0) {
+		return;
+	}
 
-	bool colX = intperPos.x + size.x >= objPos.x && objPos.x + obj->size.x >= intperPos.x;
-	bool colY = intperPos.y + size.y >= objPos.y && objPos.y + obj->size.y >= intperPos.y;
+	float e;
+	if (mat.restitution >= obj->mat.restitution) {
+		e = obj->mat.restitution;
+	}
+	else {
+		e = mat.restitution;
+	}
+	float j = -(1 + e) * velAlongNormal;
+	j /= mass_data.invMass + obj->mass_data.invMass;
+	glm::vec2 impulse = j * normal(obj);
+	velocity -= mass_data.invMass * impulse;
+	obj->velocity += obj->mass_data.invMass * impulse;
+
+}
+GLboolean GameObject::collide(GameObject* obj) { ///Two axis collision
+	//glm::vec2 intperPos = interpolate(dt);
+	//glm::vec2 objPos = obj->interpolate(dt);
+
+	bool colX = position.x + size.x >= obj->position.x && obj->position.x + obj->size.x >= position.x;
+	bool colY = position.y + size.y >= obj->position.y && obj->position.y + obj->size.y >= position.y;
 	return colX && colY;
 }
-
-glm::vec2 GameObject::normal(GameObject* obj, GLfloat dt) {
+void GameObject::positionCorrection(GameObject* obj) {
+	const GLfloat slop = 0.01; // usually 0.01 to 0.1
+	const GLfloat percent = 0.2; // 0.2-0.8
+								 //glm::vec2 correction = penetrationDepth//
+}
+glm::vec2 GameObject::normal(GameObject* obj) {
 	///Axis rectangle assumption
 	///Check collision first
 	std::ofstream file;
@@ -83,7 +109,7 @@ glm::vec2 GameObject::normal(GameObject* obj, GLfloat dt) {
 		return -normal;
 	}
 	if (diff < -6 * atan(1)) {
-		return -normal;
+		return normal;
 	}
 	if (diff > 0 && diff <= 2 * atan(1)) {
 		return normal;
@@ -119,8 +145,8 @@ GLfloat GameObject::calcDist(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, gl
 	file << "Vertex\t: (" << point.x << ", " << point.y << ")\n";
 	file << "Dir\t\t: (" << dir.x << ", " << dir.y << ")\n";
 	
-	file << "Line1\t: (" << line1.x << ", " << line1.x << ")\n";
-	file << "Line2\t: (" << line2.x << ", " << line2.x << ")\n";
+	file << "Line1\t: (" << line1.x << ", " << line1.y << ")\n";
+	file << "Line2\t: (" << line2.x << ", " << line2.y << ")\n";
 	GLfloat slope1 = dir.y / dir.x;								//M1
 	GLfloat slope2 = (line1.y - line2.y) / (line1.x - line2.x);	//M2
 	GLfloat yCo1 = 1;
@@ -214,11 +240,10 @@ glm::vec2 GameObject::getSize() const {
 glm::vec2 GameObject::getVel() const {
 	return velocity;
 }
-glm::vec2 GameObject::getFriction() const {
-	return friction;
-}
-void GameObject::setFriction(glm::vec2 fric) {
-	friction = fric;
+void GameObject::move(GLfloat dt) {
+
+	velocity += mass_data.invMass * force * dt;
+	position += velocity * dt;
 }
 GLboolean GameObject::relocate(glm::vec2 loc) {
 	position = loc;

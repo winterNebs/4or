@@ -64,20 +64,41 @@ int main(int argc, char *argv[]) {
 	///Frame tracker
 	float deltaTime = 0.0f;
 	float lastFrame = 0.0f;
+	const GLfloat fps = 144;
+	const GLfloat dt = 1 / fps;
+	float accumulator = 0;
+	float frameStart = glfwGetTime();
 	game.state = GameState::GAME_MENU;
 	while (!glfwWindowShouldClose(window)) {
 		
 		///Calculate frame time
-		GLfloat currentFrame = (GLfloat)glfwGetTime();
-		deltaTime = currentFrame - lastFrame;
-		lastFrame = currentFrame;
+		const GLfloat currentFrame = (GLfloat)glfwGetTime();
+		frameStart = currentFrame;
+		if (accumulator > 0.2f) {
+			accumulator = 0.2f;
+		}
+		
 		glfwPollEvents();
 		//std::cout << "FPS: " << 1 / (deltaTime) << std::endl;
 		if (game.state == GameState::GAME_ACTIVE) {
-			game.processInput(deltaTime);
+			while (accumulator > dt) {
+				game.processInput(deltaTime);
 
-			game.update(deltaTime);
+				game.update(deltaTime);
+				accumulator -= dt;
+			}
 		}
+		/*
+		  const float alpha = accumulator / dt;
+ 
+			RenderGame( alpha )
+ 
+			void RenderGame( float alpha )
+			for shape in game do
+			  // calculate an interpolated transform for rendering
+			 Transform i = shape.previous * alpha + shape.current * (1.0f - alpha)
+			 shape.previous = shape.current
+			 shape.Render( i )*/
 
 		///Render stuff
 		glClearColor(0.1f, 0.0f, 0.0f, 1.0f);
