@@ -2,6 +2,7 @@
 
 #include "../resources/texture.h"
 #include "../resources/sprite_renderer.h"
+#include "game_level.h"
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>
@@ -10,6 +11,15 @@
 struct MassData {
 	GLfloat mass;
 	GLfloat invMass;
+	MassData() : mass(0), invMass(0) {}
+	MassData(GLfloat m) : mass(m) {
+		if (m == 0) {
+			invMass = 0;
+		}
+		else {
+			invMass = 1 / mass;
+		}
+	}
 };
 
 struct Material {
@@ -41,12 +51,10 @@ public:
 	Texture2D sprite;
 
 	GameObject();
-	GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, bool s, glm::vec3 color = glm::vec3(1.0f), glm::vec2 vel = glm::vec2(0.0f, 0.0f));
+	GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, bool s, glm::vec3 color = glm::vec3(1.0f), glm::vec2 vel = glm::vec2(0.0f, 0.0f), GLfloat m);
 	virtual void draw(SpriteRenderer &renderer);
-	virtual GLboolean collide(GameObject* obj);
 	virtual void move(GLfloat dt);
 	virtual glm::vec2 interpolate(GLfloat dt);
-	virtual glm::vec2 normal(GameObject* obj);
 	virtual void resolveCollision(GameObject* obj, GLfloat dt);
 	virtual void positionCorrection(GameObject* obj);
 
@@ -58,6 +66,7 @@ public:
 
 	GLfloat getCloseDist(GameObject* obj);
 	GLfloat calcTime(GLfloat dist);
+	AABB computeAABB();
 protected:
 	glm::vec2 position, size;
 	GLfloat calcDist(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, glm::vec2 line2);

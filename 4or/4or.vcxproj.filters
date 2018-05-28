@@ -51,9 +51,6 @@
     <ClCompile Include="game\game_level.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="game\game_entity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h">
@@ -81,9 +78,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game\game_level.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="game\game_entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
