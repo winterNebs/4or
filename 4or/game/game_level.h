@@ -17,16 +17,12 @@ struct Manifold {
 	GLfloat penetration;
 	glm::vec2 normal;
 };
-struct AABB {
-	glm::vec2 min;
-	glm::vec2 max;
-};
 class GameLevel {
 public:
 	std::vector<GameObject*> objects;
 	std::vector<Pair> pairs;
 	GameObject* player;
-	
+	GLfloat gravity;
 
 	GameLevel() {}
 	GameLevel(std::string file);
@@ -38,7 +34,9 @@ public:
 	GLboolean isCompleted();
 	void BroadPhasePair();
 	bool AABBAABB(Manifold *m);
-	void positionCorrection(GameObject* obj);
+	void resolveCollision(Manifold *m);
+	void positionCorrection(Manifold *m);
+	void update(GLfloat dt);
 private:
 	void init(std::vector<shape*> blockData);
 };

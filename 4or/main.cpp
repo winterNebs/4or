@@ -62,31 +62,29 @@ int main(int argc, char *argv[]) {
 	game.init();
 
 	///Frame tracker
-	float deltaTime = 0.0f;
-	float lastFrame = 0.0f;
 	const GLfloat fps = 144;
 	const GLfloat dt = 1 / fps;
 	float accumulator = 0;
 	float frameStart = glfwGetTime();
 	game.state = GameState::GAME_MENU;
 	while (!glfwWindowShouldClose(window)) {
-		
+
+		glfwPollEvents();
 		///Calculate frame time
 		const GLfloat currentFrame = (GLfloat)glfwGetTime();
+		accumulator += currentFrame - frameStart;
 		frameStart = currentFrame;
 		if (accumulator > 0.2f) {
 			accumulator = 0.2f;
 		}
 		
-		glfwPollEvents();
 		//std::cout << "FPS: " << 1 / (deltaTime) << std::endl;
-		if (game.state == GameState::GAME_ACTIVE) {
-			while (accumulator > dt) {
-				game.processInput(deltaTime);
+			//std::cout << accumulator << std::endl;
+		while (accumulator > dt && game.state == GameState::GAME_ACTIVE) {
+			game.processInput(dt);
 
-				game.update(deltaTime);
-				accumulator -= dt;
-			}
+			game.update(dt);
+			accumulator -= dt;
 		}
 		/*
 		  const float alpha = accumulator / dt;

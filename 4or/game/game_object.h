@@ -2,12 +2,15 @@
 
 #include "../resources/texture.h"
 #include "../resources/sprite_renderer.h"
-#include "game_level.h"
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>
 
 #include <vector>
+struct AABB {
+	glm::vec2 min;
+	glm::vec2 max;
+};
 struct MassData {
 	GLfloat mass;
 	GLfloat invMass;
@@ -39,36 +42,28 @@ enum Layer {
 class GameObject {
 public:
 	glm::vec3 color;
-	glm::vec2 force, velocity;
+	glm::vec2 force, velocity, position, size, appliedF;
 	Layer layer;
 	GLfloat rotation;
 	MassData mass_data;
 	Material mat;
 	GLboolean isSolid;
 	GLboolean onGround;
-	GLfloat gravity;
+	GLfloat staticFriction, dynamicFriction;
 
 	Texture2D sprite;
 
 	GameObject();
-	GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, bool s, glm::vec3 color = glm::vec3(1.0f), glm::vec2 vel = glm::vec2(0.0f, 0.0f), GLfloat m);
+	GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, float = 0, glm::vec3 color = glm::vec3(1.0f));
 	virtual void draw(SpriteRenderer &renderer);
-	virtual void move(GLfloat dt);
 	virtual glm::vec2 interpolate(GLfloat dt);
-	virtual void resolveCollision(GameObject* obj, GLfloat dt);
-	virtual void positionCorrection(GameObject* obj);
 
 	glm::vec2 getPos() const;
 	glm::vec2 getSize() const;
 	glm::vec2 getVel() const;
 
 	GLboolean relocate(glm::vec2 loc);
-
-	GLfloat getCloseDist(GameObject* obj);
-	GLfloat calcTime(GLfloat dist);
 	AABB computeAABB();
 protected:
-	glm::vec2 position, size;
-	GLfloat calcDist(glm::vec2 dir, glm::vec2 point, glm::vec2 line1, glm::vec2 line2);
 	virtual std::vector<glm::vec2> getVerticies();
 };
