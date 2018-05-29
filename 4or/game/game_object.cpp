@@ -4,13 +4,14 @@
 #include <math.h>
 #include <fstream>
 GameObject::GameObject() :
-	position(0, 0), size(1, 1), velocity(0.0f), color(1.0f), rotation(0.0f), sprite(), 
-	isSolid(false), staticFriction(0.1f), dynamicFriction(0.3f){
+	position(0), size(1, 1), velocity(0), color(1.0f), rotation(0), sprite(),
+	isSolid(false), staticFriction(0.1f), dynamicFriction(0.3f), appliedF(0), layer(Layer::Default) {
 
 }
-GameObject::GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, float m, glm::vec3 color) :
+GameObject::GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, float m, glm::vec3 color, Layer l) :
 	position(pos), size(size), color(color), rotation(0.0f), sprite(sprt),
-	isSolid(false), mass_data(m), staticFriction(0.1f), dynamicFriction(0.3f) {
+	isSolid(false), mass_data(m), staticFriction(0.1f), dynamicFriction(0.3f), appliedF(0), velocity(0), force(0),
+	layer(l){
 }
 AABB GameObject::computeAABB() {
 	AABB aabb;
@@ -32,7 +33,7 @@ glm::vec2 GameObject::interpolate(GLfloat dt) {
 }
 void GameObject::draw(SpriteRenderer &renderer) {
 	renderer.drawSprite(sprite, position, size, rotation, color);
-	std::cout << position.x << ", " << position.y << std::endl;
+	//std::cout << position.x << ", " << position.y << std::endl;
 }
 ///Get/Set Land
 glm::vec2 GameObject::getPos() const {

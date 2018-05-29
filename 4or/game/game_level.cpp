@@ -13,8 +13,11 @@ void GameLevel::init(std::vector<shape*> blockData) {
 	for (auto i : blockData) {
 		GameObject* obj = new GameObject(glm::vec2(i->x, i->y), glm::vec2(i->width, i->height),
 			ResourceManager::getTexture("container"), 0, glm::vec3(0.4f, 0.4f, 0.4f));
+
 		obj->isSolid = GL_TRUE;
-		
+		obj->mass_data = MassData(0);
+		obj->mat.density = 0;
+		obj->mat.restitution = 0.4;
 		objects.push_back(obj);
 	}
 }
@@ -38,13 +41,6 @@ GameLevel::~GameLevel() {
 		delete i;
 	}
 }
-void GameLevel::positionCorrection(Manifold *m) {
-	const float percent = 0.2f; // usually 20% to 80%
-	const float slop = 0.01f; // usually 0.01 to 0.1
-	glm::vec2 correction = glm::max(m->penetration - slop, 0.0f) / (m->A->mass_data.invMass + m->B->mass_data.invMass) * percent * m->normal;
-	m->A->position -= m->A->mass_data.invMass * correction;
-	m->B->position += m->B->mass_data.invMass * correction;
-}
 
 void GameLevel::resolveCollision(Manifold *m) {
 	glm::vec2 rv = m->B->velocity - m->A->velocity;
@@ -57,7 +53,7 @@ void GameLevel::resolveCollision(Manifold *m) {
 	}
 
 	float e = glm::max(m->A->mat.restitution, m->B->mat.restitution);
-		
+
 	float j = -(1 + e) * velAlongNormal;
 	j /= m->A->mass_data.invMass + m->B->mass_data.invMass;
 
@@ -80,36 +76,45 @@ void GameLevel::resolveCollision(Manifold *m) {
 	m->B->velocity -= m->B->mass_data.invMass * impulse;
 	m->A->velocity -= m->A->mass_data.invMass * frictionImpulse;
 	m->B->velocity += m->B->mass_data.invMass * frictionImpulse;
+	const float percent = 0.2f; // usually 20% to 80%
+	const float slop = 0.01f; // usually 0.01 to 0.1
+	glm::vec2 correction = glm::max(m->penetration - slop, 0.0f) / (m->A->mass_data.invMass + m->B->mass_data.invMass) * percent * m->normal;
+	m->A->position -= m->A->mass_data.invMass * correction;
+	m->B->position += m->B->mass_data.invMass * correction;
 }
-
+bool AABBvsAABB(AABB a, AABB b) {
+	// Exit with no intersection if found separated along an axis
+	if (a.max.x < b.min.x || a.min.x > b.max.x) { return false; }
+	if (a.max.y < b.min.y || a.min.y > b.max.y) { return false; }
+	// No separating axis found, therefor there is at least one overlapping axis
+	return true;
+}
 
 void GameLevel::BroadPhasePair() {
 	pairs.clear();
-	std::vector<Pair> temp;
 	for (int i = 0; i < objects.size(); i++) {
 		for (int j = 0; j < objects.size(); j++) {
-			
 			if (i != j && (objects[i]->layer == objects[j]->layer)) {
-				if (i > j) {
+				if (AABBvsAABB(objects[i]->computeAABB(), objects[j]->computeAABB())) {
 					for (Pair k : pairs) {
-						if (k.A == objects[i] && k.B == objects[j]) {
+						if (i > j) {
+							if ((k.A == objects[i] && k.B == objects[j]) || (k.A == objects[j] && k.B == objects[i])) {
 								goto end;
+							}
 						}
 					}
-					temp.push_back(Pair(objects[i], objects[j]));
-				}
-				else {
-					for (Pair k : pairs) {
-						if (k.A == objects[j] && k.B == objects[i]) {
-							goto end;
-						}
+					if (i > j) {
+						pairs.push_back(Pair(objects[i], objects[j]));
 					}
-					temp.push_back(Pair(objects[j], objects[i]));
-				}
+					else {
+						pairs.push_back(Pair(objects[j], objects[i]));
+					}
+				}		
 			}
 		end:;
 		}
 	}
+
 }
 bool GameLevel::AABBAABB(Manifold *m) {
 	GameObject *A = m->A;
@@ -129,22 +134,22 @@ bool GameLevel::AABBAABB(Manifold *m) {
 	float x_overlap = a_extent + b_extent - abs(n.x);
 
 	// SAT test on x axis
-	if (x_overlap > 0)	{
+	if (x_overlap > 0) {
 		// Calculate half extents along x axis for each object
 		float a_extent = (abox.max.y - abox.min.y) / 2;
 		float b_extent = (bbox.max.y - bbox.min.y) / 2;
 		// Calculate overlap on y axis
 		float y_overlap = a_extent + b_extent - abs(n.y);
-			// SAT test on y axis
+		// SAT test on y axis
 		if (y_overlap > 0) {
 			// Find out which axis is axis of least penetration
-			if (x_overlap > y_overlap) {
+			if (x_overlap < y_overlap) {
 				// Point towards B knowing that n points from A to B
 				if (n.x < 0) {
 					m->normal = glm::vec2(-1, 0);
 				}
 				else {
-					m->normal = glm::vec2(0, 0);
+					m->normal = glm::vec2(1, 0);
 				}
 				m->penetration = x_overlap;
 				return true;
@@ -160,32 +165,36 @@ bool GameLevel::AABBAABB(Manifold *m) {
 				m->penetration = y_overlap;
 				return true;
 			}
-		
+
 		}
 	}
 	return false;
 }
 void GameLevel::update(GLfloat dt) {
 	BroadPhasePair();
-	std::vector<Manifold*> mani;
+	//std::cout << pairs.size() << std::endl;
 	for (Pair i : pairs) {
 		Manifold* m = new Manifold;
 		m->A = i.A;
 		m->B = i.B;
-		resolveCollision(m);
-		positionCorrection(m);
+		if (AABBAABB(m)) {
+			std::cout << "COLLIDECOLLIDECOLLIDECOLLIDECOLLIDE" << std::endl;
+			resolveCollision(m);
+		}
 		delete m;
 	}
 	for (GameObject* i : objects) {
-			i->force = glm::vec2(0);
-			i->force = glm::vec2(0, gravity) + i->appliedF;
-			/*There is one more thing to talk about in the body structure.
-			There is a data member called force. This value starts at zero at the beginning of each physics update.
-			Other influences in the physics engine (such as gravity) will add Vec2 vectors into this force data member.
-			Just before integration all of this force will be used to calculate acceleration of the body, and be used during integration.
-			After integration this force data member is zeroed out.*/
-			i->velocity += i->mass_data.invMass * i->force * dt;
-			i->position += i->velocity * dt;
-		
+		i->force = glm::vec2(0);
+		i->force = glm::vec2(0, gravity) + i->appliedF;
+		i->velocity += i->mass_data.invMass * i->force * dt;
+		i->position += i->velocity * dt;
+		std::cout <<
+			"Force(" << i->force.x << "," << i->force.y <<
+			")\tMass(" << i->mass_data.mass << "," << i->mass_data.invMass <<
+			")\tVelocity(" << i->velocity.x << "," << i->velocity.y <<
+			")\tPosition(" << i->position.x << "," << i->position.y <<
+			")\tdt: " << dt <<
+			std::endl;
+
 	}
 }

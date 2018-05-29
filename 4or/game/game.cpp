@@ -53,12 +53,13 @@ void Game::init() {
 	level = 4;
 	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
 	GameObject* player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::getTexture("player"), 10.0f);
+	player->mat.restitution = 0.2;
 	levels[level]->setPlayer(player);
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
-		//levels[level]->getPlayer()->appliedF = glm::vec2(0);
-		levels[level]->getPlayer()->appliedF = glm::vec2(600.0f, 0);
+		levels[level]->getPlayer()->appliedF = glm::vec2(0);
+		//levels[level]->getPlayer()->appliedF = glm::vec2(600.0f, 0);
 		//GLfloat velocity = PLAYER_VELOCITY * dt;
 		if (keys[GLFW_KEY_LEFT]) {
 			levels[level]->getPlayer()->appliedF.x -= 600.0f;
@@ -75,7 +76,7 @@ void Game::processInput(GLfloat dt) {
 	}
 }
 void Game::update(GLfloat dt) {
-	levels[level]->gravity = 50.0f;
+	levels[level]->gravity = 500.0f;
 	levels[level]->update(dt);
 }
 void Game::render() {

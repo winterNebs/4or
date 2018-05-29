@@ -139,7 +139,6 @@
     <ClCompile Include="svg\svg_reader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="camera.h" />
     <ClInclude Include="game\game.h" />
     <ClInclude Include="game\game_level.h" />
     <ClInclude Include="game\game_object.h" />

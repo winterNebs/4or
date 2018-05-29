@@ -1,5 +1,4 @@
 #include "resources/shader.h"
-#include "camera.h"
 #include "svg/svg_reader.h"
 #include "game/game.h"
 #include "resources/resource_manager.h"
@@ -70,6 +69,8 @@ int main(int argc, char *argv[]) {
 	while (!glfwWindowShouldClose(window)) {
 
 		glfwPollEvents();
+		glClearColor(0.1f, 0.0f, 0.0f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		///Calculate frame time
 		const GLfloat currentFrame = (GLfloat)glfwGetTime();
 		accumulator += currentFrame - frameStart;
@@ -97,12 +98,9 @@ int main(int argc, char *argv[]) {
 			 Transform i = shape.previous * alpha + shape.current * (1.0f - alpha)
 			 shape.previous = shape.current
 			 shape.Render( i )*/
-
 		///Render stuff
-		glClearColor(0.1f, 0.0f, 0.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
 		game.render();
-	
 		glfwSwapBuffers(window);
 	}
 	///Deallocate 

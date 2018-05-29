@@ -36,7 +36,7 @@ struct Material {
 	Pillow     Density : 0.1  Restitution : 0.2
 	Static     Density : 0.0  Restitution : 0.4*/
 };
-enum Layer {
+enum class Layer {
 	Default = 1
 };
 class GameObject {
@@ -54,7 +54,7 @@ public:
 	Texture2D sprite;
 
 	GameObject();
-	GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, float = 0, glm::vec3 color = glm::vec3(1.0f));
+	GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, float m = 0, glm::vec3 color = glm::vec3(1.0f), Layer l = Layer::Default);
 	virtual void draw(SpriteRenderer &renderer);
 	virtual glm::vec2 interpolate(GLfloat dt);
 
