@@ -3,7 +3,7 @@
 const float gravityScale = 5.0f;
 const glm::vec2 gravity(0, 10.0f * gravityScale);
 const float DT = 1.0f / 60.0f;
-const float PI = 4 * atan(1);
+const float PI = 4.0f * atan(1);
 const float EPSILON = 0.0001f;
 
 inline float crossProduct(const glm::vec2& a, const glm::vec2& b) {
@@ -20,4 +20,15 @@ inline glm::vec2 crossProduct(float s, const glm::vec2& a) {
 
 inline float len2(glm::vec2 v) {
 	return (v.x * v.x + v.y * v.y);
+}
+inline float dist2(const glm::vec2& a, const glm::vec2& b)
+{
+	glm::vec2 c = a - b;
+	return glm::dot(c, c);
+}
+inline bool biasGreaterThan(float a, float b)
+{
+	const float k_biasRelative = 0.95f;
+	const float k_biasAbsolute = 0.01f;
+	return a >= b * k_biasRelative + a * k_biasAbsolute;
 }

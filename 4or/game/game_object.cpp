@@ -1,52 +1,15 @@
 #include "game_object.h"
 
-#include <iostream>
-#include <math.h>
-#include <fstream>
-GameObject::GameObject() :
-	position(0), size(1, 1), velocity(0), color(1.0f), rotation(0), sprite(),
-	isSolid(false), staticFriction(0.1f), dynamicFriction(0.3f), appliedF(0), layer(Layer::Default) {
-
+GameObject::GameObject(Texture2D sp) : sprite(sp) {
+	
 }
-GameObject::GameObject(glm::vec2 pos, glm::vec2 size, Texture2D sprt, float m, glm::vec3 color, Layer l) :
-	position(pos), size(size), color(color), rotation(0.0f), sprite(sprt),
-	isSolid(false), mass_data(m), staticFriction(0.1f), dynamicFriction(0.3f), appliedF(0), velocity(0), force(0),
-	layer(l){
-}
-AABB GameObject::computeAABB() {
-	AABB aabb;
-	aabb.min = position;
-	aabb.max = position + size;
-	return aabb;
-}
-std::vector<glm::vec2> GameObject::getVerticies() {
-	std::vector<glm::vec2> verts;
-	verts.push_back(glm::vec2(position.x, position.y));
-	verts.push_back(glm::vec2(position.x + size.x, position.y));
-	verts.push_back(glm::vec2(position.x + size.x, position.y + size.y));
-	verts.push_back(glm::vec2(position.x, position.y + size.y));
-	return verts;
+void GameObject::initRect(glm::vec2 pos, glm::vec2 size){
+	//Polygon poly;
+	
 }
 
-glm::vec2 GameObject::interpolate(GLfloat dt) {
-	return position;
-}
 void GameObject::draw(SpriteRenderer &renderer) {
-	renderer.drawSprite(sprite, position, size, rotation, color);
+	//renderer.drawSprite(sprite, shape->body->position, size, shape->body->orient, shape->body->color);
 	//std::cout << position.x << ", " << position.y << std::endl;
 }
 ///Get/Set Land
-glm::vec2 GameObject::getPos() const {
-	return position;
-}
-glm::vec2 GameObject::getSize() const {
-	return size;
-}
-glm::vec2 GameObject::getVel() const {
-	return velocity;
-}
-
-GLboolean GameObject::relocate(glm::vec2 loc) {
-	position = loc;
-	return true;
-}

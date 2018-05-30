@@ -60,6 +60,9 @@
     <ClCompile Include="game\physics\manifold.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="game\physics\collision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resources\texture.h">

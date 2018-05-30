@@ -7,7 +7,7 @@
 #include <cassert>
 
 #define MaxPolyVertexCount 64
-
+struct Body;
 struct Shape {
 	enum class Type {
 		CIRCLE, POLY, COUNT
@@ -51,5 +51,6 @@ struct Polygon : public Shape {
 	void setBox(float hw, float hh);
 
 	void set(glm::vec2 *vertices, int count);
+	glm::vec2 getSupport(const glm::vec2& dir);
 
 };

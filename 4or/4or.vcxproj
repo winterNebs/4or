@@ -130,6 +130,7 @@
     <ClCompile Include="game\game_level.cpp" />
     <ClCompile Include="game\game_object.cpp" />
     <ClCompile Include="game\physics\body.cpp" />
+    <ClCompile Include="game\physics\collision.cpp" />
     <ClCompile Include="game\physics\manifold.cpp" />
     <ClCompile Include="game\physics\shape.cpp" />
     <ClCompile Include="main.cpp" />

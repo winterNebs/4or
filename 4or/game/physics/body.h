@@ -30,7 +30,7 @@ struct Body {
 	Shape *shape;
 
 	// Store a color in RGB format
-	float r, g, b;
+	glm::vec3 color;
 
 	Body(Shape *shape, float x, float y);
 

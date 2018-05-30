@@ -4,10 +4,11 @@
 #include "body.h"
 #include "collision.h"
 
+struct Body;
 
 struct Manifold {
-	Body *A;
-	Body *B;
+	Body* A;
+	Body* B;
 
 	float penetration;     // Depth of penetration from collision
 	glm::vec2 normal;          // From A to B
@@ -16,7 +17,7 @@ struct Manifold {
 	float e;               // Mixed restitution
 	float df;              // Mixed dynamic friction
 	float sf;              // Mixed static friction
-	Manifold(Body *a, Body *b);
+	Manifold(Body* a, Body* b);
 
 	void solve(void);                 // Generate contact information
 	void init(void);            // Precalculations for impulse solving

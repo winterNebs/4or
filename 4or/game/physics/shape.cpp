@@ -176,5 +176,23 @@ void Polygon::set(glm::vec2 *vertices, int count) {
 		// Calculate normal with 2D cross product between vector and scalar
 		m_normals[i1] = glm::vec2(face.y, -face.x);
 		m_normals[i1] = glm::normalize(m_normals[i1]);
+
 	}
+}
+
+glm::vec2 Polygon::getSupport(const glm::vec2& dir) {
+	float bestProjection = -FLT_MAX;
+	glm::vec2 bestVertex;
+
+	for (int i = 0; i < m_vertexCount; ++i)	{
+		glm::vec2 v = m_vertices[i];
+		float projection = glm::dot(v, dir);
+
+		if (projection > bestProjection) {
+			bestVertex = v;
+			bestProjection = projection;
+		}
+	}
+
+	return bestVertex;
 }

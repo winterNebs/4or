@@ -5,8 +5,7 @@ void Manifold::solve(void) {
 	dispatch[(int)A->shape->getType()][(int)B->shape->getType()](this, A, B);
 }
 
-void Manifold::init(void)
-{
+void Manifold::init(void) {
 	// Calculate average restitution
 	e = glm::min(A->restitution, B->restitution);
 
@@ -14,8 +13,7 @@ void Manifold::init(void)
 	sf = std::sqrt(A->staticFriction * A->staticFriction);
 	df = std::sqrt(A->dynamicFriction * A->dynamicFriction);
 
-	for (int i = 0; i < contact_count; ++i)
-	{
+	for (int i = 0; i < contact_count; ++i) {
 		// Calculate radii from COM to contact
 		glm::vec2 ra = contacts[i] - A->position;
 		glm::vec2 rb = contacts[i] - B->position;
@@ -27,8 +25,9 @@ void Manifold::init(void)
 		// Determine if we should perform a resting collision or not
 		// The idea is if the only thing moving this object is gravity,
 		// then the collision should be performed without any restitution
-		if (len2(rv) < len2(DT * gravity) + EPSILON)
+		if (len2(rv) < len2(DT * gravity) + EPSILON) {
 			e = 0.0f;
+		}
 	}
 }
 
@@ -39,8 +38,7 @@ void Manifold::applyImpulse(void) {
 		return;
 	}
 
-	for (int i = 0; i < contact_count; ++i)
-	{
+	for (int i = 0; i < contact_count; ++i) {
 		// Calculate radii from COM to contact
 		glm::vec2 ra = contacts[i] - A->position;
 		glm::vec2 rb = contacts[i] - B->position;
@@ -87,11 +85,12 @@ void Manifold::applyImpulse(void) {
 
 		// Coulumb's law
 		glm::vec2 tangentImpulse;
-		if (std::abs(jt) < j * sf)
+		if (std::abs(jt) < j * sf) {
 			tangentImpulse = t * jt;
-		else
+		}
+		else {
 			tangentImpulse = t * -j * df;
-
+		}
 		// Apply friction impulse
 		A->applyImpulse(-tangentImpulse, ra);
 		B->applyImpulse(tangentImpulse, rb);
@@ -106,8 +105,7 @@ void Manifold::positionCorrection(void) {
 	B->position += correction * B->im;
 }
 
-void Manifold::infiniteMassCorrection(void)
-{
+void Manifold::infiniteMassCorrection(void) {
 	A->velocity = glm::vec2(0);
 	B->velocity = glm::vec2(0);
 }
