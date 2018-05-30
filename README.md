@@ -10,3 +10,5 @@ http://glad.dav1d.de/
 http://www.glfw.org/docs/latest/quick.html
 
 https://github.com/nothings/stb
+
+https://tutsplus.com/authors/randy-gaul
