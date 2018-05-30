@@ -51,6 +51,15 @@
     <ClCompile Include="game\game_level.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="game\physics\body.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game\physics\shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game\physics\manifold.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resources\texture.h">
@@ -75,6 +84,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game\game_level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game\physics\shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game\physics\body.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game\physics\collision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game\physics\manifold.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game\physics\constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,3 +1,5 @@
+#include "game/physics/constants.h"
+
 #include "resources/shader.h"
 #include "svg/svg_reader.h"
 #include "game/game.h"
@@ -61,8 +63,6 @@ int main(int argc, char *argv[]) {
 	game.init();
 
 	///Frame tracker
-	const GLfloat fps = 144;
-	const GLfloat dt = 1 / fps;
 	float accumulator = 0;
 	float frameStart = glfwGetTime();
 	game.state = GameState::GAME_MENU;
@@ -81,11 +81,11 @@ int main(int argc, char *argv[]) {
 		
 		//std::cout << "FPS: " << 1 / (deltaTime) << std::endl;
 			//std::cout << accumulator << std::endl;
-		while (accumulator > dt && game.state == GameState::GAME_ACTIVE) {
-			game.processInput(dt);
+		while (accumulator > DT && game.state == GameState::GAME_ACTIVE) {
+			game.processInput(DT);
 
-			game.update(dt);
-			accumulator -= dt;
+			game.update(DT);
+			accumulator -= DT;
 		}
 		/*
 		  const float alpha = accumulator / dt;
