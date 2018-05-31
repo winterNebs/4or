@@ -6,7 +6,7 @@
 #include "manifold.h"
 
 #include <glm/glm.hpp>
-const float gravityScale = 5.0f;
+const float gravityScale = 100.0f;
 const glm::vec2 gravity(0, 10.0f * gravityScale);
 const float DT = 1.0f / 60.0f;
 const float PI = (float)(4.0f * atan(1));

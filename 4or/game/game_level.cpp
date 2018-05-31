@@ -13,6 +13,7 @@ void GameLevel::init(std::vector<shape*> blockData) {
 	for (auto i : blockData) {
 		GameObject* obj = new GameObject(ResourceManager::getTexture("container"));
 		objects.push_back(obj->initRect(glm::vec2(i->x,i->y), glm::vec2(i->width,i->height)));
+		obj->body->setStatic();
 	}
 }
 void GameLevel::draw(SpriteRenderer &renderer) {

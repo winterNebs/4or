@@ -1,5 +1,5 @@
 #include "headerSpaghetti.h"
-
+#include <iostream>
 Body::Body(Shape* shape, float x, float y) : shape(shape->clone()){
 	shape->body = this;
 	position = glm::vec2(x, y);
@@ -11,11 +11,11 @@ Body::Body(Shape* shape, float x, float y) : shape(shape->clone()){
 	staticFriction = 0.5f;
 	dynamicFriction = 0.3f;
 	restitution = 0.2f;
+	color = glm::vec3(0.5f, 0.5f, 0.5f);
 	shape->init();
 }
 
-void Body::setOrient(float radians)
-{
+void Body::setOrient(float radians) {
 	orient = radians;
 	shape->setOrient(radians);
 }

@@ -43,6 +43,7 @@ void PolyG::init(void) {
 Shape* PolyG::clone(void) const {
 	PolyG* poly = new PolyG();
 	poly->u = u;
+	poly->body = body;
 	for (int i = 0; i < m_vertexCount; i++) {
 		poly->m_vertices[i] = m_vertices[i];
 		poly->m_normals[i] = m_normals[i];

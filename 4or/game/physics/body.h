@@ -17,7 +17,7 @@ struct Body {
 	float I;  // moment of inertia
 	float iI; // inverse inertia
 	float m;  // mass
-	float im; // inverse masee
+	float im; // inverse mass
 
 	float staticFriction;
 	float dynamicFriction;

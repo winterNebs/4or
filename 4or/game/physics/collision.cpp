@@ -99,8 +99,7 @@ void circletoPolygon(Manifold* m, Body* a, Body* b) {
 	}
 
 	// Closest to v2
-	else if (dot2 <= 0.0f)
-	{
+	else if (dot2 <= 0.0f) {
 		if (dist2(center, v2) > A->radius * A->radius)
 			return;
 
@@ -228,10 +227,13 @@ int clip(glm::vec2 n, float c, glm::vec2* face) {
 	return sp;
 }
 
-void polygontoPolygon(Manifold *m, Body *a, Body *b)
-{
+void polygontoPolygon(Manifold* m, Body* a, Body* b) {
 	PolyG* A = reinterpret_cast<PolyG*>(a->shape);
 	PolyG* B = reinterpret_cast<PolyG*>(b->shape);
+	//PolyG* A = (PolyG*)a->shape;
+	//PolyG* B = (PolyG*)b->shape;
+	A->body = a;
+	B->body = b;
 	m->contact_count = 0;
 
 	// Check for a separating axis with A's face planes

@@ -55,22 +55,22 @@ void Game::init() {
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
-		/*
-		levels[level]->getPlayer()->appliedF = glm::vec2(0);
+		const float PS = 600.0f;
+		//levels[level]->getPlayer()->body->force = glm::vec2(0);
 		//levels[level]->getPlayer()->appliedF = glm::vec2(600.0f, 0);
 		//GLfloat velocity = PLAYER_VELOCITY * dt;
 		if (keys[GLFW_KEY_LEFT]) {
-		levels[level]->getPlayer()->appliedF.x -= 600.0f;
+			levels[level]->getPlayer()->body->applyForce(glm::vec2(-PS, 0));
 		}
 		if (keys[GLFW_KEY_RIGHT]) {
-		levels[level]->getPlayer()->appliedF.x += 600.0f;
+			levels[level]->getPlayer()->body->applyForce(glm::vec2(PS, 0));
 		}
 		if (keys[GLFW_KEY_UP]) {
-		levels[level]->getPlayer()->appliedF.y -= 600.0f;
+			levels[level]->getPlayer()->body->applyForce(glm::vec2(0, -PS));
 		}
 		if (keys[GLFW_KEY_DOWN]) {
-		levels[level]->getPlayer()->appliedF.y += 600.0f;
-		}*/
+			levels[level]->getPlayer()->body->applyForce(glm::vec2(0, PS));
+		}
 	}
 }
 void Game::update(GLfloat dt) {
