@@ -33,16 +33,10 @@
     <ClCompile Include="resources\resource_manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="resources\sprite_renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="resources\sprite_renderer.h">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="svg\svg_reader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game\game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="game\game_object.cpp">
@@ -61,6 +55,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="game\physics\collision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game\game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resources\sprite_renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -101,7 +101,7 @@
     <ClInclude Include="game\physics\manifold.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="game\physics\constants.h">
+    <ClInclude Include="game\physics\headerSpaghetti.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

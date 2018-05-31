@@ -1,5 +1,24 @@
-#include "shape.h"
 
+#include "shape.h"
+const float EPSILON = 0.0001f;
+
+inline float crossProduct(const glm::vec2& a, const glm::vec2& b) {
+	return a.x * b.y - a.y * b.x;
+}
+
+inline glm::vec2 crossProduct(const glm::vec2& a, float s) {
+	return glm::vec2(s * a.y, -s * a.x);
+}
+
+inline glm::vec2 crossProduct(float s, const glm::vec2& a) {
+	return glm::vec2(-s * a.y, s * a.x);
+}
+
+inline float len2(glm::vec2 v) {
+	return (v.x * v.x + v.y * v.y);
+}
+
+const float PI = (float)(4.0f * atan(1));
 Circle::Circle(float r) {
 	radius = r;
 }
@@ -18,11 +37,11 @@ void Circle::computeMass(float density) {
 Shape::Type Circle::getType(void) const {
 	return Type::CIRCLE;
 }
-void Polygon::init(void) {
+void PolyG::init(void) {
 	computeMass(1.0f);
 }
-Shape* Polygon::clone(void) const {
-	Polygon* poly = new Polygon();
+Shape* PolyG::clone(void) const {
+	PolyG* poly = new PolyG();
 	poly->u = u;
 	for (int i = 0; i < m_vertexCount; i++) {
 		poly->m_vertices[i] = m_vertices[i];
@@ -32,7 +51,7 @@ Shape* Polygon::clone(void) const {
 	return poly;
 }
 
-void Polygon::computeMass(float density) {
+void PolyG::computeMass(float density) {
 	glm::vec2 c(0);
 	float area = 0.0f;
 	float I = 0.0f;
@@ -65,7 +84,7 @@ void Polygon::computeMass(float density) {
 	body->I = I * density;
 	body->iI = body->I ? 1.0f / body->I : 0.0f;
 }
-void Polygon::setOrient(float radians) {
+void PolyG::setOrient(float radians) {
 	float c = cos(radians);
 	float s = sin(radians);
 	u = glm::mat2(
@@ -73,10 +92,10 @@ void Polygon::setOrient(float radians) {
 		glm::vec2(s, c)
 	);
 }
-Shape::Type Polygon::getType(void) const {
+Shape::Type PolyG::getType(void) const {
 	return Type::POLY;
 }
-void Polygon::setBox(float hw, float hh) {
+void PolyG::setBox(float hw, float hh) {
 	m_vertexCount = 4;
 	m_vertices[0] = glm::vec2(-hw, -hh);
 	m_vertices[1] = glm::vec2(hw, -hh);
@@ -88,7 +107,7 @@ void Polygon::setBox(float hw, float hh) {
 	m_normals[3] = glm::vec2(-1.0f, 0.0f);
 }
 
-void Polygon::set(glm::vec2 *vertices, int count) {
+void PolyG::set(glm::vec2 *vertices, int count) {
 	// No hulls with less than 3 vertices (ensure actual polygon)
 	assert(count > 2 && count <= MaxPolyVertexCount);
 	count = glm::min(count, MaxPolyVertexCount);
@@ -180,7 +199,7 @@ void Polygon::set(glm::vec2 *vertices, int count) {
 	}
 }
 
-glm::vec2 Polygon::getSupport(const glm::vec2& dir) {
+glm::vec2 PolyG::getSupport(const glm::vec2& dir) {
 	float bestProjection = -FLT_MAX;
 	glm::vec2 bestVertex;
 

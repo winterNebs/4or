@@ -1,12 +1,17 @@
 #pragma 
-#include "constants.h"
-
-#include "body.h"
-#include "collision.h"
 
 struct Body;
 
 struct Manifold {
+
+	Manifold(Body* a, Body* b) : A(a), B(b) {}
+
+	void solve(void);                 // Generate contact information
+	void init(void);            // Precalculations for impulse solving
+	void applyImpulse(void);          // Solve impulse and apply
+	void positionCorrection(void);  // Naive correction of positional penetration
+	void infiniteMassCorrection(void);
+
 	Body* A;
 	Body* B;
 
@@ -17,11 +22,4 @@ struct Manifold {
 	float e;               // Mixed restitution
 	float df;              // Mixed dynamic friction
 	float sf;              // Mixed static friction
-	Manifold(Body* a, Body* b);
-
-	void solve(void);                 // Generate contact information
-	void init(void);            // Precalculations for impulse solving
-	void applyImpulse(void);          // Solve impulse and apply
-	void positionCorrection(void);  // Naive correction of positional penetration
-	void infiniteMassCorrection(void);
 };

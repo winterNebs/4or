@@ -1,14 +1,13 @@
 #pragma once
-#include "shape.h"
-#include "body.h"
-#include "manifold.h"
+#include "headerSpaghetti.h"
+
 
 struct Manifold;
 struct Body;
 
 typedef void(*collisionCallback)(Manifold* m, Body* a, Body* b);
 
-extern collisionCallback dispatch[(int)Shape::Type::COUNT][(int)Shape::Type::COUNT];
+extern collisionCallback dispatch[Shape::COUNT][Shape::COUNT];
 
 void circletoCircle(Manifold* m, Body* a, Body* b);
 void circletoPolygon(Manifold* m, Body* a, Body* b);

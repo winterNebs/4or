@@ -1,7 +1,5 @@
 #pragma once
 
-#include "constants.h"
-
 #include "body.h"
 
 #include <cassert>
@@ -9,7 +7,7 @@
 #define MaxPolyVertexCount 64
 struct Body;
 struct Shape {
-	enum class Type {
+	enum Type {
 		CIRCLE, POLY, COUNT
 	};
 
@@ -37,7 +35,7 @@ struct Circle : public Shape {
 	Type getType(void) const;
 };
 
-struct Polygon : public Shape {
+struct PolyG : public Shape {
 	int m_vertexCount;
 	glm::vec2 m_vertices[MaxPolyVertexCount];
 	glm::vec2 m_normals[MaxPolyVertexCount];

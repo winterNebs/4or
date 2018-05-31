@@ -1,10 +1,7 @@
 #pragma once
-#include "constants.h"
-
-#include "shape.h"
 
 #include <glm/glm.hpp>
-
+struct Shape;
 
 struct Body {
 	glm::vec2 position;
@@ -27,7 +24,7 @@ struct Body {
 	float restitution;
 
 	// Shape interface
-	Shape *shape;
+	Shape* shape;
 
 	// Store a color in RGB format
 	glm::vec3 color;

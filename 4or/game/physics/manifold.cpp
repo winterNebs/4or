@@ -1,8 +1,7 @@
-#include "manifold.h"
+#include "headerSpaghetti.h"
 
-Manifold::Manifold(Body *a, Body *b) : A(a), B(b) {	}
 void Manifold::solve(void) {
-	dispatch[(int)A->shape->getType()][(int)B->shape->getType()](this, A, B);
+	dispatch[A->shape->getType()][B->shape->getType()](this, A, B);
 }
 
 void Manifold::init(void) {

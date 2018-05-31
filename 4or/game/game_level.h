@@ -9,11 +9,16 @@
 
 class GameLevel {
 public:
+	float m_dt;
+	int m_iterations;
+
 	std::vector<GameObject*> objects;
+	std::vector<Manifold> contacts;
 	GameObject* player;
 	GLfloat gravity;
 
-	GameLevel() {}
+	GameLevel(float dt, int iter) : m_dt(dt), m_iterations(iter) {}
+	GameLevel() : m_dt(DT), m_iterations(10) {}
 	GameLevel(std::string file);
 	~GameLevel();
 	void setPlayer(GameObject* p);
@@ -23,6 +28,7 @@ public:
 	GLboolean isCompleted();
 
 	void update(GLfloat dt);
+	void step();
 private:
 	void init(std::vector<shape*> blockData);
 };

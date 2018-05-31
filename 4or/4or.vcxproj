@@ -148,7 +148,7 @@
     <ClInclude Include="game\game_object.h" />
     <ClInclude Include="game\physics\body.h" />
     <ClInclude Include="game\physics\collision.h" />
-    <ClInclude Include="game\physics\constants.h" />
+    <ClInclude Include="game\physics\headerSpaghetti.h" />
     <ClInclude Include="game\physics\manifold.h" />
     <ClInclude Include="game\physics\shape.h" />
     <ClInclude Include="resources\resource_manager.h" />

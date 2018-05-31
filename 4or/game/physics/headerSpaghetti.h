@@ -1,9 +1,15 @@
 #pragma once
+
+#include "body.h"
+#include "shape.h"
+#include "collision.h"
+#include "manifold.h"
+
 #include <glm/glm.hpp>
 const float gravityScale = 5.0f;
 const glm::vec2 gravity(0, 10.0f * gravityScale);
 const float DT = 1.0f / 60.0f;
-const float PI = 4.0f * atan(1);
+const float PI = (float)(4.0f * atan(1));
 const float EPSILON = 0.0001f;
 
 inline float crossProduct(const glm::vec2& a, const glm::vec2& b) {

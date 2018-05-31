@@ -1,7 +1,5 @@
 #include "game.h"
-#include "../resources/resource_manager.h"
-#include "../resources/sprite_renderer.h"
-#include <glm/gtc/matrix_transform.hpp>
+
 
 #include <iostream>
 #include <fstream>
@@ -50,11 +48,10 @@ void Game::init() {
 	levels.push_back(three);
 	levels.push_back(four);
 	levels.push_back(five);
-	level = 4;
+	level = 3;
 	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
-	//GameObject* player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::getTexture("player"), 10.0f);
-	//player->mat.restitution = 0.2;
-	//levels[level]->setPlayer(player);
+	GameObject* player = new GameObject(ResourceManager::getTexture("player"));
+	levels[level]->setPlayer(player->initRect(playerPos, PLAYER_SIZE));
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
@@ -63,22 +60,23 @@ void Game::processInput(GLfloat dt) {
 		//levels[level]->getPlayer()->appliedF = glm::vec2(600.0f, 0);
 		//GLfloat velocity = PLAYER_VELOCITY * dt;
 		if (keys[GLFW_KEY_LEFT]) {
-			levels[level]->getPlayer()->appliedF.x -= 600.0f;
+		levels[level]->getPlayer()->appliedF.x -= 600.0f;
 		}
 		if (keys[GLFW_KEY_RIGHT]) {
-			levels[level]->getPlayer()->appliedF.x += 600.0f;
+		levels[level]->getPlayer()->appliedF.x += 600.0f;
 		}
 		if (keys[GLFW_KEY_UP]) {
-			levels[level]->getPlayer()->appliedF.y -= 600.0f;
+		levels[level]->getPlayer()->appliedF.y -= 600.0f;
 		}
 		if (keys[GLFW_KEY_DOWN]) {
-			levels[level]->getPlayer()->appliedF.y += 600.0f;
+		levels[level]->getPlayer()->appliedF.y += 600.0f;
 		}*/
 	}
 }
 void Game::update(GLfloat dt) {
 	levels[level]->gravity = 500.0f;
-	levels[level]->update(dt);
+	//levels[level]->update(dt);
+	levels[level]->step();
 }
 void Game::render() {
 	if (state == GameState::GAME_ACTIVE) {

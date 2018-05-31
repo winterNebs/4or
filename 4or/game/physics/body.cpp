@@ -1,4 +1,4 @@
-#include "body.h"
+#include "headerSpaghetti.h"
 
 Body::Body(Shape* shape, float x, float y) : shape(shape->clone()){
 	shape->body = this;

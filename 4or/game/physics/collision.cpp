@@ -1,7 +1,7 @@
-#include "collision.h"
+#include "headerSpaghetti.h"
 
 
-CollisionCallback dispatch[(int)Shape::Type::COUNT][(int)Shape::Type::COUNT] = {
+collisionCallback dispatch[Shape::COUNT][Shape::COUNT] = {
 	{circletoCircle, circletoPolygon},
 	{polygontoCircle, polygontoPolygon},
 };
@@ -40,16 +40,16 @@ void circletoCircle(Manifold* m, Body* a, Body* b) {
 
 void circletoPolygon(Manifold* m, Body* a, Body* b) {
 	Circle *A = reinterpret_cast<Circle*> (a->shape);
-	Polygon *B = reinterpret_cast<Polygon*>(b->shape);
+	PolyG *B = reinterpret_cast<PolyG*>(b->shape);
 
 	m->contact_count = 0;
 
-	// Transform circle center to Polygon model space
+	// Transform circle center to PolyG model space
 	glm::vec2 center = a->position;
 	center = glm::transpose(B->u) * (center - b->position);
 
 	// Find edge with minimum penetration
-	// Exact concept as using support points in Polygon vs Polygon
+	// Exact concept as using support points in PolyG vs PolyG
 	float separation = -FLT_MAX;
 	int faceNormal = 0;
 	for (int i = 0; i < B->m_vertexCount; ++i) {
@@ -70,7 +70,7 @@ void circletoPolygon(Manifold* m, Body* a, Body* b) {
 	int i2 = faceNormal + 1 < B->m_vertexCount ? faceNormal + 1 : 0;
 	glm::vec2 v2 = B->m_vertices[i2];
 
-	// Check to see if center is within polygon
+	// Check to see if center is within PolyG
 	if (separation < EPSILON) {
 		m->contact_count = 1;
 		m->normal = -(B->u * B->m_normals[faceNormal]);
@@ -132,7 +132,7 @@ void polygontoCircle(Manifold* m, Body* a, Body* b) {
 	m->normal = -m->normal;
 }
 
-float findAxisLeastPenetration(int *faceIndex, Polygon *A, Polygon *B) {
+float findAxisLeastPenetration(int *faceIndex, PolyG *A, PolyG *B) {
 	float bestDistance = -FLT_MAX;
 	int bestIndex;
 
@@ -170,14 +170,14 @@ float findAxisLeastPenetration(int *faceIndex, Polygon *A, Polygon *B) {
 	return bestDistance;
 }
 
-void findIncidentFace(glm::vec2* v, Polygon* RefPoly, Polygon* IncPoly, int referenceIndex) {
+void findIncidentFace(glm::vec2* v, PolyG* RefPoly, PolyG* IncPoly, int referenceIndex) {
 	glm::vec2 referenceNormal = RefPoly->m_normals[referenceIndex];
 
 	// Calculate normal in incident's frame of reference
 	referenceNormal = RefPoly->u * referenceNormal; // To world space
 	referenceNormal = glm::transpose(IncPoly->u) * referenceNormal; // To incident's model space
 
-																// Find most anti-normal face on incident polygon
+																// Find most anti-normal face on incident PolyG
 	int incidentFace = 0;
 	float minDot = FLT_MAX;
 	for (int i = 0; i < IncPoly->m_vertexCount; ++i)
@@ -195,8 +195,7 @@ void findIncidentFace(glm::vec2* v, Polygon* RefPoly, Polygon* IncPoly, int refe
 	v[1] = IncPoly->u * IncPoly->m_vertices[incidentFace] + IncPoly->body->position;
 }
 
-int clip(glm::vec2 n, float c, glm::vec2* face)
-{
+int clip(glm::vec2 n, float c, glm::vec2* face) {
 	int sp = 0;
 	glm::vec2 out[2] = {
 		face[0],
@@ -231,8 +230,8 @@ int clip(glm::vec2 n, float c, glm::vec2* face)
 
 void polygontoPolygon(Manifold *m, Body *a, Body *b)
 {
-	Polygon* A = reinterpret_cast<Polygon*>(a->shape);
-	Polygon* B = reinterpret_cast<Polygon*>(b->shape);
+	PolyG* A = reinterpret_cast<PolyG*>(a->shape);
+	PolyG* B = reinterpret_cast<PolyG*>(b->shape);
 	m->contact_count = 0;
 
 	// Check for a separating axis with A's face planes
@@ -250,8 +249,8 @@ void polygontoPolygon(Manifold *m, Body *a, Body *b)
 	int referenceIndex;
 	bool flip; // Always point from a to b
 
-	Polygon* RefPoly; // Reference
-	Polygon* IncPoly; // Incident
+	PolyG* RefPoly; // Reference
+	PolyG* IncPoly; // Incident
 
 						   // Determine which shape contains reference face
 	if (biasGreaterThan(penetrationA, penetrationB)) {

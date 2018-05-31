@@ -1,4 +1,4 @@
-#include "game/physics/constants.h"
+#include "game/physics/headerSpaghetti.h"
 
 #include "resources/shader.h"
 #include "svg/svg_reader.h"
@@ -85,6 +85,7 @@ int main(int argc, char *argv[]) {
 			game.processInput(DT);
 
 			game.update(DT);
+			
 			accumulator -= DT;
 		}
 		/*
