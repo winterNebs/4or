@@ -238,7 +238,6 @@ void polygontoPolygon(Manifold* m, Body* a, Body* b) {
 	// Check for a separating axis with A's face planes
 	int faceA;
 	float penetrationA = findAxisLeastPenetration(&faceA, A, B);
-	std::cout << "PenA: " << penetrationA << std::endl;
 	if (penetrationA >= 0.0f)
 		return;
 
@@ -248,14 +247,14 @@ void polygontoPolygon(Manifold* m, Body* a, Body* b) {
 	if (penetrationB >= 0.0f)
 		return;
 
-	std::cout << "PenB: " << penetrationB << std::endl;
+	std::cout << "PenA: " << penetrationA <<  "\tPenB: " << penetrationB << std::endl;
 	int referenceIndex;
 	bool flip; // Always point from a to b
 
 	PolyG* RefPoly; // Reference
 	PolyG* IncPoly; // Incident
 
-						   // Determine which shape contains reference face
+	// Determine which shape contains reference face
 	if (biasGreaterThan(penetrationA, penetrationB)) {
 		RefPoly = A;
 		IncPoly = B;
@@ -278,16 +277,16 @@ void polygontoPolygon(Manifold* m, Body* a, Body* b) {
 	//        ^  ->n       ^
 	//      +---c ------posPlane--
 	//  x < | i |\
-	  //      +---+ c-----negPlane--
-//             \       v
-//              r
-//
-//  r : reference face
-//  i : incident poly
-//  c : clipped point
-//  n : incident normal
+	//      +---+ c-----negPlane--
+	//             \       v
+	//              r
+	//
+	//  r : reference face
+	//  i : incident poly
+	//  c : clipped point
+	//  n : incident normal
 
-// Setup reference face vertices
+	// Setup reference face vertices
 	glm::vec2 v1 = RefPoly->m_vertices[referenceIndex];
 	referenceIndex = referenceIndex + 1 == RefPoly->m_vertexCount ? 0 : referenceIndex + 1;
 	glm::vec2 v2 = RefPoly->m_vertices[referenceIndex];

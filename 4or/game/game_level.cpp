@@ -43,7 +43,7 @@ GameLevel::~GameLevel() {
 void GameLevel::update(GLfloat dt) {
 	
 }
-void IntegrateForces(Body *b, float dt) {
+void integrateForces(Body *b, float dt) {
 	if (b->im == 0.0f) {
 		return;
 	}
@@ -51,14 +51,14 @@ void IntegrateForces(Body *b, float dt) {
 	b->angularVelocity += b->torque * b->iI * (dt / 2.0f);
 }
 
-void IntegrateVelocity(Body *b, float dt) {
+void integrateVelocity(Body *b, float dt) {
 	if (b->im == 0.0f)
 		return;
 
 	b->position += b->velocity * dt;
 	b->orient += b->angularVelocity * dt;
 	b->setOrient(b->orient);
-	IntegrateForces(b, dt);
+	integrateForces(b, dt);
 }
 
 void GameLevel::step() {
@@ -81,7 +81,7 @@ void GameLevel::step() {
 
 	// Integrate forces
 	for (int i = 0; i < objects.size(); ++i)
-		IntegrateForces(objects[i]->body, m_dt);
+		integrateForces(objects[i]->body, m_dt);
 
 	// Initialize collision
 	for (int i = 0; i < contacts.size(); ++i)
@@ -94,15 +94,14 @@ void GameLevel::step() {
 
 	// Integrate velocities
 	for (int i = 0; i < objects.size(); ++i)
-		IntegrateVelocity(objects[i]->body, m_dt);
+		integrateVelocity(objects[i]->body, m_dt);
 
 	// Correct positions
 	for (int i = 0; i < contacts.size(); ++i)
 		contacts[i].positionCorrection();
 
 	// Clear all forces
-	for (int i = 0; i < objects.size(); ++i)
-	{
+	for (int i = 0; i < objects.size(); ++i) {
 		Body *b = objects[i]->body;
 		b->force = glm::vec2(0);
 		b->torque = 0;

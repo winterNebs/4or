@@ -5,16 +5,18 @@ GameObject::GameObject(Texture2D sp) : sprite(sp) {
 }
 GameObject* GameObject::initRect(glm::vec2 pos, glm::vec2 s){
 	size = s;
+	
 	PolyG poly;
 	glm::vec2 *verticies = new glm::vec2[4];
-	verticies[0] = pos;
-	verticies[1] = glm::vec2(pos.x + s.x, pos.y);
-	verticies[2] = pos + s;
-	verticies[3] = glm::vec2(pos.x + pos.y + size.y);
 
+	verticies[0] = glm::vec2(0);
+	verticies[1] = glm::vec2(s.x, 0);
+	verticies[2] = s;
+	verticies[3] = glm::vec2(0, s.y);
+	
 	poly.set(verticies, 4);
 	body = new Body(&poly, pos.x, pos.y);
-
+	body->position = pos;
 	delete[] verticies;
 	return this;
 }
