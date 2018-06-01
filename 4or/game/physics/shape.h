@@ -15,7 +15,7 @@ struct Shape {
 
 	float radius;
 	
-	glm::mat2 u;
+	glm::mat2 u = glm::mat2(glm::vec2(1,0),glm::vec2(0,1));
 
 	Shape() {}
 

@@ -48,16 +48,20 @@ void Game::init() {
 	levels.push_back(three);
 	levels.push_back(four);
 	levels.push_back(five);
-	level = 3;
+	level = 4;
 	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
 	GameObject* player = new GameObject(ResourceManager::getTexture("player"));
 	levels[level]->setPlayer(player->initRect(playerPos, PLAYER_SIZE));
+	player->body->setMass(25.0f);
+	player->body->restitution = 0.2f;
+	player->body->dynamicFriction = 0.2f;
+	player->body->staticFriction = 0.4f;
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
-		const float PS = 600.0f;
+		const float PS = 8000.0f;
 		//levels[level]->getPlayer()->body->force = glm::vec2(0);
-		//levels[level]->getPlayer()->appliedF = glm::vec2(600.0f, 0);
+		//levels[level]->getPlayer()->body->applyForce(glm::vec2(PS, 0));
 		//GLfloat velocity = PLAYER_VELOCITY * dt;
 		if (keys[GLFW_KEY_LEFT]) {
 			levels[level]->getPlayer()->body->applyForce(glm::vec2(-PS, 0));

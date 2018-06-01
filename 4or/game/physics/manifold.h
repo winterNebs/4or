@@ -7,9 +7,9 @@ struct Manifold {
 	Manifold(Body* a, Body* b) : A(a), B(b) {}
 
 	void solve(void);                 // Generate contact information
-	void init(void);            // Precalculations for impulse solving
+	void init(void);					//Precalculations for impulse solving
 	void applyImpulse(void);          // Solve impulse and apply
-	void positionCorrection(void);  // Naive correction of positional penetration
+	void positionCorrection(void); // Naive correction of positional penetration
 	void infiniteMassCorrection(void);
 
 	Body* A;

@@ -1,5 +1,5 @@
 #include "headerSpaghetti.h"
-
+#include <iostream>
 
 collisionCallback dispatch[Shape::COUNT][Shape::COUNT] = {
 	{circletoCircle, circletoPolygon},
@@ -158,13 +158,12 @@ float findAxisLeastPenetration(int *faceIndex, PolyG *A, PolyG *B) {
 		float d = glm::dot(n, s - v);
 
 		// Store greatest distance
-		if (d > bestDistance)
-		{
+		if (d > bestDistance) {
 			bestDistance = d;
 			bestIndex = i;
 		}
 	}
-
+	//std::cout << bestDistance << std::endl;
 	*faceIndex = bestIndex;
 	return bestDistance;
 }
@@ -239,6 +238,7 @@ void polygontoPolygon(Manifold* m, Body* a, Body* b) {
 	// Check for a separating axis with A's face planes
 	int faceA;
 	float penetrationA = findAxisLeastPenetration(&faceA, A, B);
+	std::cout << "PenA: " << penetrationA << std::endl;
 	if (penetrationA >= 0.0f)
 		return;
 
@@ -248,6 +248,7 @@ void polygontoPolygon(Manifold* m, Body* a, Body* b) {
 	if (penetrationB >= 0.0f)
 		return;
 
+	std::cout << "PenB: " << penetrationB << std::endl;
 	int referenceIndex;
 	bool flip; // Always point from a to b
 

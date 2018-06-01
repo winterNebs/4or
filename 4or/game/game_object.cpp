@@ -14,6 +14,7 @@ GameObject* GameObject::initRect(glm::vec2 pos, glm::vec2 s){
 
 	poly.set(verticies, 4);
 	body = new Body(&poly, pos.x, pos.y);
+
 	delete[] verticies;
 	return this;
 }

@@ -33,3 +33,7 @@ void Body::setStatic(void) {
 	m = 0.0f;
 	im = 0.0f;
 }
+void Body::setMass(float mass) {
+	m = mass;
+	im = 1.0f / mass;
+}

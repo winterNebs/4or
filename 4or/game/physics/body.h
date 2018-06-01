@@ -35,4 +35,5 @@ struct Body {
 	void applyImpulse(const glm::vec2& impulse, const glm::vec2& contactVector);
 	void setStatic(void);
 	void setOrient(float radians);
+	void setMass(float mass);
 };
