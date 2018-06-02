@@ -25,6 +25,7 @@ void Body::applyForce(const glm::vec2& f) {
 void Body::applyImpulse(const glm::vec2& impulse, const glm::vec2& contactVector) {
 	velocity += im * impulse;
 	angularVelocity += iI * crossProduct(contactVector, impulse);
+	//angularVelocity = 0;
 }
 
 void Body::setStatic(void) {

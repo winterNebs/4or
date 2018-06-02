@@ -105,6 +105,7 @@ void GameLevel::step() {
 		Body *b = objects[i]->body;
 		b->force = glm::vec2(0);
 		b->torque = 0;
+		b->angularVelocity = 0;
 	}
 }
 
