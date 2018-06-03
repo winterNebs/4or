@@ -222,7 +222,7 @@ int clip(glm::vec2 n, float c, glm::vec2* face) {
 	face[1] = out[1];
 
 	assert(sp != 3);
-
+	//std::cout << sp << std::endl;
 	return sp;
 }
 

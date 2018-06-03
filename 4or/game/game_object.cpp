@@ -3,6 +3,21 @@
 GameObject::GameObject(Texture2D sp) : sprite(sp) {
 	
 }
+
+GameObject::GameObject(Texture2D sp, glm::vec2 s, glm::vec2 pos, float mass, float res, float df, float sf) 
+	: sprite(sp) {
+	initRect(pos, s);
+	if (mass == 0) {
+		body->setStatic();
+	}
+	else {
+		body->setMass(mass);
+	}
+	body->restitution = res;
+	body->dynamicFriction = df;
+	body->staticFriction = sf;
+	body->setOrient(0);
+}
 GameObject* GameObject::initRect(glm::vec2 pos, glm::vec2 s){
 	size = s;
 	

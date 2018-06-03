@@ -11,13 +11,8 @@ void GameLevel::load(std::string file) {
 void GameLevel::init(std::vector<shape*> blockData) {
 	///Calculate max size;
 	for (auto i : blockData) {
-		GameObject* obj = new GameObject(ResourceManager::getTexture("container"));
-		objects.push_back(obj->initRect(glm::vec2(i->x,i->y), glm::vec2(i->width,i->height)));
-		obj->body->setStatic();
-		obj->body->restitution = 0.2f;
-		obj->body->dynamicFriction = 0.2f;
-		obj->body->staticFriction = 0.4f;
-
+		GameObject* obj = new GameObject(ResourceManager::getTexture("container"), glm::vec2(i->width, i->height), glm::vec2(i->x, i->y), 0.0f);
+		objects.push_back(obj);
 	}
 }
 void GameLevel::draw(SpriteRenderer &renderer) {
@@ -73,6 +68,7 @@ void GameLevel::step() {
 				continue;
 			Manifold m(A, B);
 			m.solve();
+				//std::cout << m.contact_count << std::endl;
 			if (m.contact_count) {
 				contacts.emplace_back(m);
 			}

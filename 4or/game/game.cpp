@@ -19,8 +19,10 @@ Game::~Game() {
 		delete i;
 	}
 }
-
+GameObject* player;
 void Game::init() {
+	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
+
 	///Deugging
 	std::ofstream file;
 	file.open(".\\logs\\normals.txt", std::ofstream::out | std::ofstream::trunc);
@@ -48,22 +50,16 @@ void Game::init() {
 	levels.push_back(three);
 	levels.push_back(four);
 	levels.push_back(five);
-	level = 4;
-	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
-	GameObject* player = new GameObject(ResourceManager::getTexture("player"));
-	levels[level]->setPlayer(player->initRect(playerPos, PLAYER_SIZE));
-	player->body->setMass(0.001f);
-	player->body->restitution = 0.2f;
-	player->body->dynamicFriction = 0.2f;
-	player->body->staticFriction = 0.4f;
-	//player->body->setOrient(atan(1));
-	player->body->setOrient(0);
+	level = 3;
+	player = new GameObject(ResourceManager::getTexture("player"), PLAYER_SIZE, playerPos, 0.01f, 0.2, 100000.0f, 200000.0f);
+	levels[level]->setPlayer(player);
+
 
 	levels[level]->gravity = 500.0f;
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
-		const float PS = 2.0;
+		const float PS = 10.0;
 		//levels[level]->getPlayer()->body->force = glm::vec2(0);
 		//levels[level]->getPlayer()->body->applyForce(glm::vec2(PS, 0));
 		//GLfloat velocity = PLAYER_VELOCITY * dt;
@@ -87,6 +83,15 @@ void Game::update(GLfloat dt) {
 }
 void Game::render() {
 	if (state == GameState::GAME_ACTIVE) {
+		glm::mat4 projection = glm::ortho(
+			static_cast<GLfloat>(player->body->position.x - this->width / 2.0f),
+			static_cast<GLfloat>(player->body->position.x + this->width / 2.0f) ,
+			static_cast<GLfloat>(player->body->position.y + this->height / 2.0f) ,
+			static_cast<GLfloat>(player->body->position.y - this->height / 2.0f) , -1.0f, 1.0f);
+		
+		std::cout << player->body->position.x << "," << player->body->position.y << std::endl;
+
+		ResourceManager::getShader("sprite").setMatrix4("projection", projection);
 		levels[level]->draw(*renderer);
 	}
 }

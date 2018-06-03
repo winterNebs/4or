@@ -21,8 +21,6 @@ void Manifold::init(void) {
 			A->velocity - crossProduct(A->angularVelocity, ra);
 		//glm::vec2 rv = B->velocity - A->velocity;
 
-
-
 		// Determine if we should perform a resting collision or not
 		// The idea is if the only thing moving this object is gravity,
 		// then the collision should be performed without any restitution
@@ -56,8 +54,8 @@ void Manifold::applyImpulse(void) {
 		}
 		float raCrossN = crossProduct(ra, normal);
 		float rbCrossN = crossProduct(rb, normal);
-		//float invMassSum = A->im + B->im + (raCrossN * raCrossN) * A->iI + (rbCrossN * rbCrossN) * B->iI;
-		float invMassSum = A->im + B->im;
+		float invMassSum = A->im + B->im + (raCrossN * raCrossN) * A->iI + (rbCrossN * rbCrossN) * B->iI;
+		//float invMassSum = A->im + B->im;
 
 		// Calculate impulse scalar
 		float j = - (1.0f + e) * contactVel;
@@ -83,7 +81,7 @@ void Manifold::applyImpulse(void) {
 		jt /= (float)contact_count;
 
 		// Don't apply tiny friction impulses
-		if (jt <= EPSILON)
+		if (abs(jt) <= EPSILON)
 			return;
 
 		// Coulumb's law
@@ -106,7 +104,7 @@ void Manifold::positionCorrection(void) {
 	glm::vec2 correction = (glm::max(penetration - k_slop, 0.0f) / (A->im + B->im)) * normal * percent;
 	A->position -= correction * A->im;
 	B->position += correction * B->im;
-	std::cout << (correction * B->im).x << "," << (correction * B->im).y << std::endl;
+	//std::cout << (correction * B->im).x << "," << (correction * B->im).y << std::endl;
 }
 
 void Manifold::infiniteMassCorrection(void) {
