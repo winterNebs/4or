@@ -11,7 +11,7 @@ void GameLevel::load(std::string file) {
 void GameLevel::init(std::vector<shape*> blockData) {
 	///Calculate max size;
 	for (auto i : blockData) {
-		GameObject* obj = new GameObject(ResourceManager::getTexture("container"), glm::vec2(i->width, i->height), glm::vec2(i->x, i->y), 0.0f);
+		GameObject* obj = new GameObject(ResourceManager::getTexture("container"), glm::vec2(i->width, i->height), glm::vec2(i->x, i->y), 0.0f, .4f, .8f);
 		objects.push_back(obj);
 	}
 }

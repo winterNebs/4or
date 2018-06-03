@@ -51,11 +51,8 @@ void Game::init() {
 	levels.push_back(four);
 	levels.push_back(five);
 	level = 3;
-	player = new GameObject(ResourceManager::getTexture("player"), PLAYER_SIZE, playerPos, 0.01f, 0.2, 100000.0f, 200000.0f);
+	player = new GameObject(ResourceManager::getTexture("player"), PLAYER_SIZE, playerPos, 0.01f, 0.9, 0.6f, 0.9f);
 	levels[level]->setPlayer(player);
-
-
-	levels[level]->gravity = 500.0f;
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
