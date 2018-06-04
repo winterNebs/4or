@@ -247,7 +247,7 @@ void polygontoPolygon(Manifold* m, Body* a, Body* b) {
 	if (penetrationB >= 0.0f)
 		return;
 
-	std::cout << "PenA: " << penetrationA <<  "\tPenB: " << penetrationB << std::endl;
+	//std::cout << "PenA: " << penetrationA <<  "\tPenB: " << penetrationB << std::endl;
 	int referenceIndex;
 	bool flip; // Always point from a to b
 

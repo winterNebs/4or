@@ -19,7 +19,7 @@ Game::~Game() {
 		delete i;
 	}
 }
-GameObject* player;
+GamePlayer* player;
 void Game::init() {
 	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
 
@@ -51,23 +51,22 @@ void Game::init() {
 	levels.push_back(four);
 	levels.push_back(five);
 	level = 3;
-	player = new GameObject(ResourceManager::getTexture("player"), PLAYER_SIZE, playerPos, 0.01f, 0.9, 0.6f, 0.9f);
+	player = new GamePlayer(ResourceManager::getTexture("player"), PLAYER_SIZE, playerPos, 0.01f, 0.9, 0.6f, 0.9f);
 	levels[level]->setPlayer(player);
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
-		const float PS = 10.0;
 		//levels[level]->getPlayer()->body->force = glm::vec2(0);
 		//levels[level]->getPlayer()->body->applyForce(glm::vec2(PS, 0));
 		//GLfloat velocity = PLAYER_VELOCITY * dt;
 		if (keys[GLFW_KEY_LEFT]) {
-			levels[level]->getPlayer()->body->applyForce(glm::vec2(-PS, 0));
+			player->move(DIR::left);
 		}
 		if (keys[GLFW_KEY_RIGHT]) {
-			levels[level]->getPlayer()->body->applyForce(glm::vec2(PS, 0));
+			player->move(DIR::right);
 		}
 		if (keys[GLFW_KEY_UP]) {
-			levels[level]->getPlayer()->body->applyForce(glm::vec2(0, -PS));
+			player->move(DIR::up);
 		}
 		if (keys[GLFW_KEY_DOWN]) {
 			levels[level]->getPlayer()->body->applyForce(glm::vec2(0, PS));
@@ -86,7 +85,7 @@ void Game::render() {
 			static_cast<GLfloat>(player->body->position.y + this->height / 2.0f) ,
 			static_cast<GLfloat>(player->body->position.y - this->height / 2.0f) , -1.0f, 1.0f);
 		
-		std::cout << player->body->position.x << "," << player->body->position.y << std::endl;
+		//std::cout << player->body->position.x << "," << player->body->position.y << std::endl;
 
 		ResourceManager::getShader("sprite").setMatrix4("projection", projection);
 		levels[level]->draw(*renderer);

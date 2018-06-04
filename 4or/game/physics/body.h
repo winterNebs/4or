@@ -7,6 +7,8 @@ struct Body {
 	glm::vec2 position;
 	glm::vec2 velocity;
 
+	bool colliding = false;
+
 	float angularVelocity;
 	float torque;
 	float orient; // radians

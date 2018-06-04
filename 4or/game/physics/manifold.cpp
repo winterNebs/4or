@@ -104,6 +104,8 @@ void Manifold::positionCorrection(void) {
 	glm::vec2 correction = (glm::max(penetration - k_slop, 0.0f) / (A->im + B->im)) * normal * percent;
 	A->position -= correction * A->im;
 	B->position += correction * B->im;
+	A->colliding = true;
+	B->colliding = true;
 	//std::cout << (correction * B->im).x << "," << (correction * B->im).y << std::endl;
 }
 

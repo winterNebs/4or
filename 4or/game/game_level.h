@@ -14,14 +14,14 @@ public:
 
 	std::vector<GameObject*> objects;
 	std::vector<Manifold> contacts;
-	GameObject* player;
+	GamePlayer* player;
 
 	GameLevel(float dt, int iter) : m_dt(dt), m_iterations(iter) {}
 	GameLevel() : m_dt(DT), m_iterations(10) {}
 	GameLevel(std::string file);
 	~GameLevel();
-	void setPlayer(GameObject* p);
-	GameObject* getPlayer();
+	void setPlayer(GamePlayer* p);
+	GamePlayer* getPlayer();
 	void load(std::string file);
 	void draw(SpriteRenderer &renderer);
 	GLboolean isCompleted();

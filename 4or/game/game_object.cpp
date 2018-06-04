@@ -35,7 +35,13 @@ GameObject* GameObject::initRect(glm::vec2 pos, glm::vec2 s){
 	delete[] verticies;
 	return this;
 }
-
+void GameObject::update() {
+	body->colliding = false;
+}
+void GameEntity::update() {
+	isColliding = body->colliding;
+	GameObject::update();
+}
 void GameObject::draw(SpriteRenderer &renderer) {
 	renderer.drawSprite(sprite, body->position, size, body->orient, body->color);
 
@@ -43,3 +49,37 @@ void GameObject::draw(SpriteRenderer &renderer) {
 		"Pos:" << body->position.x << "," << body->position.y << 
 		"\t Size:" << size.x << "," << size.y <<  std::endl;*/
 }
+
+void GameEntity::move(DIR dir) {
+
+}
+void GamePlayer::update() {
+	GameEntity::update();
+}
+void GamePlayer::move(DIR dir) {
+	if (len2(body->velocity) < 100000.0f ) {
+		switch (dir) {
+		case DIR::left:
+			body->applyForce(glm::vec2(-PS,0));
+			break;
+		case DIR::right:
+			body->applyForce(glm::vec2(PS, 0));
+			break;
+		}
+	}
+	if (isColliding) {
+		switch (dir) {
+		case DIR::up:
+			body->applyForce(glm::vec2(0,-PS*20));
+			break;
+		}
+	}
+}
+
+GameEntity::GameEntity(Texture2D sp) : GameObject(sp) {}
+
+GameEntity::GameEntity(Texture2D sp, glm::vec2 s, glm::vec2 pos, float mass, float res, float df, float sf) : GameObject(sp, s, pos, mass, res, df, sf) {}
+
+GamePlayer::GamePlayer(Texture2D sp) : GameEntity(sp) {}
+
+GamePlayer::GamePlayer(Texture2D sp, glm::vec2 s, glm::vec2 pos, float mass, float res, float df, float sf) : GameEntity(sp, s, pos, mass, res, df, sf) {}

@@ -23,11 +23,11 @@ void GameLevel::draw(SpriteRenderer &renderer) {
 GLboolean GameLevel::isCompleted() {
 	return GL_FALSE;
 }
-void GameLevel::setPlayer(GameObject* p) {
+void GameLevel::setPlayer(GamePlayer* p) {
 	player = p;
 	objects.push_back(player);
 }
-GameObject* GameLevel::getPlayer() {
+GamePlayer* GameLevel::getPlayer() {
 	return player;
 }
 GameLevel::~GameLevel() {
@@ -91,13 +91,13 @@ void GameLevel::step() {
 	// Integrate velocities
 	for (int i = 0; i < objects.size(); ++i)
 		integrateVelocity(objects[i]->body, m_dt);
-
 	// Correct positions
 	for (int i = 0; i < contacts.size(); ++i)
 		contacts[i].positionCorrection();
 
 	// Clear all forces
 	for (int i = 0; i < objects.size(); ++i) {
+		objects[i]->update();
 		Body *b = objects[i]->body;
 		b->force = glm::vec2(0);
 		b->torque = 0;
