@@ -12,3 +12,5 @@ http://www.glfw.org/docs/latest/quick.html
 https://github.com/nothings/stb
 
 https://tutsplus.com/authors/randy-gaul
+
+https://github.com/ubawurinna/freetype-windows-binaries/
