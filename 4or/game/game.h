@@ -3,6 +3,7 @@
 #include "game_level.h"
 #include "../resources/resource_manager.h"
 #include "../resources/sprite_renderer.h"
+#include "../resources/text_renderer.h"
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glad/glad.h>

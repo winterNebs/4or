@@ -57,7 +57,7 @@ void GamePlayer::update() {
 	GameEntity::update();
 }
 void GamePlayer::move(DIR dir) {
-	if (len2(body->velocity) < 100000.0f ) {
+	if (abs(body->velocity.x) < 10000.0f ) {
 		switch (dir) {
 		case DIR::left:
 			body->applyForce(glm::vec2(-PS,0));
@@ -70,7 +70,7 @@ void GamePlayer::move(DIR dir) {
 	if (isColliding) {
 		switch (dir) {
 		case DIR::up:
-			body->applyForce(glm::vec2(0,-PS*20));
+			body->applyForce(glm::vec2(0,-PS*100));
 			break;
 		}
 	}

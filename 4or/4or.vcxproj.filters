@@ -63,6 +63,9 @@
     <ClCompile Include="resources\sprite_renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="resources\text_renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resources\texture.h">
@@ -104,6 +107,9 @@
     <ClInclude Include="game\physics\headerSpaghetti.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resources\text_renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="svg\2rect.svg" />
@@ -115,6 +121,9 @@
     <None Include="svg\1box.svg" />
     <None Include="svg\5rect.svg" />
     <None Include="svg\normaldebug.svg" />
+    <None Include="resources\shaders\text.vs" />
+    <None Include="resources\shaders\text.frag" />
+    <None Include="freetype.dll" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\container.jpg">
@@ -127,5 +136,8 @@
   <ItemGroup>
     <Text Include="logs\normals.txt" />
     <Text Include="logs\collide.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\fonts\OpenSans-Regular.ttf" />
   </ItemGroup>
 </Project>

@@ -8,7 +8,7 @@
 #include <glm/glm.hpp>
 const float gravityScale = 10.0f;
 const glm::vec2 gravity(0, 100.0f * gravityScale);
-const float DT = 1.0f / 60.0f;
+const float DT = 1.0f / 144.0f;
 const float PI = (float)(4.0f * atan(1));
 const float EPSILON = 0.0001f;
 const float PS = 10.0;
