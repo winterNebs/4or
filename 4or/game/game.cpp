@@ -1,6 +1,6 @@
 #include "game.h"
 
-
+#include <sstream>
 #include <iostream>
 #include <fstream>
 ///TODO:
@@ -9,6 +9,7 @@
 */
 int counter = 0;
 SpriteRenderer* renderer;
+TextRenderer* text;
 Game::Game(GLuint w, GLuint h) :
 	state(GameState::GAME_ACTIVE), keys(), width(w), height(h) {
 	counter = 0;
@@ -39,6 +40,10 @@ void Game::init() {
 	// Set render-specific controls
 	Shader myShader = ResourceManager::getShader("sprite");
 	renderer = new SpriteRenderer(myShader);
+	// Load Text Renderer
+	text = new TextRenderer(this->width, this->width);
+	text->Load(".\\resources\\fonts\\OpenSans-Regular.ttf", 24);
+
 	// Load levels
 	GameLevel* one = new GameLevel(); one->load(".\\svg\\2rect.svg");
 	GameLevel* two = new GameLevel(); two->load(".\\svg\\3rect.svg");
@@ -66,6 +71,7 @@ void Game::processInput(GLfloat dt) {
 			player->move(DIR::right);
 		}
 		if (keys[GLFW_KEY_UP]) {
+			keys[GLFW_KEY_UP] = false;
 			player->move(DIR::up);
 		}
 		if (keys[GLFW_KEY_DOWN]) {
@@ -79,15 +85,14 @@ void Game::update(GLfloat dt) {
 }
 void Game::render() {
 	if (state == GameState::GAME_ACTIVE) {
+		levels[level]->draw(*renderer);
+
 		glm::mat4 projection = glm::ortho(
 			static_cast<GLfloat>(player->body->position.x - this->width / 2.0f),
-			static_cast<GLfloat>(player->body->position.x + this->width / 2.0f) ,
-			static_cast<GLfloat>(player->body->position.y + this->height / 2.0f) ,
-			static_cast<GLfloat>(player->body->position.y - this->height / 2.0f) , -1.0f, 1.0f);
-		
-		//std::cout << player->body->position.x << "," << player->body->position.y << std::endl;
-
+			static_cast<GLfloat>(player->body->position.x + this->width / 2.0f),
+			static_cast<GLfloat>(player->body->position.y + this->height / 2.0f),
+			static_cast<GLfloat>(player->body->position.y - this->height / 2.0f), -1.0f, 1.0f);
 		ResourceManager::getShader("sprite").setMatrix4("projection", projection);
-		levels[level]->draw(*renderer);
+		text->RenderText("Testy:", 0.0f, 48.0f, 2.0f, glm::vec3(1.0f, 0.0f, 0.0f));
 	}
 }

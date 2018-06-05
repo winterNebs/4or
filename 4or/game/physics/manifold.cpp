@@ -100,7 +100,8 @@ void Manifold::applyImpulse(void) {
 
 void Manifold::positionCorrection(void) {
 	const float k_slop = 0.05f; // Penetration allowance usually 0.01 to 0.1
-	const float percent = 0.2f; // Penetration percentage to correct  usually 20% to 80%
+	const float percent = 0.4f; // Penetration percentage to correct  usually 20% to 80%
+	
 	glm::vec2 correction = (glm::max(penetration - k_slop, 0.0f) / (A->im + B->im)) * normal * percent;
 	A->position -= correction * A->im;
 	B->position += correction * B->im;
