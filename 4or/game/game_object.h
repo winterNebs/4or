@@ -40,3 +40,7 @@ public:
 	void update() override;
 	void move(DIR dir);
 };
+class GameEnemy : public GameEntity {
+public:
+
+};

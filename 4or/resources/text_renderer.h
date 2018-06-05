@@ -12,10 +12,10 @@
 
 /// Holds all state information relevant to a character as loaded using FreeType
 struct Character {
-	GLuint TextureID;   // ID handle of the glyph texture
-	glm::ivec2 Size;    // Size of glyph
-	glm::ivec2 Bearing; // Offset from baseline to left/top of glyph
-	GLuint Advance;     // Horizontal offset to advance to next glyph
+	GLuint textureID;   // ID handle of the glyph texture
+	glm::ivec2 size;    // Size of glyph
+	glm::ivec2 bearing; // Offset from baseline to left/top of glyph
+	GLuint advance;     // Horizontal offset to advance to next glyph
 };
 
 
@@ -25,15 +25,17 @@ struct Character {
 class TextRenderer {
 public:
 	// Holds a list of pre-compiled Characters
-	std::map<GLchar, Character> Characters;
+	std::map<GLchar, Character> characters;
 	// Shader used for text rendering
-	Shader TextShader;
+	Shader textShader;
 	// Constructor
 	TextRenderer(GLuint width, GLuint height);
 	// Pre-compiles a list of characters from the given font
-	void Load(std::string font, GLuint fontSize);
+	void load(std::string font, GLuint fontSize);
 	// Renders a string of text using the precompiled list of characters
-	void RenderText(std::string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color = glm::vec3(1.0f));
+	void renderText(std::string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color = glm::vec3(1.0f));
+	void resetMatrix(GLuint width, GLuint height);
+	void setMatrix(glm::mat4 trans);
 private:
 	// Render state
 	GLuint VAO, VBO;

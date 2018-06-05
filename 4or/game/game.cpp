@@ -42,7 +42,7 @@ void Game::init() {
 	renderer = new SpriteRenderer(myShader);
 	// Load Text Renderer
 	text = new TextRenderer(this->width, this->width);
-	text->Load(".\\resources\\fonts\\OpenSans-Regular.ttf", 24);
+	text->load(".\\resources\\fonts\\OpenSans-Regular.ttf", 24);
 
 	// Load levels
 	GameLevel* one = new GameLevel(); one->load(".\\svg\\2rect.svg");
@@ -75,7 +75,7 @@ void Game::processInput(GLfloat dt) {
 			player->move(DIR::up);
 		}
 		if (keys[GLFW_KEY_DOWN]) {
-			levels[level]->getPlayer()->body->applyForce(glm::vec2(0, PS));
+			//levels[level]->getPlayer()->body->applyForce(glm::vec2(0, PS));
 		}
 	}
 }
@@ -86,13 +86,18 @@ void Game::update(GLfloat dt) {
 void Game::render() {
 	if (state == GameState::GAME_ACTIVE) {
 		levels[level]->draw(*renderer);
-
+		glm::vec2 pps = player->body->position;
 		glm::mat4 projection = glm::ortho(
-			static_cast<GLfloat>(player->body->position.x - this->width / 2.0f),
-			static_cast<GLfloat>(player->body->position.x + this->width / 2.0f),
-			static_cast<GLfloat>(player->body->position.y + this->height / 2.0f),
-			static_cast<GLfloat>(player->body->position.y - this->height / 2.0f), -1.0f, 1.0f);
+			static_cast<GLfloat>(pps.x - this->width / 2.0f),
+			static_cast<GLfloat>(pps.x + this->width / 2.0f),
+			static_cast<GLfloat>(pps.y + this->height / 2.0f),
+			static_cast<GLfloat>(pps.y - this->height / 2.0f), -1.0f, 1.0f);
 		ResourceManager::getShader("sprite").setMatrix4("projection", projection);
-		text->RenderText("Testy:", 0.0f, 48.0f, 2.0f, glm::vec3(1.0f, 0.0f, 0.0f));
+		ResourceManager::getShader("text").setMatrix4("projection", projection);
+		text->renderText("Testy:", 600.0f - pps.x, 700.0f - pps.y , 2.0f, glm::vec3(1.0f, 0.0f, 0.0f));
+	}
+	else {
+		text->resetMatrix(this->width, this->height);
+		text->renderText("Paused", this->width/2, this->height/8, 4.0f, glm::vec3(1.0f));
 	}
 }
