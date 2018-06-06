@@ -22,6 +22,7 @@ public:
 	GameObject* initRect(glm::vec2 pos, glm::vec2 s);
 	virtual void draw(SpriteRenderer &renderer);
 	virtual void update();
+	virtual void move();
 };
 
 class GameEntity : public GameObject {
@@ -29,8 +30,9 @@ public:
 	bool isColliding;
 	GameEntity(Texture2D sp);
 	GameEntity(Texture2D sp, glm::vec2 s, glm::vec2 pos = glm::vec2(0, 0), float mass = 0.001, float res = 0.2f, float df = 0.2f, float sf = 0.4f);
-	void move(DIR dir);
 	void update() override;
+	virtual void move(DIR dir, float force);
+	
 };
 class GamePlayer : public GameEntity {
 public:
@@ -41,6 +43,9 @@ public:
 	void move(DIR dir);
 };
 class GameEnemy : public GameEntity {
-public:
-
+public:	
+	int movecounter = 0;
+	GameEnemy(Texture2D sp);
+	GameEnemy(Texture2D sp, glm::vec2 s, glm::vec2 pos = glm::vec2(0, 0), float mass = 0.001, float res = 0.2f, float df = 0.2f, float sf = 0.4f);
+	void move() override;
 };

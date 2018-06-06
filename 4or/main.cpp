@@ -26,7 +26,7 @@ glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
 glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
 glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
 
-Game game(1280, 720);
+Game game(SCR_WIDTH, SCR_HEIGHT);
 
 int main(int argc, char *argv[]) {
 
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	game.init();
-
+	srand(glfwGetTime());
 	///Frame tracker
 	float accumulator = 0;
 	float frameStart = glfwGetTime();

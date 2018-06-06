@@ -74,7 +74,9 @@ void GameLevel::step() {
 			}
 		}
 	}
-
+	for (auto i : objects) {
+		i->move();
+	}
 	// Integrate forces
 	for (int i = 0; i < objects.size(); ++i)
 		integrateForces(objects[i]->body, m_dt);
@@ -84,6 +86,7 @@ void GameLevel::step() {
 		contacts[i].init();
 
 	// Solve collisions
+	
 	for (int j = 0; j < m_iterations; ++j)
 		for (int i = 0; i < contacts.size(); ++i)
 			contacts[i].applyImpulse();
@@ -105,3 +108,7 @@ void GameLevel::step() {
 	}
 }
 
+void GameLevel::addEnemy(glm::vec2 pos) {
+	GameEnemy* en = new GameEnemy(ResourceManager::getTexture("enemy"), glm::vec2(100, 200), pos, 0.1f);
+	objects.push_back(en);
+}

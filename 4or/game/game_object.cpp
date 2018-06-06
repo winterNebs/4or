@@ -35,6 +35,7 @@ GameObject* GameObject::initRect(glm::vec2 pos, glm::vec2 s){
 	delete[] verticies;
 	return this;
 }
+
 void GameObject::update() {
 	body->colliding = false;
 }
@@ -50,36 +51,58 @@ void GameObject::draw(SpriteRenderer &renderer) {
 		"\t Size:" << size.x << "," << size.y <<  std::endl;*/
 }
 
-void GameEntity::move(DIR dir) {
-
-}
 void GamePlayer::update() {
 	GameEntity::update();
 }
-void GamePlayer::move(DIR dir) {
-	if (abs(body->velocity.x) < 10000.0f ) {
-		switch (dir) {
+void GameObject::move() {}
+void GameEntity::move(DIR dir, float force) {
+	switch (dir) {
 		case DIR::left:
-			body->applyForce(glm::vec2(-PS,0));
-			break;
+			body->applyForce(glm::vec2(-force,0));
+			return;
 		case DIR::right:
-			body->applyForce(glm::vec2(PS, 0));
-			break;
+			body->applyForce(glm::vec2(force, 0));
+			return;
+		case DIR::up:
+			body->applyForce(glm::vec2(0, -force));
+			return;
+		case DIR::down:
+			body->applyForce(glm::vec2(0, force));
 		}
+	
+	
+}
+void GamePlayer::move(DIR dir) {
+	
+	if (abs(body->velocity.x) < 500.0f && (dir == DIR::left || dir == DIR::right)) {
+		GameEntity::move(dir, 10*PS);
+		return;
 	}
 	if (isColliding) {
 		switch (dir) {
 		case DIR::up:
-			body->applyForce(glm::vec2(0,-PS*100));
-			break;
+			GameEntity::move(dir, PS * 100);
+			return;
 		}
 	}
 }
-
+void GameEnemy::move() {
+	//std::cout << movecounter << std::endl;
+	if (movecounter > 0) {
+		--movecounter;
+		GameEntity::move(DIR::left, -50.0f);
+	}
+	else if (movecounter < 0) {
+		++movecounter;
+		GameEntity::move(DIR::right, -50.0f);
+	}
+	else {
+		movecounter = rand() % 300 - 150;
+	}
+}
 GameEntity::GameEntity(Texture2D sp) : GameObject(sp) {}
-
 GameEntity::GameEntity(Texture2D sp, glm::vec2 s, glm::vec2 pos, float mass, float res, float df, float sf) : GameObject(sp, s, pos, mass, res, df, sf) {}
-
 GamePlayer::GamePlayer(Texture2D sp) : GameEntity(sp) {}
-
 GamePlayer::GamePlayer(Texture2D sp, glm::vec2 s, glm::vec2 pos, float mass, float res, float df, float sf) : GameEntity(sp, s, pos, mass, res, df, sf) {}
+GameEnemy::GameEnemy(Texture2D sp) : GameEntity(sp) {}
+GameEnemy::GameEnemy(Texture2D sp, glm::vec2 s, glm::vec2 pos, float mass, float res, float df, float sf) : GameEntity(sp, s, pos, mass, res, df, sf) {}

@@ -178,6 +178,7 @@
   <ItemGroup>
     <Image Include="resources\textures\container.jpg" />
     <Image Include="resources\textures\frik.png" />
+    <Image Include="resources\textures\stand.png" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="logs\collide.txt" />

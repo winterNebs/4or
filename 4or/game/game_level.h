@@ -22,6 +22,7 @@ public:
 	~GameLevel();
 	void setPlayer(GamePlayer* p);
 	GamePlayer* getPlayer();
+	void addEnemy(glm::vec2 pos);
 	void load(std::string file);
 	void draw(SpriteRenderer &renderer);
 	GLboolean isCompleted();

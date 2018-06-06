@@ -36,6 +36,7 @@ void Game::init() {
 	ResourceManager::getShader("sprite").setMatrix4("projection", projection);
 	// Load textures
 	ResourceManager::loadTexture(".\\resources\\textures\\container.jpg", GL_TRUE, "container");
+	ResourceManager::loadTexture(".\\resources\\textures\\frik.png", GL_TRUE, "enemy");
 	ResourceManager::loadTexture(".\\resources\\textures\\stand.png", GL_TRUE, "player");
 	// Set render-specific controls
 	Shader myShader = ResourceManager::getShader("sprite");
@@ -58,12 +59,14 @@ void Game::init() {
 	level = 3;
 	player = new GamePlayer(ResourceManager::getTexture("player"), PLAYER_SIZE, playerPos, 0.01f, 0.9, 0.6f, 0.9f);
 	levels[level]->setPlayer(player);
+	levels[level]->addEnemy(glm::vec2(400.0f, 300.0f));
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
 		//levels[level]->getPlayer()->body->force = glm::vec2(0);
 		//levels[level]->getPlayer()->body->applyForce(glm::vec2(PS, 0));
 		//GLfloat velocity = PLAYER_VELOCITY * dt;
+		//std::cout << player->isColliding << std::endl;
 		if (keys[GLFW_KEY_LEFT]) {
 			player->move(DIR::left);
 		}
