@@ -36,7 +36,7 @@ void Game::init() {
 	ResourceManager::getShader("sprite").setMatrix4("projection", projection);
 	// Load textures
 	ResourceManager::loadTexture(".\\resources\\textures\\container.jpg", GL_TRUE, "container");
-	ResourceManager::loadTexture(".\\resources\\textures\\frik.png", GL_TRUE, "player");
+	ResourceManager::loadTexture(".\\resources\\textures\\stand.png", GL_TRUE, "player");
 	// Set render-specific controls
 	Shader myShader = ResourceManager::getShader("sprite");
 	renderer = new SpriteRenderer(myShader);
@@ -76,6 +76,7 @@ void Game::processInput(GLfloat dt) {
 		}
 		if (keys[GLFW_KEY_DOWN]) {
 			//levels[level]->getPlayer()->body->applyForce(glm::vec2(0, PS));
+
 		}
 	}
 }
