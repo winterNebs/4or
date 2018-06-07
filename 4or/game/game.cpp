@@ -57,7 +57,7 @@ void Game::init() {
 	levels.push_back(four);
 	levels.push_back(five);
 	level = 3;
-	player = new GamePlayer(ResourceManager::getTexture("player"), PLAYER_SIZE, playerPos, 0.01f, 0.9, 0.6f, 0.9f);
+	player = new GamePlayer(ResourceManager::getTexture("player"), PLAYER_SIZE, playerPos, 0.01f, 0.9f, 0.6f, 0.9f);
 	levels[level]->setPlayer(player);
 	levels[level]->addEnemy(glm::vec2(400.0f, 300.0f));
 }
@@ -98,10 +98,13 @@ void Game::render() {
 			static_cast<GLfloat>(pps.y - this->height / 2.0f), -1.0f, 1.0f);
 		ResourceManager::getShader("sprite").setMatrix4("projection", projection);
 		ResourceManager::getShader("text").setMatrix4("projection", projection);
-		text->renderText("Testy:", 600.0f - pps.x, 700.0f - pps.y , 2.0f, glm::vec3(1.0f, 0.0f, 0.0f));
+		for (auto i : levels[level]->debug) {
+			std::cout << i->pos.x << std::endl;
+			text->renderText(i->text, i->pos.x - pps.x, i->pos.y - pps.y, 1.0f, glm::vec3(1.0f, 0.0f, 0.0f));
+		}
 	}
 	else {
 		text->resetMatrix(this->width, this->height);
-		text->renderText("Paused", this->width/2, this->height/8, 4.0f, glm::vec3(1.0f));
+		text->renderText("Paused", (GLfloat)(this->width/2.0f), (GLfloat)(this->height/8.0f), 4.0f, glm::vec3(1.0f));
 	}
 }

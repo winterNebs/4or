@@ -6,12 +6,19 @@
 #include "../resources/resource_manager.h"
 
 #include <vector>
+#include <string>
+class DebugText {
+public:
+	std::string text;
+	glm::vec2 pos;
+	DebugText(std::string t, glm::vec2 p) : text(t), pos(p) { }
 
+};
 class GameLevel {
 public:
 	float m_dt;
 	int m_iterations;
-
+	std::vector<DebugText*> debug;
 	std::vector<GameObject*> objects;
 	std::vector<Manifold> contacts;
 	GamePlayer* player;

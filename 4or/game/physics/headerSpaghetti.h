@@ -11,8 +11,8 @@ const glm::vec2 gravity(0, 100.0f * gravityScale);
 const float DT = 1.0f / 144.0f;
 const float PI = (float)(4.0f * atan(1));
 const float EPSILON = 0.0001f;
-const float PS = 10.0;
-
+const float PS = 100.0f;
+const float ES = 250.0f;
 inline float crossProduct(const glm::vec2& a, const glm::vec2& b) {
 	return a.x * b.y - a.y * b.x;
 }

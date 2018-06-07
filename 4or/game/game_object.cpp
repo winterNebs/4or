@@ -73,31 +73,39 @@ void GameEntity::move(DIR dir, float force) {
 	
 }
 void GamePlayer::move(DIR dir) {
-	
-	if (abs(body->velocity.x) < 500.0f && (dir == DIR::left || dir == DIR::right)) {
-		GameEntity::move(dir, 10*PS);
-		return;
+	const float speedcap = 500.0f;
+	if (body->velocity.x > -speedcap) {
+		if (dir == DIR::left) {
+			GameEntity::move(dir, PS);
+			return;
+		}
+	}
+	if (body->velocity.x < speedcap) {
+		if (dir == DIR::right) {
+			GameEntity::move(dir, PS);
+			return;
+		}
 	}
 	if (isColliding) {
 		switch (dir) {
 		case DIR::up:
-			GameEntity::move(dir, PS * 100);
+			GameEntity::move(dir, PS * 10);
 			return;
 		}
 	}
 }
 void GameEnemy::move() {
-	//std::cout << movecounter << std::endl;
+	std::cout << movecounter << std::endl;
 	if (movecounter > 0) {
 		--movecounter;
-		GameEntity::move(DIR::left, -50.0f);
+		GameEntity::move(DIR::left, ES);
 	}
 	else if (movecounter < 0) {
 		++movecounter;
-		GameEntity::move(DIR::right, -50.0f);
+		GameEntity::move(DIR::right, ES);
 	}
 	else {
-		movecounter = rand() % 300 - 150;
+		movecounter = rand() % 100 - 50;
 	}
 }
 GameEntity::GameEntity(Texture2D sp) : GameObject(sp) {}

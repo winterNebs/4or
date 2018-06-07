@@ -178,8 +178,7 @@ void findIncidentFace(glm::vec2* v, PolyG* RefPoly, PolyG* IncPoly, int referenc
 																// Find most anti-normal face on incident PolyG
 	int incidentFace = 0;
 	float minDot = FLT_MAX;
-	for (int i = 0; i < IncPoly->m_vertexCount; ++i)
-	{
+	for (int i = 0; i < IncPoly->m_vertexCount; ++i) {
 		float dot = glm::dot(referenceNormal, IncPoly->m_normals[i]);
 		if (dot < minDot) {
 			minDot = dot;
@@ -229,8 +228,7 @@ int clip(glm::vec2 n, float c, glm::vec2* face) {
 void polygontoPolygon(Manifold* m, Body* a, Body* b) {
 	PolyG* A = reinterpret_cast<PolyG*>(a->shape);
 	PolyG* B = reinterpret_cast<PolyG*>(b->shape);
-	//PolyG* A = (PolyG*)a->shape;
-	//PolyG* B = (PolyG*)b->shape;
+
 	A->body = a;
 	B->body = b;
 	m->contact_count = 0;

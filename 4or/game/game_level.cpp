@@ -59,10 +59,11 @@ void integrateVelocity(Body *b, float dt) {
 void GameLevel::step() {
 	// Generate new collision info
 	contacts.clear();
-	for (int i = 0; i < objects.size(); ++i) {
+	debug.clear();
+	for (unsigned int i = 0; i < objects.size(); ++i) {
 		Body *A = objects[i]->body;
 
-		for (int j = i + 1; j < objects.size(); ++j) {
+		for (unsigned int j = i + 1; j < objects.size(); ++j) {
 			Body *B = objects[j]->body;
 			if (A->im == 0 && B->im == 0)
 				continue;
@@ -78,28 +79,30 @@ void GameLevel::step() {
 		i->move();
 	}
 	// Integrate forces
-	for (int i = 0; i < objects.size(); ++i)
+	for (unsigned int i = 0; i < objects.size(); ++i)
 		integrateForces(objects[i]->body, m_dt);
 
 	// Initialize collision
-	for (int i = 0; i < contacts.size(); ++i)
+	for (unsigned int i = 0; i < contacts.size(); ++i)
 		contacts[i].init();
 
 	// Solve collisions
 	
-	for (int j = 0; j < m_iterations; ++j)
-		for (int i = 0; i < contacts.size(); ++i)
+	for (int j = 0; j < m_iterations; ++j){
+		for (unsigned int i = 0; i < contacts.size(); ++i){
+			debug.push_back(new DebugText(std::string("Contact"), contacts[i].A->position));
 			contacts[i].applyImpulse();
-
+		}
+	}
 	// Integrate velocities
-	for (int i = 0; i < objects.size(); ++i)
+	for (unsigned int i = 0; i < objects.size(); ++i)
 		integrateVelocity(objects[i]->body, m_dt);
 	// Correct positions
-	for (int i = 0; i < contacts.size(); ++i)
+	for (unsigned int i = 0; i < contacts.size(); ++i)
 		contacts[i].positionCorrection();
 
 	// Clear all forces
-	for (int i = 0; i < objects.size(); ++i) {
+	for (unsigned int i = 0; i < objects.size(); ++i) {
 		objects[i]->update();
 		Body *b = objects[i]->body;
 		b->force = glm::vec2(0);

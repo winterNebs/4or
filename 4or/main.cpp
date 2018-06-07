@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <time.h>
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
@@ -61,10 +62,10 @@ int main(int argc, char *argv[]) {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	game.init();
-	srand(glfwGetTime());
+	srand((unsigned int)time(NULL));
 	///Frame tracker
-	float accumulator = 0;
-	float frameStart = glfwGetTime();
+	float accumulator = 0.0f;
+	float frameStart = (float)glfwGetTime();
 	game.state = GameState::GAME_MENU;
 	while (!glfwWindowShouldClose(window)) {
 
