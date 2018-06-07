@@ -95,7 +95,7 @@ void GamePlayer::move(DIR dir) {
 	}
 }
 void GameEnemy::move() {
-	std::cout << movecounter << std::endl;
+	//std::cout << movecounter << std::endl;
 	if (movecounter > 0) {
 		--movecounter;
 		GameEntity::move(DIR::left, ES);

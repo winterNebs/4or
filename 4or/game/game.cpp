@@ -90,6 +90,9 @@ void Game::update(GLfloat dt) {
 void Game::render() {
 	if (state == GameState::GAME_ACTIVE) {
 		levels[level]->draw(*renderer);
+		//text->resetMatrix(this->width, this->height);
+
+
 		glm::vec2 pps = player->body->position;
 		glm::mat4 projection = glm::ortho(
 			static_cast<GLfloat>(pps.x - this->width / 2.0f),
@@ -97,14 +100,18 @@ void Game::render() {
 			static_cast<GLfloat>(pps.y + this->height / 2.0f),
 			static_cast<GLfloat>(pps.y - this->height / 2.0f), -1.0f, 1.0f);
 		ResourceManager::getShader("sprite").setMatrix4("projection", projection);
-		ResourceManager::getShader("text").setMatrix4("projection", projection);
+	
+		//text->renderText("''''''", glm::vec2(0.0f), 1.0f, glm::vec3(1.0f, 0.0f, 0.0f));
+		
+
 		for (auto i : levels[level]->debug) {
-			std::cout << i->pos.x << std::endl;
-			text->renderText(i->text, i->pos.x - pps.x, i->pos.y - pps.y, 1.0f, glm::vec3(1.0f, 0.0f, 0.0f));
+//			std::cout << i->pos.x << std::endl;
+			text->renderText(i->text, i->pos, 1.0f, glm::vec3(1.0f, 0.0f, 0.0f));
 		}
+		text->setMatrix(projection);
 	}
 	else {
 		text->resetMatrix(this->width, this->height);
-		text->renderText("Paused", (GLfloat)(this->width/2.0f), (GLfloat)(this->height/8.0f), 4.0f, glm::vec3(1.0f));
+		text->renderText("Paused", glm::vec2(this->width/2.0f, this->height/8.0f), 4.0f, glm::vec3(1.0f));
 	}
 }

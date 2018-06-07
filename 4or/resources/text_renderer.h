@@ -33,7 +33,7 @@ public:
 	// Pre-compiles a list of characters from the given font
 	void load(std::string font, GLuint fontSize);
 	// Renders a string of text using the precompiled list of characters
-	void renderText(std::string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color = glm::vec3(1.0f));
+	void renderText(std::string text, glm::vec2 pos, GLfloat scale, glm::vec3 color = glm::vec3(1.0f));
 	void resetMatrix(GLuint width, GLuint height);
 	void setMatrix(glm::mat4 trans);
 private:

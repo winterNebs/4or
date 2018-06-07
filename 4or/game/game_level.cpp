@@ -1,4 +1,5 @@
 #include "game_level.h"
+#include <sstream>
 
 GameLevel::GameLevel(std::string f) {
 	load(f);
@@ -69,7 +70,7 @@ void GameLevel::step() {
 				continue;
 			Manifold m(A, B);
 			m.solve();
-				//std::cout << m.contact_count << std::endl;
+			//std::cout << m.contact_count << std::endl;
 			if (m.contact_count) {
 				contacts.emplace_back(m);
 			}
@@ -87,10 +88,9 @@ void GameLevel::step() {
 		contacts[i].init();
 
 	// Solve collisions
-	
 	for (int j = 0; j < m_iterations; ++j){
 		for (unsigned int i = 0; i < contacts.size(); ++i){
-			debug.push_back(new DebugText(std::string("Contact"), contacts[i].A->position));
+			debug.push_back(new DebugText(std::string("Contact"), contacts[i].B->position));
 			contacts[i].applyImpulse();
 		}
 	}
