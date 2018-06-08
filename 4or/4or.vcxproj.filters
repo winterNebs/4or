@@ -124,6 +124,7 @@
     <None Include="resources\shaders\text.vs" />
     <None Include="resources\shaders\text.frag" />
     <None Include="freetype.dll" />
+    <None Include="svg\level1.svg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\container.jpg">
@@ -137,10 +138,9 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="logs\normals.txt" />
-    <Text Include="logs\collide.txt" />
+    <Font Include="resources\fonts\OpenSans-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Font Include="resources\fonts\OpenSans-Regular.ttf" />
+    <Text Include="scores.txt" />
   </ItemGroup>
 </Project>

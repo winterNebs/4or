@@ -173,6 +173,7 @@
     <None Include="resources\shader.vs" />
     <None Include="svg\3rect.svg" />
     <None Include="svg\5rect.svg" />
+    <None Include="svg\level1.svg" />
     <None Include="svg\normaldebug.svg" />
   </ItemGroup>
   <ItemGroup>
@@ -181,11 +182,10 @@
     <Image Include="resources\textures\stand.png" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="logs\collide.txt" />
-    <Text Include="logs\normals.txt" />
+    <Font Include="resources\fonts\OpenSans-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Font Include="resources\fonts\OpenSans-Regular.ttf" />
+    <Text Include="scores.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

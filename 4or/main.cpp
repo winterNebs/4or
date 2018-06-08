@@ -66,6 +66,7 @@ int main(int argc, char *argv[]) {
 	///Frame tracker
 	float accumulator = 0.0f;
 	float frameStart = (float)glfwGetTime();
+	float time = 0.0;
 	game.state = GameState::GAME_MENU;
 	while (!glfwWindowShouldClose(window)) {
 
@@ -83,11 +84,15 @@ int main(int argc, char *argv[]) {
 		//std::cout << "FPS: " << 1 / (deltaTime) << std::endl;
 			//std::cout << accumulator << std::endl;
 		while (accumulator > DT && game.state == GameState::GAME_ACTIVE) {
+			time += DT;
 			game.processInput(DT);
 
 			game.update(DT);
 			
 			accumulator -= DT;
+		}
+		if (game.state == GameState::GAME_END) {
+			glfwSetWindowShouldClose(window, GL_TRUE);
 		}
 		/*
 		  const float alpha = accumulator / dt;
@@ -107,7 +112,34 @@ int main(int argc, char *argv[]) {
 	}
 	///Deallocate 
 	ResourceManager::clear();
-	
+	if (game.state == GameState::GAME_END) {
+
+		std::vector<float> times;
+		std::string line;
+		std::ifstream myfile(".\\scores.txt");
+		if (myfile.is_open()) {
+			while (getline(myfile, line)) {
+				times.push_back(std::stof(line));
+			}
+			myfile.close();
+		}
+		times.push_back(time);
+		if (times.size() > 1) {
+			for (int i = 1; i < times.size(); i++) {
+				for (int j = i - 1; j >= 0; j--) {
+					if (times[j + 1] < times[j]) {
+						float temp = times[j + 1];
+						times[j + 1] = times[j];
+						times[j] = temp;
+					}
+				}
+			}
+		}
+		std::ofstream output(".\\scores.txt", std::ios::trunc);
+		for (auto i : times) {
+			output << i << "\n";
+		}
+	}
 	glfwTerminate();
 	return 0;
 }

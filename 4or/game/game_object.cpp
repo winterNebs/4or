@@ -108,9 +108,15 @@ void GameEnemy::move() {
 		movecounter = rand() % 100 - 50;
 	}
 }
+
+void GameExit::update() {
+	gameEnd = body->colliding || gameEnd;
+	GameObject::update();
+}
 GameEntity::GameEntity(Texture2D sp) : GameObject(sp) {}
 GameEntity::GameEntity(Texture2D sp, glm::vec2 s, glm::vec2 pos, float mass, float res, float df, float sf) : GameObject(sp, s, pos, mass, res, df, sf) {}
 GamePlayer::GamePlayer(Texture2D sp) : GameEntity(sp) {}
 GamePlayer::GamePlayer(Texture2D sp, glm::vec2 s, glm::vec2 pos, float mass, float res, float df, float sf) : GameEntity(sp, s, pos, mass, res, df, sf) {}
 GameEnemy::GameEnemy(Texture2D sp) : GameEntity(sp) {}
 GameEnemy::GameEnemy(Texture2D sp, glm::vec2 s, glm::vec2 pos, float mass, float res, float df, float sf) : GameEntity(sp, s, pos, mass, res, df, sf) {}
+GameExit::GameExit(Texture2D sp, glm::vec2 s, glm::vec2 pos) : GameObject(sp, s, pos, 0, 0, 0, 0) {}

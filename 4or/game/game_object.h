@@ -49,3 +49,9 @@ public:
 	GameEnemy(Texture2D sp, glm::vec2 s, glm::vec2 pos = glm::vec2(0, 0), float mass = 0.001, float res = 0.2f, float df = 0.2f, float sf = 0.4f);
 	void move() override;
 };
+class GameExit : public GameObject {
+public:
+	bool gameEnd = false;
+	GameExit(Texture2D sp, glm::vec2 s, glm::vec2 pos = glm::vec2(0, 0));
+	void update() override;
+};

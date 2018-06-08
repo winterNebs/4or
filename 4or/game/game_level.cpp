@@ -89,8 +89,10 @@ void GameLevel::step() {
 
 	// Solve collisions
 	for (int j = 0; j < m_iterations; ++j){
-		for (unsigned int i = 0; i < contacts.size(); ++i){
-			debug.push_back(new DebugText(std::string("Contact"), contacts[i].B->position));
+		for (unsigned int i = 0; i < contacts.size(); ++i) {
+			std::stringstream str;
+			str << "(" << contacts[i].normal.x << "," << contacts[i].normal.y << ")";
+			debug.push_back(new DebugText(str.str(), contacts[i].B->position));
 			contacts[i].applyImpulse();
 		}
 	}
@@ -104,6 +106,7 @@ void GameLevel::step() {
 	// Clear all forces
 	for (unsigned int i = 0; i < objects.size(); ++i) {
 		objects[i]->update();
+		
 		Body *b = objects[i]->body;
 		b->force = glm::vec2(0);
 		b->torque = 0;

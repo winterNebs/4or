@@ -13,8 +13,9 @@ const glm::vec2 PLAYER_SIZE(50.0f, 100.0f);
 const GLfloat PLAYER_VELOCITY(200.0f);
 
 enum class GameState {
-GAME_ACTIVE,
-GAME_MENU
+	GAME_ACTIVE,
+	GAME_MENU,
+	GAME_END
 };
 class Game {
 public:

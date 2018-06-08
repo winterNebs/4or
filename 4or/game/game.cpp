@@ -21,6 +21,7 @@ Game::~Game() {
 	}
 }
 GamePlayer* player;
+GameExit* exitE;
 void Game::init() {
 	glm::vec2 playerPos = glm::vec2(300.0f, 100.0f);
 
@@ -38,6 +39,7 @@ void Game::init() {
 	ResourceManager::loadTexture(".\\resources\\textures\\container.jpg", GL_TRUE, "container");
 	ResourceManager::loadTexture(".\\resources\\textures\\frik.png", GL_TRUE, "enemy");
 	ResourceManager::loadTexture(".\\resources\\textures\\stand.png", GL_TRUE, "player");
+	ResourceManager::loadTexture(".\\resources\\textures\\exit.png", GL_TRUE, "exit");
 	// Set render-specific controls
 	Shader myShader = ResourceManager::getShader("sprite");
 	renderer = new SpriteRenderer(myShader);
@@ -51,15 +53,19 @@ void Game::init() {
 	GameLevel* three = new GameLevel(); three->load(".\\svg\\1box.svg");
 	GameLevel* four = new GameLevel(); four->load(".\\svg\\5rect.svg");
 	GameLevel* five = new GameLevel(); five->load(".\\svg\\normaldebug.svg");
+	GameLevel* six = new GameLevel(); six->load(".\\svg\\level1.svg");
 	levels.push_back(one);
 	levels.push_back(two);
 	levels.push_back(three);
 	levels.push_back(four);
 	levels.push_back(five);
-	level = 3;
+	levels.push_back(six);
+	level = 5;
 	player = new GamePlayer(ResourceManager::getTexture("player"), PLAYER_SIZE, playerPos, 0.01f, 0.9f, 0.6f, 0.9f);
+	exitE = new GameExit(ResourceManager::getTexture("exit"), PLAYER_SIZE, glm::vec2(3000.0f, 1000.0f));
+	levels[level]->objects.push_back(exitE);
 	levels[level]->setPlayer(player);
-	levels[level]->addEnemy(glm::vec2(400.0f, 300.0f));
+	//levels[level]->addEnemy(glm::vec2(400.0f, 300.0f));
 }
 void Game::processInput(GLfloat dt) {
 	if (state == GameState::GAME_ACTIVE) {
@@ -86,6 +92,9 @@ void Game::processInput(GLfloat dt) {
 void Game::update(GLfloat dt) {
 	//levels[level]->update(dt);
 	levels[level]->step();
+	if (exitE->gameEnd) {
+		state = GameState::GAME_END;
+	}
 }
 void Game::render() {
 	if (state == GameState::GAME_ACTIVE) {
