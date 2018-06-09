@@ -22,15 +22,10 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 const unsigned int SCR_WIDTH = 1920;
 const unsigned int SCR_HEIGHT = 1080;
 
-///Camera Pos
-glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
-glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
-glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
-
+//Create Game Object
 Game game(SCR_WIDTH, SCR_HEIGHT);
 
 int main(int argc, char *argv[]) {
-
 	
 	///GLFW: initialize & configure
 	glfwInit();
@@ -61,15 +56,17 @@ int main(int argc, char *argv[]) {
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	//Initialize game and random seed
 	game.init();
 	srand((unsigned int)time(NULL));
-	///Frame tracker
+	///Frame/Time tracker
 	float accumulator = 0.0f;
 	float frameStart = (float)glfwGetTime();
 	float time = 0.0;
+	//Set game state to paused
 	game.state = GameState::GAME_MENU;
 	while (!glfwWindowShouldClose(window)) {
-
+		//Clear screen
 		glfwPollEvents();
 		glClearColor(0.1f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -80,11 +77,11 @@ int main(int argc, char *argv[]) {
 		if (accumulator > 0.2f) {
 			accumulator = 0.2f;
 		}
-		
-		//std::cout << "FPS: " << 1 / (deltaTime) << std::endl;
-			//std::cout << accumulator << std::endl;
+		//Fixed Frame time
 		while (accumulator > DT && game.state == GameState::GAME_ACTIVE) {
+			//Update timer
 			time += DT;
+			//Update game
 			game.processInput(DT);
 
 			game.update(DT);
@@ -92,28 +89,18 @@ int main(int argc, char *argv[]) {
 			accumulator -= DT;
 		}
 		if (game.state == GameState::GAME_END) {
+			//If game ended close window
 			glfwSetWindowShouldClose(window, GL_TRUE);
 		}
-		/*
-		  const float alpha = accumulator / dt;
- 
-			RenderGame( alpha )
- 
-			void RenderGame( float alpha )
-			for shape in game do
-			  // calculate an interpolated transform for rendering
-			 Transform i = shape.previous * alpha + shape.current * (1.0f - alpha)
-			 shape.previous = shape.current
-			 shape.Render( i )*/
-		///Render stuff
 
+		//Render game and double buffer
 		game.render();
 		glfwSwapBuffers(window);
 	}
 	///Deallocate 
 	ResourceManager::clear();
 	if (game.state == GameState::GAME_END) {
-
+		//Retrieve times
 		std::vector<float> times;
 		std::string line;
 		std::ifstream myfile(".\\scores.txt");
@@ -123,7 +110,9 @@ int main(int argc, char *argv[]) {
 			}
 			myfile.close();
 		}
+		//Add current time
 		times.push_back(time);
+		//Insertion sort		
 		if (times.size() > 1) {
 			for (int i = 1; i < times.size(); i++) {
 				for (int j = i - 1; j >= 0; j--) {
@@ -135,16 +124,19 @@ int main(int argc, char *argv[]) {
 				}
 			}
 		}
+		//Reoutput
 		std::ofstream output(".\\scores.txt", std::ios::trunc);
 		for (auto i : times) {
 			output << i << "\n";
 		}
 	}
+	//Exit
 	glfwTerminate();
 	return 0;
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
+	//Keybindings for exit game and pause
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, GL_TRUE);
 	}
@@ -156,6 +148,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 			game.state = GameState::GAME_ACTIVE;
 		}
 	}
+	//Send other key inputs to the game
 	if (key >= 0 && key < 1024) {
 		if (action == GLFW_PRESS) {
 			game.keys[key] = GL_TRUE;

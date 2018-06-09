@@ -3,16 +3,11 @@
 #include <sstream>
 #include <iostream>
 #include <fstream>
-///TODO:
-/*
-- Remove all SQRTs when possible
-*/
-int counter = 0;
 SpriteRenderer* renderer;
 TextRenderer* text;
+//Default constructor
 Game::Game(GLuint w, GLuint h) :
 	state(GameState::GAME_ACTIVE), keys(), width(w), height(h) {
-	counter = 0;
 }
 Game::~Game() {
 	delete renderer;
@@ -61,6 +56,7 @@ void Game::init() {
 	levels.push_back(five);
 	levels.push_back(six);
 	level = 5;
+	//Add players and exit
 	player = new GamePlayer(ResourceManager::getTexture("player"), PLAYER_SIZE, playerPos, 0.01f, 0.9f, 0.6f, 0.9f);
 	exitE = new GameExit(ResourceManager::getTexture("exit"), PLAYER_SIZE, glm::vec2(3000.0f, 1000.0f));
 	levels[level]->objects.push_back(exitE);
@@ -68,11 +64,8 @@ void Game::init() {
 	//levels[level]->addEnemy(glm::vec2(400.0f, 300.0f));
 }
 void Game::processInput(GLfloat dt) {
+	//Process game info
 	if (state == GameState::GAME_ACTIVE) {
-		//levels[level]->getPlayer()->body->force = glm::vec2(0);
-		//levels[level]->getPlayer()->body->applyForce(glm::vec2(PS, 0));
-		//GLfloat velocity = PLAYER_VELOCITY * dt;
-		//std::cout << player->isColliding << std::endl;
 		if (keys[GLFW_KEY_LEFT]) {
 			player->move(DIR::left);
 		}

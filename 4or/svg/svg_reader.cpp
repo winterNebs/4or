@@ -1,9 +1,6 @@
 #include "svg_reader.h"
-svgReader::svgReader(std::string file) {
+svgReader::svgReader(std::string file) {			//Read the file and set shapes
 	svgReader::shapes = svgReader::read(file);
-	/*for (auto i : svgReader::read(file)) {
-		svgReader::verticies.push_back(i->convert());
-	}*/
 }
 std::vector<shape*> svgReader::getShapes() const{
 	return svgReader::shapes;
@@ -25,7 +22,7 @@ std::vector<glm::vec3> rect::convert() {
 	points.push_back(glm::vec3(x, y + height, 0.0f));
 	return points;
 }
-void rect::readAttrib(xmlTag t) {
+void rect::readAttrib(xmlTag t) {		//Read attributes (currently x,y,width,height) from tags
 	for (std::map<std::string, std::string>::const_iterator it = t.attrib.begin(); it != t.attrib.end(); ++it) {
 		if (it->first == "x") {
 			x = std::stof(it->second);
@@ -42,14 +39,13 @@ void rect::readAttrib(xmlTag t) {
 	}
 }
 
-std::vector<shape*> svgReader::read(std::string file) {	//File reader
+std::vector<shape*> svgReader::read(std::string file) {	//Svg file reader
 	std::string line;
 	std::ifstream svg(file, std::ios::binary);
 	std::string total = "";
 	if (svg.is_open()) {
 		while (getline(svg, line)) { 
 			total += line;
-			//std::cout << line << '\n';	//Uncomment for debugging
 		}
 		svg.close();
 	}
@@ -58,7 +54,7 @@ std::vector<shape*> svgReader::read(std::string file) {	//File reader
 	}
 	parse(total);
 	std::vector<shape*> shapes;
-	for (auto i : tags) {
+	for (auto i : tags) {			//Take all tags and convert them into shapes
 		if (i.type == "rect") {
 			rect* newRect = new rect();
 			newRect->readAttrib(i);
@@ -76,9 +72,9 @@ std::vector<shape*> svgReader::read(std::string file) {	//File reader
 	return shapes;
 }
 
-void svgReader::parse(std::string input) {
-	bool openBrack = false;
-	tagStarter tagStart = tagStarter::NONE;
+void svgReader::parse(std::string input) {			//Logical parsing
+	bool openBrack = false;							//Basically reads each character individually, tries to construct tags based on open bracket
+	tagStarter tagStart = tagStarter::NONE;			//Sequences, easier to see in action than explain
 	bool space = false;
 	bool attrib = false;
 	std::string temp = "";
@@ -139,12 +135,6 @@ void svgReader::parse(std::string input) {
 			}
 		}
 	}
-	/*for (auto i : tags) {
-		std::cout << i.type << " " << std::endl;
-		for (std::map<std::string, std::string>::const_iterator it = i.attrib.begin(); it != i.attrib.end(); ++it) {
-			std::cout << "\t" << it->first << " " << it->second << "\n";
-		}
-	}*/
 }
 std::vector<std::vector<glm::vec3>> svgReader::getVerticies() const {
 	return svgReader::verticies;

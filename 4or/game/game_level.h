@@ -7,7 +7,8 @@
 
 #include <vector>
 #include <string>
-class DebugText {
+
+class DebugText {		//Onscreen text 
 public:
 	std::string text;
 	glm::vec2 pos;
@@ -18,10 +19,10 @@ class GameLevel {
 public:
 	float m_dt;
 	int m_iterations;
-	std::vector<DebugText*> debug;
-	std::vector<GameObject*> objects;
-	std::vector<Manifold> contacts;
-	GamePlayer* player;
+	std::vector<DebugText*> debug;		//List of debug text
+	std::vector<GameObject*> objects;	//List of objects in level
+	std::vector<Manifold> contacts;		//List of contacts (physics)
+	GamePlayer* player;					//Player
 
 	GameLevel(float dt, int iter) : m_dt(dt), m_iterations(iter) {}
 	GameLevel() : m_dt(DT), m_iterations(10) {}
@@ -34,7 +35,6 @@ public:
 	void draw(SpriteRenderer &renderer);
 	GLboolean isCompleted();
 
-	void update(GLfloat dt);
 	void step();
 private:
 	void init(std::vector<shape*> blockData);

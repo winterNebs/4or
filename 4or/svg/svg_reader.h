@@ -13,22 +13,22 @@ enum class tagStarter {
 	QUEST = 3
 };
 //SVGs are just a type of XML files
-class xmlTag {
+class xmlTag {	//XLM tag defnintion has status (open, close, none, question mark)
 public:
 	xmlTag(std::string t, tagStarter s) {
 		type = t;
 		status = s;
 	}
 	tagStarter status;
-	std::string type;
-	std::map<std::string, std::string> attrib;
+	std::string type;								//Track tag name
+	std::map<std::string, std::string> attrib;		//Keeps track of attributes
 };
-struct shape {
+struct shape {									//Shape (rectangles for now)
 	float x, y, width, height;
 	virtual std::vector<glm::vec3> convert();
 	virtual void readAttrib(xmlTag t);
 };
-struct rect : public shape {
+struct rect : public shape {					//Rectangle is a shape
 	virtual std::vector<glm::vec3> convert() override;
 	void readAttrib(xmlTag t) override;
 };

@@ -1,45 +1,42 @@
 #include "game_level.h"
 #include <sstream>
 
-GameLevel::GameLevel(std::string f) {
+GameLevel::GameLevel(std::string f) { //Constructor Load level (svg)
 	load(f);
 }
-void GameLevel::load(std::string file) {
+void GameLevel::load(std::string file) {//Load level from svg, add shapes to objects)
 	objects.clear();
 	svgReader test = svgReader(file);
 	init(test.getShapes());
 }
 void GameLevel::init(std::vector<shape*> blockData) {
 	///Calculate max size;
-	for (auto i : blockData) {
+	for (auto i : blockData) {		//Take the shapes convert to actual objects
 		GameObject* obj = new GameObject(ResourceManager::getTexture("container"), glm::vec2(i->width, i->height), glm::vec2(i->x, i->y), 0.0f, .4f, .8f);
 		objects.push_back(obj);
 	}
 }
-void GameLevel::draw(SpriteRenderer &renderer) {
+void GameLevel::draw(SpriteRenderer &renderer) {		//Render everything in the objects list
 	for (auto i : objects) {
 		i->draw(renderer);
 	}
 }
 GLboolean GameLevel::isCompleted() {
-	return GL_FALSE;
+	return GL_FALSE;		//Nothing for now
 }
-void GameLevel::setPlayer(GamePlayer* p) {
+void GameLevel::setPlayer(GamePlayer* p) {	//Set the current player, add it to the list of objects
 	player = p;
 	objects.push_back(player);
 }
-GamePlayer* GameLevel::getPlayer() {
+GamePlayer* GameLevel::getPlayer() {	//Return player
 	return player;
 }
-GameLevel::~GameLevel() {
+GameLevel::~GameLevel() {			//Destructor
 	for (auto i : objects) {
-		delete i;
+		delete i;			//Deallocate all objects
 	}
 }
-void GameLevel::update(GLfloat dt) {
-	
-}
-void integrateForces(Body *b, float dt) {
+void integrateForces(Body *b, float dt) {		//Integrate forces (update velocity)
 	if (b->im == 0.0f) {
 		return;
 	}
@@ -47,7 +44,7 @@ void integrateForces(Body *b, float dt) {
 	b->angularVelocity += b->torque * b->iI * (dt / 2.0f);
 }
 
-void integrateVelocity(Body *b, float dt) {
+void integrateVelocity(Body *b, float dt) {		//Integrate velocity (update position)
 	if (b->im == 0.0f)
 		return;
 
@@ -57,7 +54,7 @@ void integrateVelocity(Body *b, float dt) {
 	integrateForces(b, dt);
 }
 
-void GameLevel::step() {
+void GameLevel::step() {				//Step (called every tick)
 	// Generate new collision info
 	contacts.clear();
 	debug.clear();
